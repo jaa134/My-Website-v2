@@ -1,0 +1,4 @@
+config/**
+scripts/**
+src/reportWebVitals.js
+src/setupTests.js
