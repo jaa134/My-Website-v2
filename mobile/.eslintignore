@@ -1,0 +1,4 @@
+config/**
+scripts/**
+src/reportWebVitals.ts
+src/setupTests.ts
