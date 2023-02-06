@@ -17,7 +17,7 @@ if (isMobile) {
   const root = createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <App></App>
+      <App />
     </React.StrictMode>,
   );
 

@@ -1,0 +1,105 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'AppFooter';
+$lr_padding: 4rem;
+
+.#{$name} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  box-sizing: border-box;
+  height: $footer-height;
+  width: 100%;
+  min-width: $app-min-width;
+  max-width: $app-max-width;
+  margin: auto;
+  padding: 0 $lr_padding;
+  color: $white;
+  background-image: linear-gradient(to bottom right, $purple -200%, $black 100%);
+  user-select: none;
+
+  &__logo-column {
+    svg {
+      height: 7rem;
+    }
+  }
+
+  &__link-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 2rem;
+    height: 9rem;
+  }
+
+  &__contact-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 9rem;
+  }
+
+  &__link {
+    padding: 0.25rem;
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    letter-spacing: 0.0625rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.25rem;
+    }
+
+    &--main {
+      font-weight: 400;
+      opacity: 1;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__contact-title {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.0625rem;
+  }
+
+  &__contact-subtitle {
+    font-size: 0.875rem;
+    font-weight: 300;
+    opacity: 0.9;
+    letter-spacing: 0.03125rem;
+  }
+
+  &__contact-options {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__contact-option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: $purple;
+    cursor: pointer;
+    transition: 200ms ease-in;
+
+    &:hover {
+      background-color: $purple_l_10;
+    }
+
+    svg {
+      height: 1.75rem;
+    }
+  }
+}

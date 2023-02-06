@@ -7,8 +7,9 @@ $name: 'AppHeader';
   display: flex;
   align-items: center;
   gap: 2rem;
-  height: $header-height;
-  width: calc(100% - (2 * $app-vertical-margins));
+  box-sizing: border-box;
+  height: calc($header-height + 2rem);
+  width: 100%;
   min-width: $app-min-width;
   max-width: $app-max-width;
   margin: auto;
@@ -52,6 +53,10 @@ $name: 'AppHeader';
     font-weight: 300;
     font-size: 2rem;
     letter-spacing: 0.1625rem;
+
+    svg {
+      height: 3rem;
+    }
   }
 
   &__navigation {

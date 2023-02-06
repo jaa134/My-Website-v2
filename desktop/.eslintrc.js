@@ -4,6 +4,7 @@ module.exports = {
     es6: true,
     'jest/globals': true,
   },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['tsconfig.json'],
     ecmaFeatures: {
@@ -12,7 +13,7 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  plugins: ['react', 'jest', 'simple-import-sort'],
+  plugins: ['@typescript-eslint', 'react', 'jest', 'simple-import-sort'],
   extends: [
     'plugin:react/recommended',
     'plugin:jest/recommended',
@@ -93,6 +94,12 @@ module.exports = {
       1,
       {
         extensions: ['.tsx'],
+      },
+    ],
+    'react/require-default-props': [
+      'error',
+      {
+        functions: 'defaultArguments',
       },
     ],
 

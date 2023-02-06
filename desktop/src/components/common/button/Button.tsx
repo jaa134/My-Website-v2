@@ -1,28 +1,40 @@
 import 'src/components/common/button/Button.scss';
 
-import React from 'react';
+import PropTypes from 'prop-types';
+import React, { FunctionComponent } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('Button');
 
-type Props = {} & Partial<DefaultProps>;
+type Props = React.PropsWithChildren<{
+  size?: 'small' | 'medium' | 'large';
+  type?: 'filled' | 'outlined' | 'text';
+  color?: 'purple' | 'white';
+  label?: string | null;
+}>;
 
-type DefaultProps = {
-  size: 'small' | 'medium' | 'large';
-  type: 'filled' | 'outlined' | 'text';
-  color: 'purple' | 'white';
-};
+const Button: FunctionComponent<Props> = ({
+  size = 'medium',
+  type = 'filled',
+  color = 'purple',
+  label = null,
+  children = null,
+}) => (
+  <button
+    type="button"
+    className={bem('', size, type, color)}
+  >
+    {children ?? label ?? ''}
+  </button>
+);
 
-const defaultProps: DefaultProps = {
-  size: 'medium',
-  type: 'filled',
-  color: 'purple',
-};
-
-const Button = (propsIn: React.PropsWithChildren<Props>) => {
-  const props = { ...defaultProps, ...propsIn };
-  return <button className={bem('', props.size, props.type, props.color)}>{props.children ?? ''}</button>;
+Button.propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  type: PropTypes.oneOf(['filled', 'outlined', 'text']),
+  color: PropTypes.oneOf(['purple', 'white']),
+  label: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Button;

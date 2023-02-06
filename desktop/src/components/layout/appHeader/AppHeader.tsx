@@ -1,20 +1,22 @@
 import 'src/components/layout/appHeader/AppHeader.scss';
 
+import React from 'react';
+
 import defineBlock from 'src/utils/defineBlock';
 import { useScrollPosition } from 'src/utils/hooks';
 
 import Button from 'src/components/common/button/Button';
-import LogoVariant1 from 'src/components/icons/logos/LogoVariant1';
+import MyLogoVariant1 from 'src/components/icons/logos/MyLogoVariant1';
 
 const bem = defineBlock('AppHeader');
 
-export default function () {
+const AppHeader = () => {
   const scrollPosition = useScrollPosition();
   return (
     <div className={bem('', { detached: scrollPosition >= 32 })}>
-      <div className={bem('background')}></div>
+      <div className={bem('background')} />
       <div className={bem('logo')}>
-        <LogoVariant1></LogoVariant1>
+        <MyLogoVariant1 />
         <div className="monospace">J.Alspaw</div>
       </div>
       <div className={bem('navigation')}>
@@ -29,9 +31,11 @@ export default function () {
           type="outlined"
           color="white"
         >
-          Let's Work Together
+          Let&#39;s Work Together
         </Button>
       </div>
     </div>
   );
-}
+};
+
+export default AppHeader;
