@@ -123,6 +123,8 @@ module.exports = {
 
           // Internal modules
           ['^src/utils(/|$)'],
+          ['^src/components(/|$)'],
+          ['^src/scss(/|$)'],
           ['^src/'],
 
           // Anything not matched in another group.

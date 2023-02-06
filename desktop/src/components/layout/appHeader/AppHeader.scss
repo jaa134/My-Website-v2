@@ -1,0 +1,80 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'AppHeader';
+
+.#{$name} {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: $header-height;
+  width: calc(100% - (2 * $app-vertical-margins));
+  min-width: $app-min-width;
+  max-width: $app-max-width;
+  margin: auto;
+  padding: 2rem $app-vertical-margins 0 $app-vertical-margins;
+  color: $white;
+
+  &--detached {
+    .#{$name} {
+      &__background {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    height: 8rem;
+    background-image: linear-gradient($purple, $purple_l_10);
+    transition: opacity 200ms ease-out;
+    opacity: 0;
+  }
+
+  &__logo,
+  &__navigation,
+  &__contact {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    user-select: none;
+  }
+
+  &__logo {
+    flex: 1;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 0.1625rem;
+  }
+
+  &__navigation {
+    justify-content: center;
+    gap: 2.5rem;
+    margin: auto;
+  }
+
+  &__contact {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  &__nav-link {
+    padding: 1rem;
+    font-weight: 300;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0.9;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.25rem;
+    }
+  }
+}

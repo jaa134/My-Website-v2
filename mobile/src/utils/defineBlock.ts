@@ -32,7 +32,7 @@ export function makeModifier(block: string, modifier: string) {
  * }) // => Block__element Block__element--active
  */
 export default function defineBlock(block: string) {
-  return function bem(element: string[] | string, ...modifiers: (string | Record<string, boolean>)[]): string {
+  return function bem(element?: string[] | string, ...modifiers: (string | Record<string, boolean>)[]): string {
     const classes: string[] = [];
     const elements: string[] = [];
 

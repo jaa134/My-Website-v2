@@ -1,0 +1,32 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'App';
+
+.#{$name} {
+  height: 100%;
+  width: 100%;
+  min-width: $app-min-width;
+  max-width: $app-max-width;
+  height: 10000px;
+  margin: auto;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__header {
+    position: sticky;
+    z-index: 1;
+    top: -2rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  &__body {
+    height: 100%;
+    width: 100%;
+  }
+}
