@@ -1,4 +1,4 @@
-export function makeModifier(block, modifier) {
+export function makeModifier(block: string, modifier: string) {
   return `${block}--${modifier}`;
 }
 
@@ -31,14 +31,10 @@ export function makeModifier(block, modifier) {
  *  'hidden': false
  * }) // => Block__element Block__element--active
  */
-export default function defineBlock(block) {
-  return function bem(element, ...modifiers) {
-    if (typeof element === 'function') {
-      return element(block);
-    }
-
-    const classes = [];
-    const elements = [];
+export default function defineBlock(block: string) {
+  return function bem(element: string[] | string, ...modifiers: (string | Record<string, boolean>)[]): string {
+    const classes: string[] = [];
+    const elements: string[] = [];
 
     if (Array.isArray(element)) {
       element.forEach((el) => {
@@ -59,9 +55,7 @@ export default function defineBlock(block) {
         elements.forEach((el) => {
           classes.push(makeModifier(el, modifier));
         });
-      }
-
-      if (typeof modifier === 'object') {
+      } else if (typeof modifier === 'object') {
         Object.keys(modifier).forEach((key) => {
           if (modifier[key]) {
             elements.forEach((el) => {

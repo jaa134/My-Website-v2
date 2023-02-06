@@ -1,6 +1,13 @@
-import { useEffect, useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-export function useEventListener(element, type, listener) {
+export function useEventListener(element: Window, type: keyof WindowEventMap, listener: EventListener): void;
+export function useEventListener(element: HTMLElement, type: keyof HTMLElementEventMap, listener: EventListener): void;
+
+export function useEventListener(
+  element: Window | HTMLElement,
+  type: keyof WindowEventMap | keyof HTMLElementEventMap,
+  listener: EventListener,
+) {
   useEffect(() => {
     if (!element) {
       return undefined;
@@ -26,36 +33,4 @@ export function useScrollPosition() {
   const getScrollPosition = useCallback(callback, []);
   useEventListener(window, 'scroll', getScrollPosition);
   return scrollPosition;
-}
-
-export function useDocument(url) {
-  const [result, setResult] = useState({
-    loading: true,
-    error: null,
-    blob: null,
-  });
-
-  useEffect(() => {
-    const controller = new AbortController();
-    fetch(url, { signal: controller.signal })
-      .then((res) => res.blob())
-      .then((blob) => {
-        setResult({
-          loading: false,
-          error: null,
-          blob,
-        });
-      })
-      .catch((error) => {
-        if (error.name !== 'AbortError') {
-          setResult({
-            loading: false,
-            error,
-            blob: null,
-          });
-        }
-      });
-    return () => controller.abort();
-  }, []);
-  return result;
 }
