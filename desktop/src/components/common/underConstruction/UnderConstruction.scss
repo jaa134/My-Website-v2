@@ -1,0 +1,30 @@
+@import 'src/scss/colors.scss';
+
+$name: 'UnderConstruction';
+
+.#{$name} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 4rem 2rem;
+  color: $white;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    font-size: 6rem;
+    font-weight: 700;
+    background-color: $purple;
+    border-radius: 50%;
+  }
+
+  &__description {
+    font-size: 5rem;
+  }
+}
