@@ -1,0 +1,8 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'ContactPage';
+
+.#{$name} {
+  width: 100%;
+}

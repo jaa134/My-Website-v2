@@ -1,3 +1,5 @@
+import 'src/components/pages/contactPage/ContactPage.scss';
+
 import React from 'react';
 
 import defineBlock from 'src/utils/defineBlock';

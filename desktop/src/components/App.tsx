@@ -11,11 +11,11 @@ import AppFooter from 'src/components/layout/appFooter/AppFooter';
 import AppHeader from 'src/components/layout/appHeader/AppHeader';
 import LazyPage from 'src/components/pages/LazyPage';
 
-const NotFoundPage = lazy(() => import('src/components/pages/NotFoundPage/NotFoundPage'));
-const HomePage = lazy(() => import('src/components/pages/HomePage/HomePage'));
-const AboutPage = lazy(() => import('src/components/pages/AboutPage/AboutPage'));
-const ContactPage = lazy(() => import('src/components/pages/ContactPage/ContactPage'));
-const ExperiencePage = lazy(() => import('src/components/pages/ExperiencePage/ExperiencePage'));
+const NotFoundPage = lazy(() => import('src/components/pages/notFoundPage/NotFoundPage'));
+const HomePage = lazy(() => import('src/components/pages/homePage/HomePage'));
+const AboutPage = lazy(() => import('src/components/pages/aboutPage/AboutPage'));
+const ContactPage = lazy(() => import('src/components/pages/contactPage/ContactPage'));
+const ExperiencePage = lazy(() => import('src/components/pages/experiencePage/ExperiencePage'));
 
 const bem = defineBlock('App');
 

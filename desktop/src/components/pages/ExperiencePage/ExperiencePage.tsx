@@ -1,3 +1,5 @@
+import 'src/components/pages/experiencePage/ExperiencePage.scss';
+
 import React from 'react';
 
 import defineBlock from 'src/utils/defineBlock';

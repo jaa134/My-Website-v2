@@ -1,4 +1,4 @@
-import 'src/components/pages/NotFoundPage/NotFoundPage.scss';
+import 'src/components/pages/notFoundPage/NotFoundPage.scss';
 
 import React from 'react';
 

@@ -1,0 +1,8 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'ExperiencePage';
+
+.#{$name} {
+  width: 100%;
+}
