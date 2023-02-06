@@ -1,7 +1,9 @@
 import 'src/components/layout/appHeader/AppHeader.scss';
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
+import { RouteName } from 'src/utils/constants';
 import defineBlock from 'src/utils/defineBlock';
 import { useScrollPosition } from 'src/utils/hooks';
 
@@ -20,10 +22,30 @@ const AppHeader = () => {
         <div className="monospace">J.Alspaw</div>
       </div>
       <div className={bem('navigation')}>
-        <div className={bem('nav-link')}>Home</div>
-        <div className={bem('nav-link')}>About Me</div>
-        <div className={bem('nav-link')}>Experience</div>
-        <div className={bem('nav-link')}>Contact</div>
+        <Link
+          className={bem('nav-link')}
+          to={RouteName.Home}
+        >
+          Home
+        </Link>
+        <Link
+          className={bem('nav-link')}
+          to={RouteName.About}
+        >
+          About Me
+        </Link>
+        <Link
+          className={bem('nav-link')}
+          to={RouteName.Experience}
+        >
+          Experience
+        </Link>
+        <Link
+          className={bem('nav-link')}
+          to={RouteName.Contact}
+        >
+          Contact
+        </Link>
       </div>
       <div className={bem('contact')}>
         <Button

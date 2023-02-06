@@ -44,7 +44,6 @@ module.exports = {
     },
   ],
   rules: {
-    'no-console': ['error', { allow: ['error'] }],
     'dot-notation': 'error',
     eqeqeq: 'error',
     'id-denylist': [
@@ -60,6 +59,7 @@ module.exports = {
       'undefined',
     ],
     'id-match': 'error',
+    'no-console': ['error', { allow: ['error'] }],
     'no-duplicate-imports': 'off',
     'no-eval': 'error',
     'no-lonely-if': 'error',
@@ -73,6 +73,7 @@ module.exports = {
       },
     ],
     'no-self-compare': 'error',
+    'no-shadow': 'off',
     'no-unneeded-ternary': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-rename': 'error',
@@ -115,6 +116,7 @@ module.exports = {
         ignoreDeclarationMerge: true,
       },
     ],
+    '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
 
     'simple-import-sort/imports': [

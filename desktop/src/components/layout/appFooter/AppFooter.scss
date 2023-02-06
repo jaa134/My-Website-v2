@@ -48,10 +48,15 @@ $lr_padding: 4rem;
     opacity: 0.9;
     letter-spacing: 0.0625rem;
     cursor: pointer;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
       text-underline-offset: 0.25rem;
+    }
+
+    &:visited {
+      color: unset;
     }
 
     &--main {

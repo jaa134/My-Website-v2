@@ -1,0 +1,18 @@
+@import 'src/scss/colors.scss';
+
+$name: 'LazyPage';
+
+.#{$name} {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: $white_a_25;
+  backdrop-filter: blur(0.5rem);
+}

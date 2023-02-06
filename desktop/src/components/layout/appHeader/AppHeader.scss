@@ -31,7 +31,7 @@ $name: 'AppHeader';
     left: 0;
     z-index: 0;
     height: 8rem;
-    background-image: linear-gradient($purple, $purple_l_10);
+    background-image: linear-gradient($purple, $purple_l_15);
     transition: opacity 200ms ease-out;
     opacity: 0;
   }
@@ -75,11 +75,16 @@ $name: 'AppHeader';
     font-weight: 300;
     font-size: 1.25rem;
     cursor: pointer;
+    text-decoration: none;
     opacity: 0.9;
 
     &:hover {
       text-decoration: underline;
       text-underline-offset: 0.25rem;
+    }
+
+    &:visited {
+      color: unset;
     }
   }
 }

@@ -8,17 +8,18 @@ $name: 'App';
   width: 100%;
   min-width: $app-min-width;
   max-width: $app-max-width;
-  height: 10000px;
   margin: auto;
 
   &__content {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
   }
 
   &__header {
     position: sticky;
-    z-index: 1;
+    z-index: 1000;
     top: -2rem;
     left: 0;
     right: 0;
@@ -26,8 +27,9 @@ $name: 'App';
   }
 
   &__body {
-    height: 100%;
-    width: 100%;
+    flex: 1;
+    padding: 2rem $app-vertical-margins 0 $app-vertical-margins;
+    min-height: $app-body-min-height;
   }
 
   &__footer {

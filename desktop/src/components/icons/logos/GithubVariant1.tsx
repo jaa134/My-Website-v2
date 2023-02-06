@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GithubVariant1 = () => (
+const GitHubVariant1 = () => (
   <svg
     viewBox="0 0 31 30"
     fill="none"
@@ -15,4 +15,4 @@ const GithubVariant1 = () => (
   </svg>
 );
 
-export default GithubVariant1;
+export default GitHubVariant1;
