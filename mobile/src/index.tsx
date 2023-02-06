@@ -1,9 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { isDesktop } from 'react-device-detect';
 
 import reportWebVitals from 'src/reportWebVitals';
 
 import 'src/index.scss';
+
+if (isDesktop) {
+  window.location.replace('https://desktop-app.jacob-alspaw.com');
+}
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

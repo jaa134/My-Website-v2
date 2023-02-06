@@ -1,9 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { isMobile } from 'react-device-detect';
 
 import reportWebVitals from 'src/reportWebVitals';
 
 import 'src/index.scss';
+
+if (isMobile) {
+  window.location.replace('https://mobile-app.jacob-alspaw.com');
+}
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
