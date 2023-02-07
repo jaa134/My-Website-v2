@@ -11,15 +11,12 @@ $name: 'HomePage';
   }
 
   &__waves {
-    &--inverted {
-      transform: rotateZ(180deg);
-    }
   }
 
   &__bubbles {
     width: 100%;
-    background-color: rgba(47, 2, 126, 0.84);
     height: 40rem;
+    background: linear-gradient(to bottom, #270d3c, #0e0e0e 82.4%);
   }
 
   &__experience {

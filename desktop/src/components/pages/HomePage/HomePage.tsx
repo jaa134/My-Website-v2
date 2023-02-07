@@ -5,6 +5,7 @@ import React from 'react';
 import defineBlock from 'src/utils/defineBlock';
 
 import WaveCanvas from 'src/components/layout/waveCanvas/WaveCanvas';
+import LogoBubble from 'src/components/common/logoBubble/LogoBubble';
 
 const bem = defineBlock('HomePage');
 
@@ -14,9 +15,8 @@ const HomePage = () => (
     <div className={bem('waves')}>
       <WaveCanvas />
     </div>
-    <div className={bem('bubbles')}></div>
-    <div className={bem('waves', 'inverted')}>
-      <WaveCanvas />
+    <div className={bem('bubbles')}>
+      <LogoBubble />
     </div>
     <div className={bem('experience')}></div>
     <div className={bem('projects')}></div>

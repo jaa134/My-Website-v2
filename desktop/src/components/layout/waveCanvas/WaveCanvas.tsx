@@ -12,8 +12,8 @@ const WaveCanvas: FC = () => {
 
   let frequency = 0.013;
   const waves = [
-    new WaveEntity([0.0211, 0.028, 0.015], 'rgba(47,2,126,0.6)'),
-    new WaveEntity([0.0122, 0.018, 0.005], 'rgba(47,2,126,0.6)'),
+    new WaveEntity([0.0211, 0.028, 0.015], 'rgba(39, 13, 60, 1)'),
+    new WaveEntity([0.0122, 0.018, 0.005], 'rgba(39, 13, 60, 0.75)'),
   ];
 
   const renderWaves = (canvasContext: CanvasRenderingContext2D) => {
