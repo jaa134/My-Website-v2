@@ -4,13 +4,12 @@ import React from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
-import UnderConstruction from 'src/components/common/underConstruction/UnderConstruction';
-
 const bem = defineBlock('AboutPage');
 
 const AboutPage = () => (
   <div className={bem()}>
-    <UnderConstruction />
+    <div className={bem('timeline')}></div>
+    <div className={bem('gallery')}></div>
   </div>
 );
 

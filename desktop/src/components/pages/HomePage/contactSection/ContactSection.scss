@@ -1,0 +1,29 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'ContactSection';
+
+.#{$name} {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__command {
+    font-size: 4rem;
+    font-weight: 300;
+    color: $white;
+
+    &--main {
+      color: $turquoise;
+    }
+  }
+}
