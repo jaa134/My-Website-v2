@@ -5,9 +5,10 @@ import React from 'react';
 import defineBlock from 'src/utils/defineBlock';
 
 import WaveCanvas from 'src/components/layout/waveCanvas/WaveCanvas';
-import LogoBubble from 'src/components/common/logoBubble/LogoBubble';
 import AboutSection from 'src/components/pages/homePage/aboutSection/AboutSection';
-import ContactSection from './contactSection/ContactSection';
+import ContactSection from 'src/components/pages/homePage/contactSection/ContactSection';
+import BubblesSection from 'src/components/pages/homePage/bubblesSection/BubblesSection';
+import ExperienceSection from './experienceSection/ExperienceSection';
 
 const bem = defineBlock('HomePage');
 
@@ -20,9 +21,11 @@ const HomePage = () => (
       <WaveCanvas />
     </div>
     <div className={bem('bubbles')}>
-      <LogoBubble />
+      <BubblesSection />
     </div>
-    <div className={bem('experience')}></div>
+    <div className={bem('experience')}>
+      <ExperienceSection />
+    </div>
     <div className={bem('contact')}>
       <ContactSection />
     </div>

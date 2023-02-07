@@ -1,0 +1,60 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'ExperienceSection';
+
+.#{$name} {
+  box-sizing: border-box;
+  padding: 5rem $app-vertical-margins;
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.0625rem;
+    color: $purple_l_20;
+  }
+
+  &__position {
+    font-weight: 300;
+    font-size: 1.375rem;
+    letter-spacing: 0.0625rem;
+    color: $white;
+
+    &--2 {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__bar {
+    margin-bottom: 2rem;
+    height: 1px;
+    width: 20rem;
+    background-color: $white;
+    opacity: 0.9;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 30rem;
+  }
+
+  &__card {
+    flex: 1;
+    height: 25rem;
+    background: $purple;
+    background-image: radial-gradient(137.98% 137.98% at 24.23% 20.46%, $purple 16.15%, #49deff 100%);
+    transition: 200ms ease-out;
+
+    &:hover {
+      background-image: unset;
+      transform: scale(1.15);
+      margin: 1.75rem;
+    }
+  }
+}

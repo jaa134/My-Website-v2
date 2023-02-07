@@ -1,0 +1,62 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'BubblesSection';
+
+.#{$name} {
+  position: relative;
+  width: 80rem;
+  height: 100%;
+  margin: auto;
+
+  & > {
+    * {
+      position: absolute;
+    }
+
+    :nth-child(1) {
+      top: 4rem;
+      left: 0rem;
+    }
+
+    :nth-child(2) {
+      top: -1rem;
+      left: 15rem;
+    }
+
+    :nth-child(3) {
+      top: -5rem;
+      left: 25rem;
+    }
+
+    :nth-child(4) {
+      top: 10rem;
+      left: 43rem;
+    }
+
+    :nth-child(5) {
+      top: -5rem;
+      left: 53rem;
+    }
+
+    :nth-child(6) {
+      top: 30rem;
+      left: 8rem;
+    }
+
+    :nth-child(7) {
+      top: 12rem;
+      left: 16rem;
+    }
+
+    :nth-child(8) {
+      top: 22rem;
+      left: 40rem;
+    }
+
+    :nth-child(9) {
+      top: 22rem;
+      left: 65rem;
+    }
+  }
+}
