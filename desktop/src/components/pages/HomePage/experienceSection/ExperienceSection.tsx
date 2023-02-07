@@ -9,8 +9,8 @@ const bem = defineBlock('ExperienceSection');
 const ExperienceSection = () => (
   <div className={bem()}>
     <div className={bem('title')}>What I Do</div>
-    <div className={bem('position', '1')}>Project Management /</div>
-    <div className={bem('position', '2')}>Front-End Development /</div>
+    <div className={bem('subtitle', '1')}>Project Management /</div>
+    <div className={bem('subtitle', '2')}>Front-End Development /</div>
     <div className={bem('bar')}></div>
     <div className={bem('cards')}>
       <div className={bem('card')}></div>

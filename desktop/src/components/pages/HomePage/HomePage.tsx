@@ -9,6 +9,7 @@ import AboutSection from 'src/components/pages/homePage/aboutSection/AboutSectio
 import ContactSection from 'src/components/pages/homePage/contactSection/ContactSection';
 import BubblesSection from 'src/components/pages/homePage/bubblesSection/BubblesSection';
 import ExperienceSection from './experienceSection/ExperienceSection';
+import GlobeSection from './globeSection/GlobeSection';
 
 const bem = defineBlock('HomePage');
 
@@ -29,7 +30,9 @@ const HomePage = () => (
     <div className={bem('contact')}>
       <ContactSection />
     </div>
-    <div className={bem('globe')}></div>
+    <div className={bem('globe')}>
+      <GlobeSection />
+    </div>
   </div>
 );
 

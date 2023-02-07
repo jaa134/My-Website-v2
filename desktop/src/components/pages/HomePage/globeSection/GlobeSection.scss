@@ -1,7 +1,7 @@
 @import 'src/scss/colors.scss';
 @import 'src/scss/layout.scss';
 
-$name: 'ExperienceSection';
+$name: 'GlobeSection';
 
 .#{$name} {
   box-sizing: border-box;
@@ -34,27 +34,5 @@ $name: 'ExperienceSection';
     width: 20rem;
     background-color: $white;
     opacity: 0.9;
-  }
-
-  &__cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    height: 30rem;
-  }
-
-  &__card {
-    flex: 1;
-    height: 25rem;
-    background: $purple;
-    background-image: radial-gradient(137.98% 137.98% at 24.23% 20.46%, $purple 16.15%, #49deff 100%);
-    transition: 200ms ease-out;
-
-    &:hover {
-      background-image: unset;
-      transform: scale(1.15);
-      margin: 1.75rem;
-    }
   }
 }
