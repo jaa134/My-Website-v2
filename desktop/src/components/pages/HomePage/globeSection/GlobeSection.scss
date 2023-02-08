@@ -4,6 +4,7 @@
 $name: 'GlobeSection';
 
 .#{$name} {
+  position: relative;
   box-sizing: border-box;
   padding: 5rem $app-vertical-margins;
   width: 100%;
@@ -34,5 +35,18 @@ $name: 'GlobeSection';
     width: 20rem;
     background-color: $white;
     opacity: 0.9;
+  }
+
+  &__globe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+
+    canvas {
+      cursor: grab;
+    }
   }
 }

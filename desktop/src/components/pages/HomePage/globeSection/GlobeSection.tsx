@@ -1,52 +1,37 @@
 import 'src/components/pages/homePage/globeSection/GlobeSection.scss';
 
 import React, { useEffect, useRef } from 'react';
-import * as THREE from 'three';
 
 import defineBlock from 'src/utils/defineBlock';
+import { GlobeScene } from 'src/components/pages/homePage/globeSection/GlobeScene';
 
 const bem = defineBlock('GlobeSection');
+
+const GLOBE_HEIGHT = 900;
+const GLOBE_WIDTH = 900;
 
 const GlobeSection = () => {
   const globeMountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (globeMountRef.current) {
-      var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      var renderer = new THREE.WebGLRenderer();
-
-      renderer.setSize(window.innerWidth, window.innerHeight);
-
-      globeMountRef.current.appendChild(renderer.domElement);
-
-      var geometry = new THREE.BoxGeometry(1, 1, 1);
-      var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-      var cube = new THREE.Mesh(geometry, material);
-
-      scene.add(cube);
-      camera.position.z = 5;
-
-      var animate = function () {
-        requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
+      const onLoadError = () => {
+        // noop
       };
-
-      animate();
-
+      const scene = new GlobeScene(globeMountRef.current, GLOBE_HEIGHT, GLOBE_WIDTH, onLoadError);
+      scene.init();
       return () => {
-        if (globeMountRef.current) {
-          globeMountRef.current.removeChild(renderer.domElement);
-        }
+        scene.destroy();
       };
     }
     return;
   }, []);
 
   return (
-    <div className={bem()}>
+    <div
+      className={bem()}
+      style={{ height: GLOBE_HEIGHT }}
+    >
       <div className={bem('title')}>About Me</div>
       <div className={bem('subtitle', '1')}>Traveler / Thrill Seeker /</div>
       <div className={bem('subtitle', '2')}>Littleton, Colorado /</div>
@@ -54,6 +39,7 @@ const GlobeSection = () => {
       <div
         ref={globeMountRef}
         className={bem('globe')}
+        style={{ width: GLOBE_WIDTH }}
       ></div>
     </div>
   );

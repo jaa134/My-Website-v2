@@ -16,11 +16,11 @@ const LogoBubble: FunctionComponent<Props> = ({ size, active }) => {
   return (
     <div className={bem('', size, { active })}>
       <svg
-        viewBox="0 0 406 534"
+        viewBox="0 0 460 534"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g transform="translate(-32 32)">
+        <g transform="translate(-5 32)">
           <g opacity="0.72">
             <g
               opacity="0.5"
@@ -323,11 +323,11 @@ const LogoBubble: FunctionComponent<Props> = ({ size, active }) => {
       </svg>
 
       <svg
-        viewBox="0 0 406 534"
+        viewBox="0 0 460 534"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g transform="translate(-32 0)">
+        <g transform="translate(-5 0)">
           <g
             opacity="0.5"
             filter="url(#filter0_f_89_348)"

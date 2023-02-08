@@ -104,30 +104,35 @@ const AppHeader = () => (
         <a
           className={bem('contact-option')}
           href={Link.LinkedIn}
+          target="_blank"
         >
           <LinkedinVariant1 />
         </a>
         <a
           className={bem('contact-option')}
           href={Link.GitHub}
+          target="_blank"
         >
           <GitHubVariant1 />
         </a>
         <a
           className={bem('contact-option')}
           href={Link.Facebook}
+          target="_blank"
         >
           <FacebookVariant1 />
         </a>
         <a
           className={bem('contact-option')}
           href={Link.Instagram}
+          target="_blank"
         >
           <InstagramVariant1 />
         </a>
         <a
           className={bem('contact-option')}
           href={Link.Twitter}
+          target="_blank"
         >
           <TwitterVariant1 />
         </a>
