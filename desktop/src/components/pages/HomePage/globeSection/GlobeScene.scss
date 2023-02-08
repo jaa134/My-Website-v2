@@ -1,0 +1,11 @@
+@import 'src/scss/colors.scss';
+
+$name: 'GlobeScene';
+
+.#{$name} {
+  &__marker {
+    svg {
+      fill: $purple_l_20;
+    }
+  }
+}
