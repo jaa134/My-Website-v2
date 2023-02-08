@@ -13,14 +13,18 @@ $name: 'Button';
   border-width: 0.125rem;
   border-style: solid;
   border-color: transparent;
+  text-align: center;
+  font-size: 1.125rem;
   user-select: none;
   cursor: pointer;
   transition: 200ms ease-in;
   appearance: none;
+  letter-spacing: 0.03125rem;
+
   &--medium {
     padding: 0.5rem 1.75rem;
+    min-width: 8rem;
     font-weight: 300;
-    font-size: 1.125rem;
   }
 
   &--large {

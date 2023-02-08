@@ -5,5 +5,21 @@ $name: 'ContactPage';
 
 .#{$name} {
   width: 100%;
-  height: 100rem;
+
+  &__options {
+    padding-top: 8rem;
+  }
+
+  &__form {
+    padding-top: 6rem;
+  }
+
+  &__socials {
+    padding-top: 8rem;
+  }
+
+  &__globe {
+    padding: 10rem 0 8rem 0;
+    width: 100%;
+  }
 }

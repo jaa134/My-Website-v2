@@ -1,14 +1,14 @@
-import 'src/components/pages/homePage/globeSection/GlobeSection.scss';
+import 'src/components/pages/contactPage/globeSection/GlobeSection.scss';
 
 import React, { useEffect, useRef } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
-import { GlobeScene } from 'src/components/pages/homePage/globeSection/GlobeScene';
+import { GlobeScene } from 'src/components/pages/contactPage/globeSection/GlobeScene';
 
-const bem = defineBlock('HomeGlobeSection');
+const bem = defineBlock('ContactGlobeSection');
 
-const GLOBE_HEIGHT = 900;
-const GLOBE_WIDTH = 900;
+const GLOBE_HEIGHT = 600;
+const GLOBE_WIDTH = 600;
 
 const GlobeSection = () => {
   const globeMountRef = useRef<HTMLDivElement>(null);
@@ -32,10 +32,13 @@ const GlobeSection = () => {
       className={bem()}
       style={{ height: GLOBE_HEIGHT }}
     >
-      <div className={bem('title')}>About Me</div>
-      <div className={bem('subtitle', '1')}>Traveler / Thrill Seeker /</div>
-      <div className={bem('subtitle', '2')}>Littleton, Colorado /</div>
-      <div className={bem('bar')}></div>
+      <div className={bem('title')}>
+        Let's Meet For Coffee<span className={bem('symbol')}>&#123;</span>
+      </div>
+      <div className={bem('subtitle')}>
+        Schedule a meeting with me! If I'm not in the mountains hiking, camping, climbing, or skiing, then I would love
+        to chat.
+      </div>
       <div
         ref={globeMountRef}
         className={bem('globe')}

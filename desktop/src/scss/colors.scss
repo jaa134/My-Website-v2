@@ -3,8 +3,13 @@
 $black: #000000;
 
 $white: #ffffff;
+$white_a_10: color.adjust($white, $alpha: -0.9);
+$white_a_20: color.adjust($white, $alpha: -0.8);
 $white_a_25: color.adjust($white, $alpha: -0.75);
+$white_a_33: color.adjust($white, $alpha: -0.67);
 $white_a_50: color.adjust($white, $alpha: -0.5);
+$white_a_75: color.adjust($white, $alpha: -0.25);
+$white_a_90: color.adjust($white, $alpha: -0.1);
 
 $purple: #640dfb;
 $purple_l_10: color.adjust($purple, $lightness: 10%);

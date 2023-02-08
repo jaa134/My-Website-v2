@@ -24,6 +24,11 @@ body {
   width: 100%;
 }
 
+input,
+textarea {
+  font-family: 'Red Hat Text', sans-serif;
+}
+
 .monospace {
   font-family: 'Roboto Mono', monospace;
 }

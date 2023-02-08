@@ -1,0 +1,78 @@
+@import 'src/scss/colors.scss';
+
+$name: 'PageHeader';
+
+.#{$name} {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+  color: $white;
+
+  &--pos {
+    &-1 {
+      svg {
+        &:nth-child(1) {
+          left: -5rem;
+          top: 0rem;
+        }
+
+        &:nth-child(2) {
+          right: -5rem;
+          top: 5rem;
+        }
+      }
+    }
+
+    &-2 {
+      svg {
+        &:nth-child(1) {
+          left: -5rem;
+          top: 5rem;
+        }
+
+        &:nth-child(2) {
+          right: -5rem;
+          top: 0rem;
+        }
+      }
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin: auto;
+    font-size: 5rem;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &__subtitle {
+    margin: auto;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    opacity: 0.9;
+  }
+
+  &__description {
+    margin: auto;
+    width: 27rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    opacity: 0.8;
+  }
+
+  svg {
+    position: absolute;
+    width: 2.25rem;
+    height: 2.25rem;
+    fill: $purple;
+  }
+}

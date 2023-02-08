@@ -24,7 +24,7 @@ const EARTH_RADIUS_KM = 6371; // km
 const SAT_SIZE = 100; // km
 const TIME_STEP = 1000; // per frame
 
-const bem = defineBlock('GlobeScene');
+const bem = defineBlock('HomeGlobeScene');
 
 export class GlobeScene {
   private mountEl: HTMLElement;
@@ -35,7 +35,7 @@ export class GlobeScene {
   constructor(mountEl: HTMLElement, height: number, width: number, onLoadError: (error: unknown) => void) {
     this.mountEl = mountEl;
 
-    this.globe = Globe();
+    this.globe = Globe() as unknown as GlobeInstance;
     this.globe.height(height);
     this.globe.width(width);
 
