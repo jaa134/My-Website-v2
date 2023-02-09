@@ -5,6 +5,9 @@ import React from 'react';
 import defineBlock from 'src/utils/defineBlock';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
+import GallerySection from 'src/components/pages/aboutPage/gallerySection/GallerySection';
+import TimelineSection from 'src/components/pages/aboutPage/timelineSection/TimelineSection';
+import LineSplit from 'src/components/layout/lineSplit/LineSplit';
 
 const bem = defineBlock('AboutPage');
 
@@ -17,8 +20,15 @@ const AboutPage = () => (
         description="I'm an enthusiastic and creative technologist with hands-on skills in a wide range of software, tools, and programming languages."
       />
     </div>
-    <div className={bem('timeline')} />
-    <div className={bem('gallery')} />
+    <div className={bem('line-split')}>
+      <LineSplit />
+    </div>
+    <div className={bem('timeline')}>
+      <TimelineSection />
+    </div>
+    <div className={bem('gallery')}>
+      <GallerySection />
+    </div>
   </div>
 );
 

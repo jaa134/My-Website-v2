@@ -6,13 +6,15 @@ $name: 'AboutPage';
 .#{$name} {
   width: 100%;
 
+  &__line-split {
+    padding: 8rem 0;
+  }
+
   &__timeline {
-    width: 100%;
-    height: 75rem;
+    padding: 10rem 0 2rem 0;
   }
 
   &__gallery {
     width: 100%;
-    height: 75rem;
   }
 }

@@ -1,0 +1,17 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'GallerySection';
+
+.#{$name} {
+  padding: 0 10rem 10rem 10rem;
+
+  &__title {
+    margin-bottom: 10rem;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 300;
+    letter-spacing: 0.03125rem;
+    color: $purple;
+  }
+}

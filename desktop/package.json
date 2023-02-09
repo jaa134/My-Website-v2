@@ -73,6 +73,7 @@
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
+    "react-photo-album": "^2.0.1",
     "react-router-dom": "^6.8.0",
     "satellite.js": "^5.0.0",
     "three": "^0.149.0",
