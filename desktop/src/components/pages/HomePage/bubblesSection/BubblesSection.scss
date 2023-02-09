@@ -10,10 +10,6 @@ $name: 'BubblesSection';
   margin: auto;
 
   & > {
-    * {
-      position: absolute;
-    }
-
     :nth-child(1) {
       top: 4rem;
       left: 0rem;

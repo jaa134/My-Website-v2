@@ -5,9 +5,9 @@ import React from 'react';
 import defineBlock from 'src/utils/defineBlock';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
-import OptionsSection from 'src/components/pages/contactPage/optionsSection/OptionsSection';
 import FormSection from 'src/components/pages/contactPage/formSection/FormSection';
 import GlobeSection from 'src/components/pages/contactPage/globeSection/GlobeSection';
+import OptionsSection from 'src/components/pages/contactPage/optionsSection/OptionsSection';
 import SocialsSection from 'src/components/pages/contactPage/socialsSection/SocialsSection';
 
 const bem = defineBlock('ContactPage');

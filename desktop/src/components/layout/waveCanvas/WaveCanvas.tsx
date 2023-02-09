@@ -1,9 +1,10 @@
 import 'src/components/layout/waveCanvas/WaveCanvas.scss';
 
-import { useRef, FC, useEffect } from 'react';
+import React, { FC, useEffect, useRef } from 'react';
+
+import defineBlock from 'src/utils/defineBlock';
 
 import WaveEntity from 'src/components/layout/waveCanvas/WaveEntity';
-import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('WaveCanvas');
 
@@ -40,7 +41,7 @@ const WaveCanvas: FC = () => {
         ref={canvasRef}
         width={1500}
         height={600}
-      ></canvas>
+      />
     </div>
   );
 };

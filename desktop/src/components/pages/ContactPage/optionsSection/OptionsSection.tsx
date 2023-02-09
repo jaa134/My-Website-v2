@@ -2,13 +2,14 @@ import 'src/components/pages/contactPage/optionsSection/OptionsSection.scss';
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
 import { EMAIL_ADDRESS, LOCATION, PHONE_NUMBER } from 'src/utils/constants';
-import Phone from 'src/components/icons/general/Phone';
+import defineBlock from 'src/utils/defineBlock';
+import notify from 'src/utils/notificatons';
+import copyText from 'src/utils/textUtils';
+
 import Email from 'src/components/icons/general/Email';
 import Location from 'src/components/icons/general/Location';
-import copyText from 'src/utils/textUtils';
-import notify from 'src/utils/notificatons';
+import Phone from 'src/components/icons/general/Phone';
 
 const bem = defineBlock('OptionsSection');
 
@@ -44,7 +45,9 @@ const OptionsSection = () => {
     >
       <div
         className={bem('icon')}
-        onClick={() => onCopy(optionData.value)}
+        onClick={() => {
+          onCopy(optionData.value);
+        }}
       >
         {optionData.icon}
       </div>

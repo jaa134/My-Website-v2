@@ -1,10 +1,10 @@
 import 'src/components/pages/homePage/globeSection/GlobeScene.scss';
 
-import { DoubleSide, Mesh, MeshLambertMaterial, SphereGeometry } from 'three';
-
 import Globe, { GlobeInstance } from 'globe.gl';
-import * as topojson from 'topojson-client';
 import * as satellite from 'satellite.js';
+import { DoubleSide, Mesh, MeshLambertMaterial, SphereGeometry } from 'three';
+import * as topojson from 'topojson-client';
+
 import defineBlock from 'src/utils/defineBlock';
 
 const globeURL = new URL('src/assets/datasets/globe.json?url', import.meta.url).href;
@@ -12,22 +12,23 @@ const satellitesURL = new URL('src/assets/datasets/satellites.txt?url', import.m
 
 const markerSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>`;
 
-type MarkerData = {
+interface MarkerData {
   lat: number;
   lng: number;
   size: number;
-};
+}
 
 // @ts-ignore
-const radiansToDegrees: (radian: number) => number = satellite.radiansToDegrees;
+const { radiansToDegrees } = satellite as { radiansToDegrees: (radians: number) => number };
 const EARTH_RADIUS_KM = 6371; // km
 const SAT_SIZE = 100; // km
 const TIME_STEP = 1000; // per frame
 
 const bem = defineBlock('HomeGlobeScene');
 
-export class GlobeScene {
+export default class GlobeScene {
   private mountEl: HTMLElement;
+
   private globe: GlobeInstance;
 
   onLoadError: (error: unknown) => void;
@@ -57,7 +58,11 @@ export class GlobeScene {
     // Country layer
     fetch(globeURL)
       .then((res) => res.json())
-      .then((landTopo) => {
+      .then((landTopo: TopoJSON.Topology<TopoJSON.Objects<GeoJSON.GeoJsonProperties>>) => {
+        if (!landTopo.objects.land) {
+          throw new Error('Globe JSON is malformed!');
+        }
+
         const geoJSON = topojson.feature(landTopo, landTopo.objects.land) as unknown as GeoJSON.FeatureCollection;
         this.globe
           .polygonsData(geoJSON.features)
@@ -82,7 +87,6 @@ export class GlobeScene {
 
       el.style.setProperty('pointer-events', 'auto');
       el.style.cursor = 'pointer';
-      el.onclick = () => console.info(data);
       return el;
     });
 
@@ -92,7 +96,7 @@ export class GlobeScene {
     this.globe.objectThreeObject(() => {
       const satMesh = new Mesh(satGeometry, satMaterial);
       satMesh.addEventListener('pointerdown', () => {
-        console.log('You clicked  satellite!');
+        // TODO
       });
       return satMesh;
     });
@@ -129,24 +133,26 @@ export class GlobeScene {
 
           // Update satellite positions
           const gmst = satellite.gstime(time);
-          satData.forEach((d) => {
-            const eci = satellite.propagate(d.satrec, time);
-            if (!!eci.position) {
-              const gdPos = satellite.eciToGeodetic(eci.position as satellite.EciVec3<number>, gmst);
-              d.lat = radiansToDegrees(gdPos.latitude);
-              d.lng = radiansToDegrees(gdPos.longitude);
-              d.alt = gdPos.height / EARTH_RADIUS_KM + 1000;
-            }
-          });
-
-          this.globe.objectsData(satData);
+          this.globe.objectsData(
+            satData.map((d) => {
+              const data = { ...d };
+              const eci = satellite.propagate(data.satrec, time);
+              if (eci.position) {
+                const gdPos = satellite.eciToGeodetic(eci.position as satellite.EciVec3<number>, gmst);
+                data.lat = radiansToDegrees(gdPos.latitude);
+                data.lng = radiansToDegrees(gdPos.longitude);
+                data.alt = gdPos.height / EARTH_RADIUS_KM + 1000;
+              }
+              return data;
+            }),
+          );
         };
 
         frameTicker();
       });
   }
 
-  async destroy() {
+  destroy() {
     this.globe._destructor();
   }
 }

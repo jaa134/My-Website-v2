@@ -3,6 +3,7 @@ import 'src/components/pages/homePage/contactSection/ContactSection.scss';
 import React from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
+
 import Button from 'src/components/common/button/Button';
 
 const bem = defineBlock('ContactSection');

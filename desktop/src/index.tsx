@@ -4,9 +4,9 @@ import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 
 import App from 'src/components/App';
+import ScrollToTop from 'src/components/common/scrollToTop/ScrollToTop';
 
 import reportWebVitals from 'src/reportWebVitals';
-import ScrollToTop from 'src/components/common/scrollToTop/ScrollToTop';
 
 if (isMobile) {
   window.location.replace('https://mobile-app.jacob-alspaw.com');

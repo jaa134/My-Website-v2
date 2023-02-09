@@ -9,11 +9,11 @@ import Star from 'src/components/icons/general/Star';
 
 const bem = defineBlock('PageHeader');
 
-type Props = {
+interface Props {
   title: string;
   subtitle: string;
   description: string;
-};
+}
 
 const PageHeader: FunctionComponent<Props> = ({ title, subtitle, description }) => {
   const [position] = useState(Math.ceil(Math.random() * 2));

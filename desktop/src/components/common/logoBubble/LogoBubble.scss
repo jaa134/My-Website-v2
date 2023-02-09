@@ -3,31 +3,70 @@
 $name: 'LogoBubble';
 
 .#{$name} {
-  position: relative;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 
   &--s1 {
+    height: 8.125rem;
     width: 7rem;
+
+    .#{$name} {
+      &__logo {
+        width: 2rem;
+      }
+    }
   }
 
   &--s2 {
+    height: 12.75rem;
     width: 11rem;
+
+    .#{$name} {
+      &__logo {
+        width: 3.25rem;
+      }
+    }
   }
 
   &--s3 {
+    height: 17.375rem;
     width: 15rem;
+
+    .#{$name} {
+      &__logo {
+        width: 4.5rem;
+      }
+    }
   }
 
   &--s4 {
+    height: 22rem;
     width: 19rem;
+
+    .#{$name} {
+      &__logo {
+        width: 5.75rem;
+      }
+    }
   }
 
   &--s5 {
+    height: 26.625rem;
     width: 23rem;
+
+    .#{$name} {
+      &__logo {
+        width: 7rem;
+      }
+    }
   }
 
   > svg {
     position: absolute;
+    z-index: 2;
     width: 100%;
     transition: opacity 200ms ease-in;
 
@@ -47,6 +86,13 @@ $name: 'LogoBubble';
       }
 
       &:last-child {
+        opacity: 0.5;
+      }
+    }
+
+    .#{$name} {
+      &__logo {
+        filter: brightness(80%) grayscale(10%);
         opacity: 0.75;
       }
     }
@@ -60,8 +106,28 @@ $name: 'LogoBubble';
       }
 
       &:last-child {
+        opacity: 0.75;
+      }
+    }
+
+    .#{$name} {
+      &__logo {
+        filter: brightness(100%) grayscale(0%);
         opacity: 1;
       }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(80%) grayscale(100%);
+    opacity: 0.1;
+    transition: opacity 200ms ease-in;
+
+    svg {
+      width: 100%;
     }
   }
 }

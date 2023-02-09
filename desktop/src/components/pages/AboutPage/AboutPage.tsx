@@ -17,8 +17,8 @@ const AboutPage = () => (
         description="I'm an enthusiastic and creative technologist with hands-on skills in a wide range of software, tools, and programming languages."
       />
     </div>
-    <div className={bem('timeline')}></div>
-    <div className={bem('gallery')}></div>
+    <div className={bem('timeline')} />
+    <div className={bem('gallery')} />
   </div>
 );
 

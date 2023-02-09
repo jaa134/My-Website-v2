@@ -6,10 +6,10 @@ import defineBlock from 'src/utils/defineBlock';
 
 import WaveCanvas from 'src/components/layout/waveCanvas/WaveCanvas';
 import AboutSection from 'src/components/pages/homePage/aboutSection/AboutSection';
-import ContactSection from 'src/components/pages/homePage/contactSection/ContactSection';
 import BubblesSection from 'src/components/pages/homePage/bubblesSection/BubblesSection';
-import ExperienceSection from './experienceSection/ExperienceSection';
-import GlobeSection from './globeSection/GlobeSection';
+import ContactSection from 'src/components/pages/homePage/contactSection/ContactSection';
+import ExperienceSection from 'src/components/pages/homePage/experienceSection/ExperienceSection';
+import GlobeSection from 'src/components/pages/homePage/globeSection/GlobeSection';
 
 const bem = defineBlock('HomePage');
 

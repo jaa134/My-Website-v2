@@ -3,6 +3,7 @@ import 'src/components/pages/homePage/aboutSection/AboutSection.scss';
 import React from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
+
 import Button from 'src/components/common/button/Button';
 import Star from 'src/components/icons/general/Star';
 
@@ -15,7 +16,7 @@ const AboutSection = () => (
       <div className={bem('title', '1')}>Front-End Lead,</div>
       <div className={bem('title', '2')}>Full-Stack Software Developer</div>
       <div className={bem('statement')}>
-        I'm an enthusiastic and creative technologist with hands-on skills in a wide range of software, tools, and
+        I&#39;m an enthusiastic and creative technologist with hands-on skills in a wide range of software, tools, and
         programming languages.
       </div>
       <div className={bem('contact')}>
@@ -27,11 +28,20 @@ const AboutSection = () => (
         />
       </div>
     </div>
-    <div className={bem('spacer')}></div>
+    <div className={bem('spacer')} />
     <div className={bem('picture')}>
-      <img src="static/images/test.png" />
-      <img src="static/images/test.png" />
-      <img src="static/images/test.png" />
+      <img
+        src="static/images/test.png"
+        alt=""
+      />
+      <img
+        src="static/images/test.png"
+        alt=""
+      />
+      <img
+        src="static/images/test.png"
+        alt=""
+      />
       <div className={bem('floating-symbol', '1')}>&#123;</div>
       <div className={bem('floating-symbol', '2')}>&#62;</div>
       <div className={bem('floating-symbol', '3')}>

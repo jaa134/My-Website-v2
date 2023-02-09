@@ -5,12 +5,12 @@ import React from 'react';
 import { Link } from 'src/utils/constants';
 import defineBlock from 'src/utils/defineBlock';
 
-import FacebookVariant1 from 'src/components/icons/logos/FacebookVariant1';
-import GitHubVariant1 from 'src/components/icons/logos/GitHubVariant1';
-import InstagramVariant1 from 'src/components/icons/logos/InstagramVariant1';
-import LinkedinVariant1 from 'src/components/icons/logos/LinkedinVariant1';
-import MyLogoVariant2 from 'src/components/icons/logos/MyLogoVariant2';
-import TwitterVariant1 from 'src/components/icons/logos/TwitterVariant1';
+import FacebookVariant1 from 'src/components/icons/logos/socials/FacebookVariant1';
+import GitHubVariant1 from 'src/components/icons/logos/socials/GitHubVariant1';
+import InstagramVariant1 from 'src/components/icons/logos/socials/InstagramVariant1';
+import LinkedinVariant1 from 'src/components/icons/logos/socials/LinkedinVariant1';
+import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
+import TwitterVariant1 from 'src/components/icons/logos/socials/TwitterVariant1';
 
 const bem = defineBlock('AppFooter');
 
@@ -105,6 +105,7 @@ const AppHeader = () => (
           className={bem('contact-option')}
           href={Link.LinkedIn}
           target="_blank"
+          rel="noreferrer"
         >
           <LinkedinVariant1 />
         </a>
@@ -112,6 +113,7 @@ const AppHeader = () => (
           className={bem('contact-option')}
           href={Link.GitHub}
           target="_blank"
+          rel="noreferrer"
         >
           <GitHubVariant1 />
         </a>
@@ -119,6 +121,7 @@ const AppHeader = () => (
           className={bem('contact-option')}
           href={Link.Facebook}
           target="_blank"
+          rel="noreferrer"
         >
           <FacebookVariant1 />
         </a>
@@ -126,6 +129,7 @@ const AppHeader = () => (
           className={bem('contact-option')}
           href={Link.Instagram}
           target="_blank"
+          rel="noreferrer"
         >
           <InstagramVariant1 />
         </a>
@@ -133,6 +137,7 @@ const AppHeader = () => (
           className={bem('contact-option')}
           href={Link.Twitter}
           target="_blank"
+          rel="noreferrer"
         >
           <TwitterVariant1 />
         </a>

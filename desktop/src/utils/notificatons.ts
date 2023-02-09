@@ -42,16 +42,16 @@ const notify = (message: string, timeout = 5000, animationDuration = 1000) => {
   notificationEl.appendChild(closeEl);
   container.appendChild(notificationEl);
 
-  const autoCloseTimeout = setTimeout(() => {
-    close();
-  }, timeout);
-
   const close = () => {
     notificationEl.setAttribute('class', bem('', 'closed'));
     setTimeout(() => {
       container.removeChild(notificationEl);
     }, animationDuration);
   };
+
+  const autoCloseTimeout = setTimeout(() => {
+    close();
+  }, timeout);
 
   closeEl.addEventListener('click', () => {
     clearTimeout(autoCloseTimeout);

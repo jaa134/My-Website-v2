@@ -8,7 +8,7 @@ import defineBlock from 'src/utils/defineBlock';
 import { useScrollPosition } from 'src/utils/hooks';
 
 import Button from 'src/components/common/button/Button';
-import MyLogoVariant1 from 'src/components/icons/logos/MyLogoVariant1';
+import MyLogoVariant1 from 'src/components/icons/logos/personal/MyLogoVariant1';
 
 const bem = defineBlock('AppHeader');
 
