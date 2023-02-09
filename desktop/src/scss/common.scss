@@ -24,6 +24,13 @@ body {
   width: 100%;
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
 input,
 textarea {
   font-family: 'Red Hat Text', sans-serif;

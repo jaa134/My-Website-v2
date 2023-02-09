@@ -1,0 +1,9 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'WorkSection';
+
+.#{$name} {
+  padding: 8rem $app-vertical-margins;
+  height: 50rem;
+}

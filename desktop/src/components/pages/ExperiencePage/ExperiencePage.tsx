@@ -5,6 +5,9 @@ import React from 'react';
 import defineBlock from 'src/utils/defineBlock';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
+import WorkSection from 'src/components/pages/experiencePage/workSection/WorkSection';
+import SkillsSection from 'src/components/pages/experiencePage/skillsSection/SkillsSection';
+import ProjectsSection from 'src/components/pages/experiencePage/projectsSection/ProjectsSection';
 
 const bem = defineBlock('ExperiencePage');
 
@@ -20,9 +23,15 @@ const ExperiencePage = () => {
           description={`A total of ${yearsOfExp} years in industry designing, developing, and launching highly responsive websites and mobile applications.`}
         />
       </div>
-      <div className={bem('work')} />
-      <div className={bem('tools')} />
-      <div className={bem('projects')} />
+      <div className={bem('work')}>
+        <WorkSection />
+      </div>
+      <div className={bem('skills')}>
+        <SkillsSection />
+      </div>
+      <div className={bem('projects')}>
+        <ProjectsSection />
+      </div>
     </div>
   );
 };

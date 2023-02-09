@@ -1,0 +1,8 @@
+@import 'src/scss/colors.scss';
+
+$name: 'ProjectsSection';
+
+.#{$name} {
+  height: 50rem;
+  background-image: radial-gradient(91.85% 122.42% at 17.19% 8.15%, $purple 0%, #621dda 32.81%, $purple 100%);
+}

@@ -1,0 +1,49 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'SkillsSection';
+
+.#{$name} {
+  margin: auto;
+  width: 80rem;
+
+  &__title {
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.0625rem;
+    color: $purple_l_20;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-size: 1.375rem;
+    letter-spacing: 0.0625rem;
+    color: $white;
+  }
+
+  &__bar {
+    margin-bottom: 5rem;
+    height: 1px;
+    width: 20rem;
+    background-color: $white;
+    opacity: 0.9;
+  }
+
+  &__section-title {
+    font-weight: 300;
+    font-size: 2rem;
+    color: $purple;
+    letter-spacing: 0.0625rem;
+    margin-bottom: 3rem;
+  }
+
+  &__section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 5rem;
+  }
+}
