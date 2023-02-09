@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyLogoVariant2 = () => (
   <svg
-    viewBox="0 0 152 130"
+    viewBox="0 0 125 130"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >

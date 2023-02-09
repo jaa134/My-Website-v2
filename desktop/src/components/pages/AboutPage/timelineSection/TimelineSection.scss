@@ -4,13 +4,11 @@
 $name: 'TimelineSection';
 
 .#{$name} {
-  &__line {
-    position: relative;
-    margin: auto;
-    padding-right: 12.5rem;
-    width: 25rem;
-    stroke: $purple;
-  }
+  position: relative;
+  margin: auto;
+  padding-right: 12.5rem;
+  width: 25rem;
+  stroke: $purple;
 
   &__ball {
     position: absolute;
@@ -44,6 +42,185 @@ $name: 'TimelineSection';
       left: 16.5rem;
       height: 5.5rem;
       width: 5.5rem;
+    }
+  }
+
+  &__symbol {
+    color: $purple;
+  }
+
+  &__blurb {
+    position: absolute;
+
+    &--1 {
+      top: -10rem;
+      left: -18rem;
+    }
+
+    &--2 {
+      top: 23rem;
+      left: 20rem;
+    }
+
+    &--3 {
+      top: 62rem;
+      left: -18rem;
+    }
+
+    .#{$name} {
+      letter-spacing: 0.0625rem;
+
+      &__title {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: $turquoise;
+      }
+
+      &__message {
+        width: 30rem;
+        line-height: 1.5;
+        letter-spacing: 0.0625rem;
+        font-size: 1rem;
+        font-weight: 300;
+        color: $white;
+      }
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    top: -10rem;
+    left: 30rem;
+
+    img {
+      margin: auto;
+      width: 18rem;
+      height: 24rem;
+      border-radius: 1rem;
+      border: none;
+      outline: none;
+      transform: rotate(10deg);
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: $purple_l_10;
+      }
+    }
+  }
+
+  &__year {
+    position: absolute;
+    top: 17rem;
+    left: -15rem;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.25rem;
+    transform: rotate(-10deg);
+
+    &-front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $purple;
+    }
+
+    &-back {
+      position: absolute;
+      top: 0.25rem;
+      left: 0.25rem;
+      color: $turquoise;
+    }
+
+    &-shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5) 90%);
+    }
+  }
+
+  &__image-grid {
+    position: absolute;
+    top: 34rem;
+    left: 20rem;
+
+    .#{$name} {
+      &__logo,
+      &__color-box {
+        width: 9rem;
+        height: 9rem;
+      }
+
+      &__logo {
+        position: absolute;
+        top: 10rem;
+        left: 13rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+
+      &__color-box {
+        position: absolute;
+        border-radius: 1rem;
+
+        &--1 {
+          background-color: $turquoise;
+          top: 0rem;
+          left: 13rem;
+        }
+
+        &--2 {
+          background-color: $purple;
+          top: 20rem;
+          left: 26rem;
+        }
+      }
+
+      &__image {
+        position: absolute;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background: $purple_l_10;
+        }
+
+        &--1 {
+          top: 0rem;
+          left: 0rem;
+          width: 12rem;
+          height: 19rem;
+        }
+
+        &--2 {
+          top: 0rem;
+          left: 23rem;
+          width: 12rem;
+          height: 19rem;
+        }
+
+        &--3 {
+          top: 20rem;
+          left: 0rem;
+          width: 25rem;
+          height: 9rem;
+        }
+      }
     }
   }
 }
