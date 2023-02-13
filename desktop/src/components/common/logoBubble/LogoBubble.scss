@@ -79,6 +79,19 @@ $name: 'LogoBubble';
     }
   }
 
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(70%);
+    opacity: 0.33;
+    transition: 200ms ease-in;
+
+    svg {
+      width: 100%;
+    }
+  }
+
   &:hover {
     > svg {
       &:first-child {
@@ -92,8 +105,8 @@ $name: 'LogoBubble';
 
     .#{$name} {
       &__logo {
-        filter: brightness(80%) grayscale(10%);
-        opacity: 0.75;
+        filter: grayscale(10%);
+        opacity: 0.9;
       }
     }
   }
@@ -106,28 +119,15 @@ $name: 'LogoBubble';
       }
 
       &:last-child {
-        opacity: 0.75;
+        opacity: 0.5;
       }
     }
 
     .#{$name} {
       &__logo {
-        filter: brightness(100%) grayscale(0%);
+        filter: grayscale(0%);
         opacity: 1;
       }
-    }
-  }
-
-  &__logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    filter: brightness(80%) grayscale(100%);
-    opacity: 0.1;
-    transition: opacity 200ms ease-in;
-
-    svg {
-      width: 100%;
     }
   }
 }

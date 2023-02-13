@@ -1,7 +1,7 @@
 import 'src/components/common/logoBubble/LogoBubble.scss';
 
 import PropTypes from 'prop-types';
-import React, { FunctionComponent, Validator } from 'react';
+import React, { FunctionComponent, MouseEventHandler, Validator } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -10,11 +10,15 @@ const bem = defineBlock('LogoBubble');
 interface Props {
   size: 's1' | 's2' | 's3' | 's4' | 's5';
   active: boolean;
-  children: React.ReactNode;
+  children: React.ReactElement;
+  onClick: MouseEventHandler<HTMLDivElement>;
 }
 
-const LogoBubble: FunctionComponent<Props> = ({ size = 's3', active, children }) => (
-  <div className={bem('', size, { active })}>
+const LogoBubble: FunctionComponent<Props> = ({ size = 's3', active, children, onClick }) => (
+  <div
+    className={bem('', size, { active })}
+    onClick={onClick}
+  >
     <div className={bem('logo')}>{children}</div>
 
     <svg
@@ -967,7 +971,8 @@ const LogoBubble: FunctionComponent<Props> = ({ size = 's3', active, children })
 LogoBubble.propTypes = {
   size: PropTypes.oneOf(['s1', 's2', 's3', 's4', 's5']) as Validator<'s1' | 's2' | 's3' | 's4' | 's5'>,
   active: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.element.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default LogoBubble;

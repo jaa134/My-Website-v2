@@ -12,7 +12,7 @@ $name: 'TechSkill';
   width: calc(25% - 0.75rem);
   box-sizing: border-box;
   border-radius: 0.25rem;
-  background-color: #171717;
+  background-color: $dark_gray;
 
   &__image {
     img {

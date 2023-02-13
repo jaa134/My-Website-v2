@@ -31,11 +31,10 @@ const renderSkills = (skills: SkillLink[]) =>
   });
 
 const renderAchievements = (achievements: AchievementType[]) =>
-  achievements.map(({ id, date, message }) => {
+  achievements.map(({ id, message }) => {
     return (
       <Achievement
         key={id}
-        date={date}
         message={message}
       />
     );

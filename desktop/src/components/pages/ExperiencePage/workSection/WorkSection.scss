@@ -4,6 +4,142 @@
 $name: 'WorkSection';
 
 .#{$name} {
-  padding: 8rem $app-vertical-margins;
-  height: 50rem;
+  margin: auto;
+  padding: 0 0 8rem 0;
+  width: 80rem;
+  color: $white;
+
+  &__title {
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.0625rem;
+    color: $purple_l_20;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-size: 1.375rem;
+    letter-spacing: 0.0625rem;
+    color: $white;
+  }
+
+  &__bar {
+    margin-bottom: 3rem;
+    height: 1px;
+    width: 20rem;
+    background-color: $white;
+    opacity: 0.9;
+  }
+
+  &__download-button {
+    margin: 0 0 1rem auto;
+    display: block;
+    width: fit-content;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  &__panel-button {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    width: 14rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    letter-spacing: 0.06125rem;
+    opacity: 0.8;
+    cursor: pointer;
+
+    & > :first-child {
+      height: 0.5rem;
+      width: 0.5rem;
+      border-radius: 50%;
+      outline: 1px solid $white_a_75;
+      outline-offset: 0.125rem;
+      background-color: transparent;
+      transition: 200ms ease-out;
+    }
+
+    & > :last-child {
+      transition: 200ms ease-out;
+    }
+
+    &:hover {
+      opacity: 0.9;
+
+      & > :first-child {
+        outline-color: $purple_l_10;
+        background-color: $purple_l_10;
+      }
+
+      & > :last-child {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+    }
+
+    &--active,
+    &--active:hover {
+      opacity: 1;
+
+      & > :first-child {
+        outline-color: $purple;
+        background-color: $purple;
+      }
+
+      & > :last-child {
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__panel {
+    position: relative;
+    flex: 1;
+    padding: 2rem 5rem;
+    min-height: 25rem;
+    background-color: $dark_gray;
+
+    &::before {
+      position: absolute;
+      bottom: -3rem;
+      left: -3rem;
+      content: '';
+      width: 6rem;
+      height: 6rem;
+      transform: rotate(45deg);
+      background-color: $black;
+    }
+  }
+
+  &__panel-date {
+    color: $turquoise;
+    font-size: 1.125rem;
+    letter-spacing: 0.06125rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+  }
+
+  &__panel-title {
+    color: $purple;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.125rem;
+  }
 }

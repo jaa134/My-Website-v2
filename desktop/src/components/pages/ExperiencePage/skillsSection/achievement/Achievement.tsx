@@ -9,11 +9,10 @@ import { skillsPath } from 'src/utils/constants';
 const bem = defineBlock('Achievement');
 
 type Props = {
-  date: string;
   message: string;
 };
 
-const Achievement: FunctionComponent<Props> = ({ date, message }) => (
+const Achievement: FunctionComponent<Props> = ({ message }) => (
   <div className={bem()}>
     <div className={bem('image')}>
       <img
@@ -21,10 +20,7 @@ const Achievement: FunctionComponent<Props> = ({ date, message }) => (
         alt=""
       />
     </div>
-    <div className={bem('text')}>
-      <div className={bem('date')}>{date}</div>
-      <div className={bem('message')}>{message}</div>
-    </div>
+    <div className={bem('message')}>{message}</div>
   </div>
 );
 

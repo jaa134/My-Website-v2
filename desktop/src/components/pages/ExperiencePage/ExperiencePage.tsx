@@ -8,6 +8,7 @@ import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import WorkSection from 'src/components/pages/experiencePage/workSection/WorkSection';
 import SkillsSection from 'src/components/pages/experiencePage/skillsSection/SkillsSection';
 import ProjectsSection from 'src/components/pages/experiencePage/projectsSection/ProjectsSection';
+import LineSplit from 'src/components/layout/lineSplit/LineSplit';
 
 const bem = defineBlock('ExperiencePage');
 
@@ -22,6 +23,9 @@ const ExperiencePage = () => {
           subtitle="What I've Been Up To"
           description={`A total of ${yearsOfExp} years in industry designing, developing, and launching highly responsive websites and mobile applications.`}
         />
+      </div>
+      <div className={bem('line-split')}>
+        <LineSplit />
       </div>
       <div className={bem('work')}>
         <WorkSection />

@@ -10,6 +10,9 @@ export const imagesPath = 'static/images';
 export const albumPath = `${imagesPath}/album`;
 export const skillsPath = `${imagesPath}/skills`;
 
+export const documentsPath = 'static/documents';
+export const resumePath = `${documentsPath}/Alspaw-Jacob Resume.pdf`;
+
 export const PHONE_NUMBER = '+1 636 699-7344';
 export const EMAIL_ADDRESS = 'dev@jacob-alspaw.com';
 export const LOCATION = 'Littleton, Colorado 80128';
@@ -555,49 +558,45 @@ export const devPractices: SkillLink[] = [
 
 export interface Achievement {
   id: string;
-  date: string;
   message: string;
 }
 
 export const achievements: Achievement[] = [
   {
     id: '1',
-    date: '',
     message:
       'Managed a small team of developers responsible for producing, maintaining, and modifying web front-end code for enterprise level software',
   },
   {
     id: '2',
-    date: '',
     message:
       'Ensured that correct content, product assortments, and UI functionality is developed, tested, scheduled, and validated against business expectations before it is released to clients',
   },
   {
     id: '3',
-    date: '',
     message: 'Reduced known UI defects in our product backlog by over 90% in less than 10 months',
   },
   {
     id: '4',
-    date: '',
     message: 'Identified and fixed various performance traps that resulted in web pages rendering up to 125x faster',
   },
   {
     id: '5',
-    date: '',
     message:
       'Exceeded expectations and received distinguished honors during all performance reviews as a full-stack developer and front-end lead at IBM UrbanCode and HCL Software',
   },
   {
     id: '6',
-    date: '',
     message:
       'Maintained personal relationships with high-profile customer accounts that need a dedicated advocate to meet SLA on issues that impact millions of dollars in financial investments',
   },
   {
     id: '7',
-    date: '',
     message:
       'Devised a data-driven service, website, and mobile application with senior university faculty that computed and conveyed real-time “busyness” metrics for various locations around Case Western Reserve University campus',
+  },
+  {
+    id: '8',
+    message: 'Awarded a $25,000 grant from the Innovation Fund to continue development of medical diagnostic equipment',
   },
 ];

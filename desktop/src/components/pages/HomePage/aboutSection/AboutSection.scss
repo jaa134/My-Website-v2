@@ -9,7 +9,7 @@ $name: 'AboutSection';
   justify-content: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 2rem $app-vertical-margins;
+  padding: 2rem $app-vertical-margins 8rem $app-vertical-margins;
   color: $white;
 
   &__spacer {

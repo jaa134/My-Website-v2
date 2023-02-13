@@ -6,6 +6,7 @@ $name: 'Button';
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  width: fit-content;
   background: transparent;
   box-shadow: none;
   outline: none;
@@ -21,14 +22,23 @@ $name: 'Button';
   appearance: none;
   letter-spacing: 0.03125rem;
 
+  &--small {
+    padding: 0.25rem 1rem;
+    min-width: 6rem;
+    font-weight: 300;
+    font-size: 0.875rem;
+  }
+
   &--medium {
     padding: 0.5rem 1.75rem;
     min-width: 8rem;
     font-weight: 300;
+    font-size: 1.125rem;
   }
 
   &--large {
     padding: 0.75rem 2rem;
+    min-width: 10rem;
     font-weight: 300;
     font-size: 1.25rem;
   }

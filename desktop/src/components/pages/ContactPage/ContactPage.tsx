@@ -9,6 +9,7 @@ import FormSection from 'src/components/pages/contactPage/formSection/FormSectio
 import GlobeSection from 'src/components/pages/contactPage/globeSection/GlobeSection';
 import OptionsSection from 'src/components/pages/contactPage/optionsSection/OptionsSection';
 import SocialsSection from 'src/components/pages/contactPage/socialsSection/SocialsSection';
+import LineSplit from 'src/components/layout/lineSplit/LineSplit';
 
 const bem = defineBlock('ContactPage');
 
@@ -20,6 +21,9 @@ const ContactPage = () => (
         subtitle="Let’s Work Together"
         description="Want to get in touch? Here's how you can reach me."
       />
+    </div>
+    <div className={bem('line-split')}>
+      <LineSplit />
     </div>
     <div className={bem('options')}>
       <OptionsSection />

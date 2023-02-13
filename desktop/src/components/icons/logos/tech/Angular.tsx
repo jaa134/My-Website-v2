@@ -8,7 +8,7 @@ const Angular = () => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
-    viewBox="20 25 210 210"
+    viewBox="25 30 200 200"
     xmlSpace="preserve"
   >
     <g>

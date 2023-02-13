@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Javascript = () => (
+const JavaScript = () => (
   <svg
     id="svg4525"
     xmlns="http://www.w3.org/2000/svg"
@@ -44,4 +44,4 @@ const Javascript = () => (
   </svg>
 );
 
-export default Javascript;
+export default JavaScript;

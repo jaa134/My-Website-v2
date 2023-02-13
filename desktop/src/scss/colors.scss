@@ -11,6 +11,8 @@ $white_a_50: color.adjust($white, $alpha: -0.5);
 $white_a_75: color.adjust($white, $alpha: -0.25);
 $white_a_90: color.adjust($white, $alpha: -0.1);
 
+$dark_gray: #171717;
+
 $purple: #640dfb;
 $purple_l_10: color.adjust($purple, $lightness: 10%);
 $purple_l_15: color.adjust($purple, $lightness: 15%);
