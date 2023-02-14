@@ -77,7 +77,8 @@
     "react-router-dom": "^6.8.0",
     "satellite.js": "^5.0.0",
     "three": "^0.149.0",
-    "topojson-client": "^3.1.0"
+    "topojson-client": "^3.1.0",
+    "yet-another-react-lightbox": "^2.3.1"
   },
   "scripts": {
     "start": "node scripts/start.js",
