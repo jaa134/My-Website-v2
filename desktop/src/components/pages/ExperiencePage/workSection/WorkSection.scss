@@ -43,7 +43,6 @@ $name: 'WorkSection';
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 32rem;
   }
 
   &__controls {
@@ -113,8 +112,9 @@ $name: 'WorkSection';
   &__panel {
     position: relative;
     flex: 1;
+    box-sizing: border-box;
     padding: 2rem 5rem;
-    min-height: 25rem;
+    height: 30rem;
     background-color: $dark_gray;
 
     &::before {
@@ -156,7 +156,7 @@ $name: 'WorkSection';
   &__panel-positon,
   &__panel-bullet {
     margin-bottom: 1rem;
-    color: $white_a_75;
+    color: $white_a_90;
     font-weight: 300;
     letter-spacing: 0.030625rem;
   }
