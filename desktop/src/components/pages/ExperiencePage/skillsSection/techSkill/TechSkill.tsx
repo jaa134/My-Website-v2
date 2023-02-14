@@ -1,7 +1,7 @@
 import 'src/components/pages/experiencePage/skillsSection/techSkill/TechSkill.scss';
 
 import PropTypes from 'prop-types';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, MouseEventHandler } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -10,12 +10,16 @@ const bem = defineBlock('TechSkill');
 type Props = {
   techName: string;
   imagePath: string;
-  href?: string | null;
+  active: boolean;
+  onClick: MouseEventHandler<HTMLElement>;
 };
 
-const TechSkill: FunctionComponent<Props> = ({ techName, imagePath, href = null }) => {
-  const content = (
-    <>
+const TechSkill: FunctionComponent<Props> = ({ techName, imagePath, active, onClick }) => {
+  return (
+    <div
+      className={bem('', { active })}
+      onClick={onClick}
+    >
       <div className={bem('image')}>
         <img
           src={imagePath}
@@ -23,26 +27,15 @@ const TechSkill: FunctionComponent<Props> = ({ techName, imagePath, href = null 
         />
       </div>
       <div className={bem('tech-name')}>{techName}</div>
-    </>
-  );
-
-  return href ? (
-    <a
-      className={bem()}
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-    >
-      {content}
-    </a>
-  ) : (
-    <div className={bem()}>{content}</div>
+    </div>
   );
 };
 
 TechSkill.propTypes = {
   techName: PropTypes.string.isRequired,
   imagePath: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default TechSkill;

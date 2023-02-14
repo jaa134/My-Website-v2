@@ -1,7 +1,7 @@
 import 'src/components/common/logoBubble/LogoBubble.scss';
 
 import PropTypes from 'prop-types';
-import React, { FunctionComponent, MouseEventHandler, Validator } from 'react';
+import React, { FunctionComponent, MouseEventHandler, Validator, ReactElement } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -10,8 +10,8 @@ const bem = defineBlock('LogoBubble');
 interface Props {
   size: 's1' | 's2' | 's3' | 's4' | 's5';
   active: boolean;
-  children: React.ReactElement;
-  onClick: MouseEventHandler<HTMLDivElement>;
+  children: ReactElement;
+  onClick: MouseEventHandler<HTMLElement>;
 }
 
 const LogoBubble: FunctionComponent<Props> = ({ size = 's3', active, children, onClick }) => (

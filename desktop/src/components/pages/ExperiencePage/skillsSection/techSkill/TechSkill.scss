@@ -13,6 +13,11 @@ $name: 'TechSkill';
   box-sizing: border-box;
   border-radius: 0.25rem;
   background-color: $dark_gray;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(109.12deg, #640dfb -1.55%, rgba(100, 13, 251, 0.38) 89.65%);
+  }
 
   &__image {
     img {
@@ -28,15 +33,5 @@ $name: 'TechSkill';
     font-weight: 300;
     color: $white;
     opacity: 0.9;
-  }
-}
-
-a.#{$name} {
-  text-decoration: none;
-  color: $white;
-  cursor: pointer;
-
-  &:hover {
-    background: linear-gradient(109.12deg, #640dfb -1.55%, rgba(100, 13, 251, 0.38) 89.65%);
   }
 }

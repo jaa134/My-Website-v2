@@ -59,7 +59,7 @@ $name: 'EducationSection';
     cursor: pointer;
 
     &:hover {
-      background: linear-gradient(109.12deg, #640dfb -1.55%, rgba(100, 13, 251, 0.38) 89.65%);
+      background: linear-gradient(109.12deg, $purple -1.55%, rgba(100, 13, 251, 0.38) 89.65%);
     }
 
     img {

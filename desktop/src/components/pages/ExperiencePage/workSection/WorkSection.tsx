@@ -39,9 +39,8 @@ const WorkSection = () => {
       position: 'Front-End Lead',
       bulletPoints: [
         'Led UI/UX design review meetings and implementation',
-        'Conducted an extensive UI/UX review to refresh all product pages over a 3 month period',
         'Was responsibile for merging UI/UX focused tickets into main branch after reviewing team pull requests',
-        'Rewrote more than 30 pages from scratch to remove legacy code and ensure robustnesss of the UI',
+        'Conducted an extensive UI/UX review to refresh all product pages over a 3 month period. Rewrote more than 30 pages from scratch to remove legacy code and ensure robustnesss of the UI',
         'Reduced known UI defects in our product backlog by over 90% in less than 10 months',
         'Identified and fixed various performance traps that resulted in web pages rendering up to 125x faster',
         'Recieved the highest form of accredidation, distinguished, during all performance reviews',

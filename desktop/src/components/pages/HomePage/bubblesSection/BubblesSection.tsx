@@ -1,6 +1,6 @@
 import 'src/components/pages/homePage/bubblesSection/BubblesSection.scss';
 
-import React, { useState } from 'react';
+import React, { useState, ReactElement } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -25,11 +25,13 @@ type BubbleData = {
   id: string;
   size: 's1' | 's2' | 's3' | 's4' | 's5';
   active: boolean;
-  logo: React.ReactElement;
+  logo: ReactElement;
 };
 
 const BubblesSection = () => {
-  const [bubbles, setBubbles] = useState<readonly BubbleData[]>([
+  const [activeBubble, setActiveBubble] = useState<BubbleData | null>(null);
+
+  const bubbles: readonly BubbleData[] = [
     {
       id: 'bubble-1',
       size: 's3',
@@ -108,15 +110,7 @@ const BubblesSection = () => {
       active: false,
       logo: <Sass />,
     },
-  ]);
-
-  const toggleActive = (activeBubble: BubbleData) => {
-    const newBubbles = [...bubbles];
-    newBubbles.forEach((currentBubble) => {
-      currentBubble.active = !currentBubble.active && currentBubble.id === activeBubble.id;
-    });
-    setBubbles(newBubbles);
-  };
+  ];
 
   return (
     <div className={bem()}>
@@ -125,8 +119,8 @@ const BubblesSection = () => {
           <LogoBubble
             key={bubble.id}
             size={bubble.size}
-            active={bubble.active}
-            onClick={() => toggleActive(bubble)}
+            active={bubble.id === activeBubble?.id}
+            onClick={() => setActiveBubble(bubble)}
           >
             {bubble.logo}
           </LogoBubble>

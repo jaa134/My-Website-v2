@@ -1,17 +1,18 @@
 import 'src/components/common/button/Button.scss';
 
 import PropTypes from 'prop-types';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, MouseEventHandler, PropsWithChildren } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('Button');
 
-type Props = React.PropsWithChildren<{
+type Props = PropsWithChildren<{
   size?: 'small' | 'medium' | 'large';
   type?: 'filled' | 'outlined' | 'text';
   color?: 'purple' | 'white';
   label?: string | null;
+  onClick?: MouseEventHandler<HTMLElement>;
 }>;
 
 const Button: FunctionComponent<Props> = ({
@@ -20,10 +21,12 @@ const Button: FunctionComponent<Props> = ({
   color = 'purple',
   label = null,
   children = null,
+  onClick,
 }) => (
   <button
     type="button"
     className={bem('', size, type, color)}
+    onClick={onClick}
   >
     {children ?? label ?? ''}
   </button>
@@ -35,6 +38,7 @@ Button.propTypes = {
   color: PropTypes.oneOf(['purple', 'white']),
   label: PropTypes.string,
   children: PropTypes.node,
+  onClick: PropTypes.func,
 };
 
 export default Button;

@@ -1,6 +1,6 @@
 import 'src/components/pages/experiencePage/projectsSection/ProjectsSection.scss';
 
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -9,7 +9,7 @@ const bem = defineBlock('ProjectsSection');
 type ProjectData = {
   name: string;
   link: string;
-  logo: React.ReactElement;
+  logo: ReactElement;
 };
 
 const ProjectsSection = () => {
