@@ -48,13 +48,14 @@ const AppHeader = () => {
         </Link>
       </div>
       <div className={bem('contact')}>
-        <Button
-          size="large"
-          type="outlined"
-          color="white"
-        >
-          Let&#39;s Work Together
-        </Button>
+        <Link to={RouteName.Contact}>
+          <Button
+            size="large"
+            type="outlined"
+            color="white"
+            label="Let's Work Together"
+          />
+        </Link>
       </div>
     </div>
   );

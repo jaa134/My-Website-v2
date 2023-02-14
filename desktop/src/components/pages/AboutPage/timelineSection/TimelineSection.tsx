@@ -4,6 +4,7 @@ import React from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
+import { albumImagesPath } from 'src/utils/constants';
 
 const bem = defineBlock('TimelineSection');
 
@@ -48,7 +49,7 @@ const TimelineSection = () => (
     </div>
     <div className={bem('picture')}>
       <img
-        src="static/images/test.png"
+        src={`${albumImagesPath}/djnfv36LPa.jpg`}
         alt=""
       />
     </div>
@@ -71,17 +72,17 @@ const TimelineSection = () => (
       <div className={bem('color-box', '2')}></div>
       <img
         className={bem('image', '1')}
-        src="static/images/test.png"
+        src={`${albumImagesPath}/d9dK249xAz.jpg`}
         alt=""
       />
       <img
         className={bem('image', '2')}
-        src="static/images/test.png"
+        src={`${albumImagesPath}/js9FGG134c.jpg`}
         alt=""
       />
       <img
         className={bem('image', '3')}
-        src="static/images/test.png"
+        src={`${albumImagesPath}/D18spL3vmq.jpg`}
         alt=""
       />
     </div>

@@ -6,6 +6,8 @@ import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
 import Star from 'src/components/icons/general/Star';
+import { albumImagesPath, RouteName } from 'src/utils/constants';
+import { Link } from 'react-router-dom';
 
 const bem = defineBlock('AboutSection');
 
@@ -20,28 +22,36 @@ const AboutSection = () => (
         programming languages.
       </div>
       <div className={bem('contact')}>
-        <Button
-          size="medium"
-          type="filled"
-          color="purple"
-          label="Let's Talk"
-        />
+        <Link to={RouteName.Contact}>
+          <Button
+            size="medium"
+            type="filled"
+            color="purple"
+            label="Let's Talk"
+          />
+        </Link>
       </div>
     </div>
     <div className={bem('spacer')} />
-    <div className={bem('picture')}>
-      <img
-        src="static/images/test.png"
-        alt=""
-      />
-      <img
-        src="static/images/test.png"
-        alt=""
-      />
-      <img
-        src="static/images/test.png"
-        alt=""
-      />
+    <div className={bem('pictures')}>
+      <div className={bem('image')}>
+        <img
+          src={`${albumImagesPath}/GK6GvUHSho.jpg`}
+          alt=""
+        />
+      </div>
+      <div className={bem('image')}>
+        <img
+          src={`${albumImagesPath}/ypqCmdMDip.jpg`}
+          alt=""
+        />
+      </div>
+      <div className={bem('image')}>
+        <img
+          src={`${albumImagesPath}/7m2FbjvtBR.jpg`}
+          alt=""
+        />
+      </div>
       <div className={bem('floating-symbol', '1')}>&#123;</div>
       <div className={bem('floating-symbol', '2')}>&#62;</div>
       <div className={bem('floating-symbol', '3')}>

@@ -48,55 +48,77 @@ $name: 'AboutSection';
     opacity: 0.9;
   }
 
-  &__picture {
+  &__pictures {
     position: relative;
     width: 30rem;
     height: 30rem;
 
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: auto;
-      width: 20rem;
-      height: 26rem;
-      border-radius: 1rem;
-      border: none;
-      outline: none;
-
-      &:nth-child(1) {
-        transform: translate(-40%, -45%) rotate(15deg);
-
-        &::before {
-          background-image: linear-gradient($purple_l_20, $black);
-        }
-      }
-
-      &:nth-child(2) {
-        transform: translate(-60%, -45%) rotate(-7.5deg);
-
-        &::before {
-          background-image: linear-gradient($purple_l_10, $black);
-        }
-      }
-
-      &:nth-child(3) {
-        transform: translate(-50%, -35%) rotate(7.5deg);
-
-        &::before {
-          background-image: linear-gradient($purple, $black);
-        }
-      }
-
-      &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-      }
-    }
-
     .#{$name} {
+      &__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: auto;
+        width: 20rem;
+        height: 26rem;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          border: none;
+          outline: none;
+          object-fit: cover;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+        }
+
+        &:nth-child(1) {
+          transform: translate(-40%, -45%) rotate(15deg);
+
+          img {
+            opacity: 0.25;
+          }
+
+          &::after {
+            background-image: linear-gradient($purple_l_20, $black);
+          }
+        }
+
+        &:nth-child(2) {
+          transform: translate(-60%, -45%) rotate(-7.5deg);
+
+          img {
+            opacity: 0.25;
+          }
+
+          &::after {
+            background-image: linear-gradient($purple_l_10, $black);
+          }
+        }
+
+        &:nth-child(3) {
+          transform: translate(-50%, -35%) rotate(7.5deg);
+
+          img {
+            opacity: 1;
+          }
+
+          &::after {
+            background-image: linear-gradient($purple, $black);
+          }
+        }
+      }
+
       &__floating-symbol {
         position: absolute;
         color: $purple_l_10;
@@ -104,12 +126,12 @@ $name: 'AboutSection';
         font-weight: 400;
 
         &--1 {
-          top: 5rem;
-          left: -2rem;
+          top: 6rem;
+          left: -3rem;
         }
 
         &--2 {
-          bottom: 2rem;
+          bottom: 1rem;
           right: 0;
         }
 
