@@ -30,7 +30,7 @@ $name: 'ExperienceSection';
 
   &__bar {
     margin-bottom: 2rem;
-    height: 1px;
+    height: 0.0625rem;
     width: 20rem;
     background-color: $white;
     opacity: 0.9;
@@ -91,7 +91,7 @@ $name: 'ExperienceSection';
     font-size: 2.5rem;
     background: $white;
     border-radius: 2rem;
-    -webkit-text-stroke: 1px $black;
+    -webkit-text-stroke: 0.0625rem $black;
     color: white;
     font-weight: 600;
 

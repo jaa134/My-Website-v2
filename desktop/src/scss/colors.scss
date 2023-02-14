@@ -12,6 +12,11 @@ $white_a_75: color.adjust($white, $alpha: -0.25);
 $white_a_90: color.adjust($white, $alpha: -0.1);
 
 $dark_gray: #171717;
+$dark_gray_l_10: color.adjust($dark_gray, $lightness: 10%);
+
+$light_gray: #d9d9d9;
+$light_gray_l_10: color.adjust($light_gray, $lightness: 10%);
+$light_gray_d_10: color.adjust($light_gray, $lightness: -10%);
 
 $purple: #640dfb;
 $purple_l_10: color.adjust($purple, $lightness: 10%);

@@ -318,7 +318,7 @@ export const languages: SkillLink[] = [
     href: 'https://www.java.com/en/',
     imagePath: `${skillsPath}/Java.svg`,
     values: {
-      knowledge: 80,
+      knowledge: 70,
       experience: 80,
       fondness: 80,
     },

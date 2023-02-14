@@ -23,92 +23,153 @@ const bem = defineBlock('BubblesSection');
 
 type BubbleData = {
   id: string;
-  size: 's1' | 's2' | 's3' | 's4' | 's5';
-  active: boolean;
   logo: ReactElement;
+  size: 's1' | 's2' | 's3' | 's4' | 's5';
+  menuPosition: 'left' | 'right';
+  values: {
+    knowledge: number;
+    experience: number;
+  };
 };
 
 const BubblesSection = () => {
   const [activeBubble, setActiveBubble] = useState<BubbleData | null>(null);
 
+  const toggleActiveBubble = (bubble: BubbleData) => {
+    const newActiveBubble = bubble.id === activeBubble?.id ? null : bubble;
+    setActiveBubble(newActiveBubble);
+  };
+
   const bubbles: readonly BubbleData[] = [
     {
       id: 'bubble-1',
-      size: 's3',
-      active: false,
       logo: <TypeScript />,
+      size: 's3',
+      menuPosition: 'right',
+      values: {
+        knowledge: 90,
+        experience: 80,
+      },
     },
     {
       id: 'bubble-2',
-      size: 's1',
-      active: false,
       logo: <Angular />,
+      size: 's1',
+      menuPosition: 'left',
+      values: {
+        knowledge: 40,
+        experience: 20,
+      },
     },
     {
       id: 'bubble-3',
-      size: 's4',
-      active: false,
       logo: <CSS />,
+      size: 's4',
+      menuPosition: 'right',
+      values: {
+        knowledge: 100,
+        experience: 100,
+      },
     },
     {
       id: 'bubble-4',
-      size: 's2',
-      active: false,
       logo: <GraphQL />,
+      size: 's2',
+      menuPosition: 'left',
+      values: {
+        knowledge: 80,
+        experience: 80,
+      },
     },
     {
       id: 'bubble-5',
-      size: 's5',
-      active: false,
       logo: <HTML />,
+      size: 's5',
+      menuPosition: 'left',
+      values: {
+        knowledge: 100,
+        experience: 100,
+      },
     },
     {
       id: 'bubble-6',
-      size: 's1',
-      active: false,
       logo: <Jest />,
+      size: 's1',
+      menuPosition: 'right',
+      values: {
+        knowledge: 90,
+        experience: 90,
+      },
     },
     {
       id: 'bubble-7',
-      size: 's5',
-      active: false,
       logo: <JavaScript />,
+      size: 's5',
+      menuPosition: 'left',
+      values: {
+        knowledge: 90,
+        experience: 80,
+      },
     },
     {
       id: 'bubble-8',
-      size: 's4',
-      active: false,
       logo: <Vue />,
+      size: 's4',
+      menuPosition: 'right',
+      values: {
+        knowledge: 90,
+        experience: 70,
+      },
     },
     {
       id: 'bubble-9',
-      size: 's2',
-      active: false,
       logo: <Git />,
+      size: 's2',
+      menuPosition: 'left',
+      values: {
+        knowledge: 90,
+        experience: 90,
+      },
     },
     {
       id: 'bubble-10',
-      size: 's2',
-      active: false,
       logo: <Jira />,
+      size: 's2',
+      menuPosition: 'right',
+      values: {
+        knowledge: 90,
+        experience: 90,
+      },
     },
     {
       id: 'bubble-11',
-      size: 's4',
-      active: false,
       logo: <ReactJS />,
+      size: 's4',
+      menuPosition: 'right',
+      values: {
+        knowledge: 80,
+        experience: 70,
+      },
     },
     {
       id: 'bubble-12',
-      size: 's1',
-      active: false,
       logo: <Java />,
+      size: 's1',
+      menuPosition: 'left',
+      values: {
+        knowledge: 70,
+        experience: 80,
+      },
     },
     {
       id: 'bubble-13',
-      size: 's3',
-      active: false,
       logo: <Sass />,
+      size: 's3',
+      menuPosition: 'left',
+      values: {
+        knowledge: 100,
+        experience: 100,
+      },
     },
   ];
 
@@ -119,8 +180,10 @@ const BubblesSection = () => {
           <LogoBubble
             key={bubble.id}
             size={bubble.size}
+            menuPositon={bubble.menuPosition}
+            values={bubble.values}
             active={bubble.id === activeBubble?.id}
-            onClick={() => setActiveBubble(bubble)}
+            onClick={() => toggleActiveBubble(bubble)}
           >
             {bubble.logo}
           </LogoBubble>
