@@ -293,6 +293,11 @@ export const technologies: SkillLink[] = [
     imagePath: `${skillsPath}/React.svg`,
   },
   {
+    displayText: 'Vue',
+    href: 'https://vuejs.org/',
+    imagePath: `${skillsPath}/Vue.svg`,
+  },
+  {
     displayText: 'Angular',
     href: 'https://angular.io/',
     imagePath: `${skillsPath}/Angular.svg`,
