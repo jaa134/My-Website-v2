@@ -59,7 +59,7 @@ export const photos: Photo[] = [
     src: `${albumPath}/xhEZaOycWJ.jpg`,
     width: 6000,
     height: 4000,
-    title: 'Leave No Trace - Trail Half Marathon',
+    title: 'Trail Half Marathon - 2020',
     description: 'I love running. I placed 4th out of ~250 in this race!',
   },
   {
