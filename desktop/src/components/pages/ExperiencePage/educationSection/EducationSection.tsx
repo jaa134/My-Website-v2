@@ -3,9 +3,67 @@ import 'src/components/pages/experiencePage/educationSection/EducationSection.sc
 import React from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
+import { educationPath, transcriptPath } from 'src/utils/constants';
+import Button from 'src/components/common/button/Button';
 
 const bem = defineBlock('EducationSection');
 
-const EducationSection = () => <div className={bem()}></div>;
+type EducationData = {
+  name: string;
+  link: string;
+  pic: string;
+  description: string;
+};
+
+const EducationSection = () => {
+  const universities: readonly EducationData[] = [
+    {
+      name: 'Case Western Reserve University',
+      link: 'https://case.edu/',
+      pic: `${educationPath}/CWRU_logo.svg`,
+      description: 'Undergraduate Alma Mater',
+    },
+    {
+      name: 'University of Cape Town',
+      link: 'https://www.uct.ac.za/',
+      pic: `${educationPath}/UCT_logo.svg`,
+      description: 'IES Study Abroad Program - South Africa',
+    },
+  ];
+
+  return (
+    <div className={bem()}>
+      <div className={bem('title')}>Education &#60;&#47;</div>
+      <div className={bem('subtitle')}>How I Got My Start</div>
+      <div className={bem('bar')} />
+      <a
+        className={bem('download-button')}
+        href={transcriptPath}
+        download
+      >
+        <Button
+          size="medium"
+          label="Download Transcript"
+        />
+      </a>
+      <div className={bem('container')}>
+        {universities.map((university) => (
+          <a
+            key={university.name}
+            className={bem('card')}
+            href={university.link}
+            target="_blank"
+          >
+            <img
+              src={university.pic}
+              alt=""
+            />
+            <div className={bem('card-description')}>{university.description}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default EducationSection;

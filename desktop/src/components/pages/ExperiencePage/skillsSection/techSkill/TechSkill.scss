@@ -34,11 +34,9 @@ $name: 'TechSkill';
 a.#{$name} {
   text-decoration: none;
   color: $white;
-  transition: 200ms ease-out;
   cursor: pointer;
 
   &:hover {
     background: linear-gradient(109.12deg, #640dfb -1.55%, rgba(100, 13, 251, 0.38) 89.65%);
-    border-radius: 5px;
   }
 }

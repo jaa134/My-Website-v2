@@ -9,6 +9,7 @@ import WorkSection from 'src/components/pages/experiencePage/workSection/WorkSec
 import SkillsSection from 'src/components/pages/experiencePage/skillsSection/SkillsSection';
 import ProjectsSection from 'src/components/pages/experiencePage/projectsSection/ProjectsSection';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
+import EducationSection from 'src/components/pages/experiencePage/educationSection/EducationSection';
 
 const bem = defineBlock('ExperiencePage');
 
@@ -29,6 +30,9 @@ const ExperiencePage = () => {
       </div>
       <div className={bem('work')}>
         <WorkSection />
+      </div>
+      <div className={bem('education')}>
+        <EducationSection />
       </div>
       <div className={bem('skills')}>
         <SkillsSection />

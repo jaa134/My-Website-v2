@@ -5,7 +5,7 @@ $name: 'WorkSection';
 
 .#{$name} {
   margin: auto;
-  padding: 0 0 8rem 0;
+  padding: 0 0 10rem 0;
   width: 80rem;
   color: $white;
 
@@ -26,7 +26,7 @@ $name: 'WorkSection';
   }
 
   &__bar {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     height: 1px;
     width: 20rem;
     background-color: $white;
@@ -34,7 +34,7 @@ $name: 'WorkSection';
   }
 
   &__download-button {
-    margin: 0 0 1rem auto;
+    margin: 0 0 1.5rem auto;
     display: block;
     width: fit-content;
   }
@@ -43,6 +43,7 @@ $name: 'WorkSection';
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    height: 32rem;
   }
 
   &__controls {
@@ -129,17 +130,55 @@ $name: 'WorkSection';
   }
 
   &__panel-date {
-    color: $turquoise;
-    font-size: 1.125rem;
-    letter-spacing: 0.06125rem;
     margin-bottom: 0.5rem;
+    color: $turquoise;
+    font-size: 1rem;
+    letter-spacing: 0.06125rem;
     opacity: 0.9;
   }
 
-  &__panel-title {
+  a.#{$name}__panel-title {
+    display: inline-block;
+    margin-bottom: 1rem;
     color: $purple;
     font-size: 4rem;
     font-weight: 300;
     letter-spacing: 0.125rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+      text-decoration-thickness: 0.25rem;
+    }
+  }
+
+  &__panel-positon,
+  &__panel-bullet {
+    margin-bottom: 1rem;
+    color: $white_a_75;
+    font-weight: 300;
+    letter-spacing: 0.030625rem;
+  }
+
+  &__panel-positon {
+    font-size: 1.25rem;
+  }
+
+  &__panel-bullets {
+    margin: 0;
+    padding-inline-start: 2rem;
+  }
+
+  &__panel-bullet {
+    font-size: 1rem;
+
+    &::marker {
+      font-size: 0.75em;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

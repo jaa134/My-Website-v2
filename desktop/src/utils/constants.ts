@@ -8,10 +8,12 @@ export enum RouteName {
 
 export const imagesPath = 'static/images';
 export const albumPath = `${imagesPath}/album`;
+export const educationPath = `${imagesPath}/education`;
 export const skillsPath = `${imagesPath}/skills`;
 
 export const documentsPath = 'static/documents';
 export const resumePath = `${documentsPath}/Alspaw-Jacob Resume.pdf`;
+export const transcriptPath = `${documentsPath}/Alspaw-Jacob Transcript.pdf`;
 
 export const PHONE_NUMBER = '+1 636 699-7344';
 export const EMAIL_ADDRESS = 'dev@jacob-alspaw.com';
