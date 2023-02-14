@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, { FunctionComponent } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
-import { skillsPath } from 'src/utils/constants';
+import { skillsImagesPath } from 'src/utils/constants';
 
 const bem = defineBlock('Achievement');
 
@@ -16,7 +16,7 @@ const Achievement: FunctionComponent<Props> = ({ message }) => (
   <div className={bem()}>
     <div className={bem('image')}>
       <img
-        src={`${skillsPath}/OtherSkill.svg`}
+        src={`${skillsImagesPath}/OtherSkill.svg`}
         alt=""
       />
     </div>

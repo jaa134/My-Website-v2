@@ -3,7 +3,7 @@ import 'src/components/pages/experiencePage/educationSection/EducationSection.sc
 import React from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
-import { educationPath, transcriptPath } from 'src/utils/constants';
+import { educationImagesPath, transcriptPath } from 'src/utils/constants';
 import Button from 'src/components/common/button/Button';
 
 const bem = defineBlock('EducationSection');
@@ -20,13 +20,13 @@ const EducationSection = () => {
     {
       name: 'Case Western Reserve University',
       link: 'https://case.edu/',
-      pic: `${educationPath}/CWRU_logo.svg`,
+      pic: `${educationImagesPath}/CWRU_logo.svg`,
       description: 'Undergraduate Alma Mater',
     },
     {
       name: 'University of Cape Town',
       link: 'https://www.uct.ac.za/',
-      pic: `${educationPath}/UCT_logo.svg`,
+      pic: `${educationImagesPath}/UCT_logo.svg`,
       description: 'IES Study Abroad Program - South Africa',
     },
   ];

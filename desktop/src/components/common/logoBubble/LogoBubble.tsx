@@ -38,7 +38,7 @@ const LogoBubble: FunctionComponent<Props> = ({ size, menuPositon, values, activ
       <div className={bem('menu-wrapper')}>
         <div className={bem('menu')}>
           {renderSlider('Knowledge', values.knowledge)}
-          {renderSlider('Years of Experience', values.experience)}
+          {renderSlider('Experience Level', values.experience)}
         </div>
         <div className={bem('menu-arm', '1')}></div>
         <div className={bem('menu-arm', '2')}></div>

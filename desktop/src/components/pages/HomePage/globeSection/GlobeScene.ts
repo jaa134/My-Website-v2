@@ -12,12 +12,6 @@ const satellitesURL = new URL('src/assets/datasets/satellites.txt?url', import.m
 
 const markerSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>`;
 
-interface MarkerData {
-  lat: number;
-  lng: number;
-  size: number;
-}
-
 // @ts-ignore
 const { radiansToDegrees } = satellite as { radiansToDegrees: (radians: number) => number };
 const EARTH_RADIUS_KM = 6371; // km
@@ -26,20 +20,42 @@ const TIME_STEP = 1000; // per frame
 
 const bem = defineBlock('HomeGlobeScene');
 
-export default class GlobeScene {
-  private mountEl: HTMLElement;
+export interface Marker {
+  title: string;
+  location: string;
+  date: string;
+  description: string;
+  imageSrc: string;
+  lat: number;
+  lng: number;
+}
 
+export default class GlobeScene {
   private globe: GlobeInstance;
 
-  onLoadError: (error: unknown) => void;
+  private mountEl: HTMLElement;
 
-  constructor(mountEl: HTMLElement, height: number, width: number, onLoadError: (error: unknown) => void) {
-    this.mountEl = mountEl;
+  private markers: readonly Marker[];
 
+  private onClickMarker: (marker: Marker) => void;
+
+  private onLoadError: (error: unknown) => void;
+
+  constructor(
+    mountEl: HTMLElement,
+    height: number,
+    width: number,
+    markers: readonly Marker[],
+    onClickMarker: (marker: Marker) => void,
+    onLoadError: (error: unknown) => void,
+  ) {
     this.globe = Globe() as unknown as GlobeInstance;
     this.globe.height(height);
     this.globe.width(width);
 
+    this.mountEl = mountEl;
+    this.markers = [...markers];
+    this.onClickMarker = onClickMarker;
     this.onLoadError = onLoadError;
   }
 
@@ -72,27 +88,17 @@ export default class GlobeScene {
       .catch(this.onLoadError);
 
     // Markers
-    const N = 10;
-    const gData: MarkerData[] = [...Array(N).keys()].map(() => ({
-      lat: (Math.random() - 0.5) * 180,
-      lng: (Math.random() - 0.5) * 360,
-      size: 15 + Math.random() * 10,
-    }));
-    this.globe.htmlElementsData(gData).htmlElement((data: object) => {
-      const { size } = data as MarkerData;
+    this.globe.htmlElementsData([...this.markers]).htmlElement((data: object) => {
       const el = document.createElement('div');
       el.innerHTML = markerSvg;
       el.className = bem('marker');
-      el.style.width = `${size}px`;
-
-      el.style.setProperty('pointer-events', 'auto');
-      el.style.cursor = 'pointer';
+      el.addEventListener('click', () => this.onClickMarker(data as Marker));
       return el;
     });
 
     // Satellites
     const satGeometry = new SphereGeometry((SAT_SIZE * this.globe.getGlobeRadius()) / EARTH_RADIUS_KM / 2);
-    const satMaterial = new MeshLambertMaterial({ color: 'palegreen', transparent: true, opacity: 0.7 });
+    const satMaterial = new MeshLambertMaterial({ color: 'palegreen', transparent: true, opacity: 0.9 });
     this.globe.objectThreeObject(() => {
       const satMesh = new Mesh(satGeometry, satMaterial);
       satMesh.addEventListener('pointerdown', () => {
