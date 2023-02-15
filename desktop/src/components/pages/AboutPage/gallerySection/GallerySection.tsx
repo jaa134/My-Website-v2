@@ -8,12 +8,19 @@ import Lightbox from 'yet-another-react-lightbox';
 import Captions from 'yet-another-react-lightbox/plugins/captions';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
-import { photos } from 'src/utils/constants';
+import { photos } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
+
+import Button from 'src/components/common/button/Button';
+import Plus from 'src/components/icons/general/Plus';
 
 const bem = defineBlock('GallerySection');
 
+const IMAGE_PAGE_SIZE = 25;
+
 const GallerySection = () => {
+  const [imageCount, setImageCount] = useState<number>(IMAGE_PAGE_SIZE);
+
   const [currentImage, setCurrentImage] = useState<number>(0);
   const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
   const openLightbox = useCallback((handlerProps: ClickHandlerProps<Photo>) => {
@@ -26,9 +33,24 @@ const GallerySection = () => {
       <div className={bem('title')}>Gallery</div>
       <PhotoAlbum
         layout="rows"
-        photos={photos}
+        photos={photos.slice(0, imageCount)}
         onClick={openLightbox}
       />
+      {imageCount < photos.length && (
+        <div className={bem('load-more')}>
+          <Button
+            size="medium"
+            type="filled"
+            color="purple"
+            icon={<Plus />}
+            label="Load More Images"
+            onClick={() => {
+              setImageCount(imageCount + IMAGE_PAGE_SIZE);
+            }}
+          />
+        </div>
+      )}
+
       <Lightbox
         plugins={[Captions, Zoom]}
         animation={{ swipe: 0 }}

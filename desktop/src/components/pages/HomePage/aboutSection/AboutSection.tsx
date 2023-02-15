@@ -3,7 +3,8 @@ import 'src/components/pages/homePage/aboutSection/AboutSection.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { albumImagesPath, RouteName } from 'src/utils/constants';
+import { RouteName } from 'src/constants/common';
+import { albumImagesPath } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';

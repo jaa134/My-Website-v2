@@ -3,7 +3,7 @@ import 'src/components/pages/experiencePage/skillsSection/achievement/Achievemen
 import PropTypes from 'prop-types';
 import React, { FunctionComponent } from 'react';
 
-import { skillsImagesPath } from 'src/utils/constants';
+import { skillsImagesPath } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('Achievement');

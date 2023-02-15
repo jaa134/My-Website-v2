@@ -2,7 +2,7 @@ import 'src/components/layout/appFooter/AppFooter.scss';
 
 import React from 'react';
 
-import { Link } from 'src/utils/constants';
+import { Link } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 
 import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
@@ -24,6 +24,7 @@ const AppHeader = () => (
         className={bem('link', 'main')}
         href="https://github.com/jaa134?tab=repositories"
         target="_blank"
+        rel="noreferrer"
       >
         REPOS
       </a>
@@ -31,6 +32,7 @@ const AppHeader = () => (
         className={bem('link')}
         href="https://legacy.jacob-alspaw.com"
         target="_blank"
+        rel="noreferrer"
       >
         Legacy Website
       </a>
@@ -38,6 +40,7 @@ const AppHeader = () => (
         className={bem('link')}
         href="https://wordgames.jacob-alspaw.com/"
         target="_blank"
+        rel="noreferrer"
       >
         Word Games
       </a>
@@ -45,6 +48,7 @@ const AppHeader = () => (
         className={bem('link')}
         href="https://planetplanner.jacob-alspaw.com/"
         target="_blank"
+        rel="noreferrer"
       >
         Planet Planner
       </a>
@@ -55,6 +59,7 @@ const AppHeader = () => (
         className={bem('link', 'main')}
         href="https://blog.feedspot.com/programming_blogs/"
         target="_blank"
+        rel="noreferrer"
       >
         TECH BLOGS
       </a>
@@ -62,6 +67,7 @@ const AppHeader = () => (
         className={bem('link')}
         href="https://frontendweekly.co/"
         target="_blank"
+        rel="noreferrer"
       >
         Frontend Weekly
       </a>
@@ -69,6 +75,7 @@ const AppHeader = () => (
         className={bem('link')}
         href="https://stackoverflow.com/questions/tagged/frontend"
         target="_blank"
+        rel="noreferrer"
       >
         Stack Overflow
       </a>
@@ -85,6 +92,7 @@ const AppHeader = () => (
         className={bem('link', 'main')}
         href="https://www.google.com/search?q=Jacob+Alspaw&tbm=nws"
         target="_blank"
+        rel="noreferrer"
       >
         NEWS
       </a>
@@ -92,6 +100,7 @@ const AppHeader = () => (
         className={bem('link')}
         href="https://mdc.mo.gov/newsroom/mdc-opens-first-public-outdoor-rock-climbing-bluff-st-louis-area-rockwoods-reservation"
         target="_blank"
+        rel="noreferrer"
       >
         MDC Climb
       </a>
@@ -99,6 +108,7 @@ const AppHeader = () => (
         className={bem('link')}
         href="https://athletics.case.edu/sports/mswimdive/2014-15/bios/alspaw_jacob_y49p"
         target="_blank"
+        rel="noreferrer"
       >
         College Swim
       </a>
@@ -106,6 +116,7 @@ const AppHeader = () => (
         className={bem('link')}
         href="https://www.newsmagazinenetwork.com/nn/2013052235407/rockwood-swim-club-places-11th-at-open-water-festival/"
         target="_blank"
+        rel="noreferrer"
       >
         Open Water
       </a>

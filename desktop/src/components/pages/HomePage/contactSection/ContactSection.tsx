@@ -3,7 +3,7 @@ import 'src/components/pages/homePage/contactSection/ContactSection.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { RouteName } from 'src/utils/constants';
+import { RouteName } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';

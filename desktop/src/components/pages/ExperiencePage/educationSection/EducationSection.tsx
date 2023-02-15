@@ -2,7 +2,8 @@ import 'src/components/pages/experiencePage/educationSection/EducationSection.sc
 
 import React from 'react';
 
-import { educationImagesPath, transcriptPath } from 'src/utils/constants';
+import { transcriptPath } from 'src/constants/documents';
+import { educationImagesPath } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
@@ -53,7 +54,8 @@ const EducationSection = () => {
             key={university.name}
             className={bem('card')}
             href={university.link}
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <img
               src={university.pic}

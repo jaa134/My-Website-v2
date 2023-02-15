@@ -3,7 +3,7 @@ import 'src/components/layout/appHeader/AppHeader.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { RouteName } from 'src/utils/constants';
+import { RouteName } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 import { useScrollPosition } from 'src/utils/hooks';
 

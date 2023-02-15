@@ -14,4 +14,23 @@ $name: 'GallerySection';
     letter-spacing: 0.03125rem;
     color: $purple;
   }
+
+  .react-photo-album--photo {
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: $purple_l_10;
+    }
+  }
+
+  &__load-more {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -2,7 +2,7 @@ import 'src/components/pages/experiencePage/workSection/WorkSection.scss';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-import { resumePath } from 'src/utils/constants';
+import { resumePath } from 'src/constants/documents';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
@@ -34,7 +34,7 @@ const WorkSection = () => {
         'Works with a diverse and talented team of Engineers in Europe and in the US to help build the next missions and apps to test and pilot spacecraft',
         'Demonstrates in-depth knowledge of core web/browser concepts, and other web development/testing/production tools using Vue.js (2&3), TypeScript, GraphQL, Apollo Client, Webpack, and Vite',
         'Introduced new patterns for backlog management, Jira ticket templating, Gitlab merge request templating, code linting, and code formating to increase developer productivity',
-        'Recieved a satellite pilot training and certification',
+        'Piloted and controlled satellites in orbit after completing satellite pilot training and certification',
         'Routinely engages in satellite operations to ensure satellites remain performant',
       ],
     },
@@ -154,7 +154,8 @@ const WorkSection = () => {
       <a
         className={bem('panel-title')}
         href={visiblePanel.link}
-        target="_blank" rel="noreferrer"
+        target="_blank"
+        rel="noreferrer"
       >
         {visiblePanel.companyNameLong}
       </a>

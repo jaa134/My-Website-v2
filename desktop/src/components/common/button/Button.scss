@@ -3,6 +3,9 @@
 $name: 'Button';
 
 .#{$name} {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -15,7 +18,7 @@ $name: 'Button';
   border-style: solid;
   border-color: transparent;
   text-align: center;
-  font-size: 1.125rem;
+  font-weight: 300;
   user-select: none;
   cursor: pointer;
   transition: 200ms ease-in;
@@ -25,21 +28,28 @@ $name: 'Button';
   &--small {
     padding: 0.25rem 1rem;
     min-width: 6rem;
-    font-weight: 300;
     font-size: 0.875rem;
   }
 
   &--medium {
+    gap: 1rem;
     padding: 0.5rem 1.75rem;
     min-width: 8rem;
-    font-weight: 300;
     font-size: 1.125rem;
+
+    .#{$name} {
+      &__icon {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 1rem;
+      }
+    }
   }
 
   &--large {
     padding: 0.75rem 2rem;
     min-width: 10rem;
-    font-weight: 300;
     font-size: 1.25rem;
   }
 
@@ -47,6 +57,7 @@ $name: 'Button';
     &.#{$name} {
       &--white {
         color: $white;
+        fill: $white;
         border-color: $white;
         background-color: transparent;
 
@@ -65,6 +76,7 @@ $name: 'Button';
     &.#{$name} {
       &--purple {
         color: $white;
+        fill: $white;
         border-color: $purple;
         background-color: $purple;
 

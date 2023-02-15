@@ -2,7 +2,7 @@ import 'src/components/pages/contactPage/socialsSection/SocialsSection.scss';
 
 import React from 'react';
 
-import { Handle, Link } from 'src/utils/constants';
+import { Handle, Link } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 
 import FacebookVariant1 from 'src/components/icons/logos/socials/FacebookVariant1';

@@ -2,15 +2,8 @@ import 'src/components/pages/experiencePage/skillsSection/SkillsSection.scss';
 
 import React, { useState } from 'react';
 
-import {
-  Achievement as AchievementType,
-  achievements,
-  devPractices,
-  languages,
-  services,
-  SkillLink,
-  technologies,
-} from 'src/utils/constants';
+import { devPractices, languages, services, SkillLink, technologies } from 'src/constants/skills';
+import { Achievement as AchievementType, achievements } from 'src/constants/achievements';
 import defineBlock from 'src/utils/defineBlock';
 
 import Dialog from 'src/components/common/dialog/Dialog';

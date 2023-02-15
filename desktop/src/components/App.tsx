@@ -4,7 +4,7 @@ import 'src/components/App.scss';
 import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { RouteName } from 'src/utils/constants';
+import { RouteName } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 
 import AppFooter from 'src/components/layout/appFooter/AppFooter';

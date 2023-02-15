@@ -2,7 +2,7 @@ import 'src/components/pages/contactPage/optionsSection/OptionsSection.scss';
 
 import React from 'react';
 
-import { EMAIL_ADDRESS, LOCATION, PHONE_NUMBER } from 'src/utils/constants';
+import { EMAIL_ADDRESS, LOCATION, PHONE_NUMBER } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 import notify from 'src/utils/notificatons';
 import copyText from 'src/utils/textUtils';
