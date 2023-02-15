@@ -2,15 +2,16 @@ import 'src/components/common/dialog/Dialog.scss';
 
 import PropTypes from 'prop-types';
 import React, { FunctionComponent, MouseEventHandler, ReactElement } from 'react';
+import { createPortal } from 'react-dom';
 
 import defineBlock from 'src/utils/defineBlock';
-import { createPortal } from 'react-dom';
-import Button from '../button/Button';
+
+import Button from 'src/components/common/button/Button';
 import Close from 'src/components/icons/general/Close';
 
 const bem = defineBlock('Dialog');
 
-type Props = {
+interface Props {
   open: boolean;
   title: string;
   children: ReactElement;
@@ -20,9 +21,9 @@ type Props = {
     onClick?: MouseEventHandler<HTMLElement> | null;
   } | null;
   onClose: MouseEventHandler<HTMLElement>;
-};
+}
 
-const Dialog: FunctionComponent<Props> = ({ open, title, children, primaryAction, onClose }) => {
+const Dialog: FunctionComponent<Props> = ({ open, title, children, primaryAction = null, onClose }) => {
   if (!open) {
     return null;
   }
@@ -42,6 +43,7 @@ const Dialog: FunctionComponent<Props> = ({ open, title, children, primaryAction
         <a
           href={primaryAction.href}
           target="_blank"
+          rel="noreferrer"
         >
           {primaryActionButton}
         </a>

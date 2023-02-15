@@ -2,13 +2,13 @@ import 'src/components/pages/homePage/globeSection/GlobeSection.scss';
 
 import React, { useEffect, useRef, useState } from 'react';
 
+import { globeImagesPath } from 'src/utils/constants';
 import defineBlock from 'src/utils/defineBlock';
 
-import GlobeScene, { Marker } from 'src/components/pages/homePage/globeSection/GlobeScene';
 import Dialog from 'src/components/common/dialog/Dialog';
-import { globeImagesPath } from 'src/utils/constants';
-import Location from 'src/components/icons/general/Location';
 import Calendar from 'src/components/icons/general/Calendar';
+import Location from 'src/components/icons/general/Location';
+import GlobeScene, { Marker } from 'src/components/pages/homePage/globeSection/GlobeScene';
 
 const bem = defineBlock('HomeGlobeSection');
 
@@ -303,7 +303,7 @@ const GlobeSection = () => {
 
       {selectedMarker && (
         <Dialog
-          open={true}
+          open
           title={selectedMarker.title}
           onClose={() => setSelectedMarker(null)}
         >

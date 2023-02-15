@@ -2,28 +2,28 @@ import 'src/components/pages/experiencePage/skillsSection/SkillsSection.scss';
 
 import React, { useState } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
 import {
-  SkillLink,
   Achievement as AchievementType,
+  achievements,
   devPractices,
   languages,
   services,
+  SkillLink,
   technologies,
-  achievements,
 } from 'src/utils/constants';
+import defineBlock from 'src/utils/defineBlock';
 
-import TechSkill from 'src/components/pages/experiencePage/skillsSection/techSkill/TechSkill';
-import Achievement from 'src/components/pages/experiencePage/skillsSection/achievement/Achievement';
 import Dialog from 'src/components/common/dialog/Dialog';
+import Achievement from 'src/components/pages/experiencePage/skillsSection/achievement/Achievement';
+import TechSkill from 'src/components/pages/experiencePage/skillsSection/techSkill/TechSkill';
 
 const bem = defineBlock('SkillsSection');
 
 const SkillsSection = () => {
   const [activeSkill, setActiveSkill] = useState<SkillLink | null>(null);
 
-  const renderSkills = (skills: SkillLink[]) =>
-    skills.map((skill) => (
+  const renderSkills = (skillsData: SkillLink[]) =>
+    skillsData.map((skill) => (
       <TechSkill
         key={skill.displayText}
         techName={skill.displayText}
@@ -33,8 +33,8 @@ const SkillsSection = () => {
       />
     ));
 
-  const renderAchievements = (achievements: AchievementType[]) =>
-    achievements.map(({ id, message }) => (
+  const renderAchievements = (achievementsData: AchievementType[]) =>
+    achievementsData.map(({ id, message }) => (
       <Achievement
         key={id}
         message={message}
@@ -46,7 +46,7 @@ const SkillsSection = () => {
       <style>{`.${bem('dialog-slider')}--${value} { --bar-width: ${value}% }`}</style>
       <div className={bem('dialog-slider-label')}>{label}</div>
       <div className={bem('dialog-slider-value')}>
-        <div className={bem('dialog-slider-value-inner')}></div>
+        <div className={bem('dialog-slider-value-inner')} />
       </div>
     </div>
   );
@@ -76,7 +76,7 @@ const SkillsSection = () => {
 
       {activeSkill && (
         <Dialog
-          open={true}
+          open
           title={`You Selected "${activeSkill.displayText}"`}
           {...(activeSkill.href && {
             primaryAction: {

@@ -5,20 +5,19 @@ import 'src/components/pages/aboutPage/gallerySection/GallerySection.scss';
 import React, { useCallback, useState } from 'react';
 import PhotoAlbum, { ClickHandlerProps, Photo } from 'react-photo-album';
 import Lightbox from 'yet-another-react-lightbox';
-import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import Captions from 'yet-another-react-lightbox/plugins/captions';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
-import defineBlock from 'src/utils/defineBlock';
 import { photos } from 'src/utils/constants';
+import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('GallerySection');
 
 const GallerySection = () => {
   const [currentImage, setCurrentImage] = useState<number>(0);
   const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
-  const openLightbox = useCallback((props: ClickHandlerProps<Photo>) => {
-    console.log(currentImage);
-    setCurrentImage(props.index);
+  const openLightbox = useCallback((handlerProps: ClickHandlerProps<Photo>) => {
+    setCurrentImage(handlerProps.index);
     setLightboxIsOpen(true);
   }, []);
 

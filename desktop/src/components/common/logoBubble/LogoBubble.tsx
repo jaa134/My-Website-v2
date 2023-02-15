@@ -1,7 +1,7 @@
 import 'src/components/common/logoBubble/LogoBubble.scss';
 
 import PropTypes from 'prop-types';
-import React, { FunctionComponent, MouseEventHandler, Validator, ReactElement } from 'react';
+import React, { FunctionComponent, MouseEventHandler, ReactElement } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -25,7 +25,7 @@ const LogoBubble: FunctionComponent<Props> = ({ size, menuPositon, values, activ
       <style>{`.${bem('menu-slider')}--${value} { --bar-width: ${value}% }`}</style>
       <div className={bem('menu-slider-label')}>{label}</div>
       <div className={bem('menu-slider-value')}>
-        <div className={bem('menu-slider-value-inner')}></div>
+        <div className={bem('menu-slider-value-inner')} />
       </div>
     </div>
   );
@@ -40,8 +40,8 @@ const LogoBubble: FunctionComponent<Props> = ({ size, menuPositon, values, activ
           {renderSlider('Knowledge', values.knowledge)}
           {renderSlider('Experience Level', values.experience)}
         </div>
-        <div className={bem('menu-arm', '1')}></div>
-        <div className={bem('menu-arm', '2')}></div>
+        <div className={bem('menu-arm', '1')} />
+        <div className={bem('menu-arm', '2')} />
       </div>
 
       <div className={bem('logo')}>{children}</div>
@@ -997,8 +997,8 @@ const LogoBubble: FunctionComponent<Props> = ({ size, menuPositon, values, activ
 };
 
 LogoBubble.propTypes = {
-  size: PropTypes.oneOf(['s1', 's2', 's3', 's4', 's5']) as Validator<'s1' | 's2' | 's3' | 's4' | 's5'>,
-  menuPositon: PropTypes.oneOf(['left', 'right']) as Validator<'left' | 'right'>,
+  size: PropTypes.oneOf(['s1', 's2', 's3', 's4', 's5'] as const).isRequired,
+  menuPositon: PropTypes.oneOf(['left', 'right'] as const).isRequired,
   values: PropTypes.shape({
     knowledge: PropTypes.number.isRequired,
     experience: PropTypes.number.isRequired,

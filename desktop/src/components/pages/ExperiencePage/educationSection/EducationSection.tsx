@@ -2,18 +2,19 @@ import 'src/components/pages/experiencePage/educationSection/EducationSection.sc
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
 import { educationImagesPath, transcriptPath } from 'src/utils/constants';
+import defineBlock from 'src/utils/defineBlock';
+
 import Button from 'src/components/common/button/Button';
 
 const bem = defineBlock('EducationSection');
 
-type EducationData = {
+interface EducationData {
   name: string;
   link: string;
   pic: string;
   description: string;
-};
+}
 
 const EducationSection = () => {
   const universities: readonly EducationData[] = [
@@ -52,7 +53,7 @@ const EducationSection = () => {
             key={university.name}
             className={bem('card')}
             href={university.link}
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <img
               src={university.pic}

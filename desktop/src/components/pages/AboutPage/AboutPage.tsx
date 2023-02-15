@@ -5,9 +5,9 @@ import React from 'react';
 import defineBlock from 'src/utils/defineBlock';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
+import LineSplit from 'src/components/layout/lineSplit/LineSplit';
 import GallerySection from 'src/components/pages/aboutPage/gallerySection/GallerySection';
 import TimelineSection from 'src/components/pages/aboutPage/timelineSection/TimelineSection';
-import LineSplit from 'src/components/layout/lineSplit/LineSplit';
 
 const bem = defineBlock('AboutPage');
 

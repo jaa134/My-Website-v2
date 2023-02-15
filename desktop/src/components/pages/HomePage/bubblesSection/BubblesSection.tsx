@@ -1,27 +1,27 @@
 import 'src/components/pages/homePage/bubblesSection/BubblesSection.scss';
 
-import React, { useState, ReactElement } from 'react';
+import React, { ReactElement,useState } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
 import LogoBubble from 'src/components/common/logoBubble/LogoBubble';
 import Angular from 'src/components/icons/logos/tech/Angular';
-import ReactJS from 'src/components/icons/logos/tech/ReactJS';
-import Vue from 'src/components/icons/logos/tech/Vue';
-import GraphQL from 'src/components/icons/logos/tech/GraphQL';
-import Git from 'src/components/icons/logos/tech/Git';
-import JavaScript from 'src/components/icons/logos/tech/JavaScript';
 import CSS from 'src/components/icons/logos/tech/CSS';
+import Git from 'src/components/icons/logos/tech/Git';
+import GraphQL from 'src/components/icons/logos/tech/GraphQL';
 import HTML from 'src/components/icons/logos/tech/HTML';
-import Jest from 'src/components/icons/logos/tech/Jest';
-import TypeScript from 'src/components/icons/logos/tech/TypeScript';
 import Java from 'src/components/icons/logos/tech/Java';
-import Sass from 'src/components/icons/logos/tech/Sass';
+import JavaScript from 'src/components/icons/logos/tech/JavaScript';
+import Jest from 'src/components/icons/logos/tech/Jest';
 import Jira from 'src/components/icons/logos/tech/Jira';
+import ReactJS from 'src/components/icons/logos/tech/ReactJS';
+import Sass from 'src/components/icons/logos/tech/Sass';
+import TypeScript from 'src/components/icons/logos/tech/TypeScript';
+import Vue from 'src/components/icons/logos/tech/Vue';
 
 const bem = defineBlock('BubblesSection');
 
-type BubbleData = {
+interface BubbleData {
   id: string;
   logo: ReactElement;
   size: 's1' | 's2' | 's3' | 's4' | 's5';
@@ -30,7 +30,7 @@ type BubbleData = {
     knowledge: number;
     experience: number;
   };
-};
+}
 
 const BubblesSection = () => {
   const [activeBubble, setActiveBubble] = useState<BubbleData | null>(null);

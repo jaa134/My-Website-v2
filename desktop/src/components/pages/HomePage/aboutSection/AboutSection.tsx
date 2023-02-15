@@ -1,13 +1,13 @@
 import 'src/components/pages/homePage/aboutSection/AboutSection.scss';
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
+import { albumImagesPath, RouteName } from 'src/utils/constants';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
 import Star from 'src/components/icons/general/Star';
-import { albumImagesPath, RouteName } from 'src/utils/constants';
-import { Link } from 'react-router-dom';
 
 const bem = defineBlock('AboutSection');
 

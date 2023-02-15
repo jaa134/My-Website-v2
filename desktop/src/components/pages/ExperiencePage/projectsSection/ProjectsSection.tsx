@@ -6,11 +6,11 @@ import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('ProjectsSection');
 
-type ProjectData = {
+interface ProjectData {
   name: string;
   link: string;
   logo: ReactElement;
-};
+}
 
 const ProjectsSection = () => {
   const projects: ProjectData[] = [
@@ -117,7 +117,7 @@ const ProjectsSection = () => {
             key={project.name}
             className={bem('project')}
             href={project.link}
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             <div className={bem('project-logo')}>{project.logo}</div>
             <div className={bem('project-name')}>{project.name}</div>

@@ -20,19 +20,19 @@ const ExperienceSection = () => (
         <div className={bem('card-title')}>Software Development</div>
       </div>
       <div className={bem('card')}>
-        <div className={bem('dev-screen-inner')}></div>
-        <div className={bem('dev-screen-outer')}></div>
+        <div className={bem('dev-screen-inner')} />
+        <div className={bem('dev-screen-outer')} />
         <div className={bem('card-title')}>Websites & Mobile Apps</div>
       </div>
       <div className={bem('card')}>
         <div className={bem('project-grid')}>
-          <div className={bem('project-grid-box')}></div>
-          <div className={bem('project-grid-box')}></div>
-          <div className={bem('project-grid-box')}></div>
-          <div className={bem('project-grid-box')}></div>
-          <div className={bem('project-grid-box')}></div>
-          <div className={bem('project-grid-box')}></div>
-          <div className={bem('project-grid-box')}></div>
+          <div className={bem('project-grid-box')} />
+          <div className={bem('project-grid-box')} />
+          <div className={bem('project-grid-box')} />
+          <div className={bem('project-grid-box')} />
+          <div className={bem('project-grid-box')} />
+          <div className={bem('project-grid-box')} />
+          <div className={bem('project-grid-box')} />
         </div>
         <div className={bem('card-title')}>Project Management</div>
       </div>

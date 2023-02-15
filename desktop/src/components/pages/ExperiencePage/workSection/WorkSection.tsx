@@ -2,20 +2,21 @@ import 'src/components/pages/experiencePage/workSection/WorkSection.scss';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
 import { resumePath } from 'src/utils/constants';
+import defineBlock from 'src/utils/defineBlock';
+
 import Button from 'src/components/common/button/Button';
 
 const bem = defineBlock('WorkSection');
 
-type PanelData = {
+interface PanelData {
   companyNameShort: string;
   companyNameLong: string;
   date: string;
   link: string;
   position: string;
   bulletPoints: string[];
-};
+}
 
 const WorkSection = () => {
   const panelIndexInterval = useRef<NodeJS.Timer | null>(null);
@@ -153,7 +154,7 @@ const WorkSection = () => {
       <a
         className={bem('panel-title')}
         href={visiblePanel.link}
-        target="_blank"
+        target="_blank" rel="noreferrer"
       >
         {visiblePanel.companyNameLong}
       </a>
@@ -196,7 +197,7 @@ const WorkSection = () => {
               className={bem('panel-button', { active: panelIndex === i })}
               onClick={() => onClickPanelButton(i)}
             >
-              <div></div>
+              <div />
               <div>{panel.companyNameShort}</div>
             </div>
           ))}

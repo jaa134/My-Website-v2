@@ -5,11 +5,11 @@ import React from 'react';
 import defineBlock from 'src/utils/defineBlock';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
-import WorkSection from 'src/components/pages/experiencePage/workSection/WorkSection';
-import SkillsSection from 'src/components/pages/experiencePage/skillsSection/SkillsSection';
-import ProjectsSection from 'src/components/pages/experiencePage/projectsSection/ProjectsSection';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
 import EducationSection from 'src/components/pages/experiencePage/educationSection/EducationSection';
+import ProjectsSection from 'src/components/pages/experiencePage/projectsSection/ProjectsSection';
+import SkillsSection from 'src/components/pages/experiencePage/skillsSection/SkillsSection';
+import WorkSection from 'src/components/pages/experiencePage/workSection/WorkSection';
 
 const bem = defineBlock('ExperiencePage');
 

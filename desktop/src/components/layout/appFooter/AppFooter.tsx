@@ -5,11 +5,11 @@ import React from 'react';
 import { Link } from 'src/utils/constants';
 import defineBlock from 'src/utils/defineBlock';
 
+import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
 import FacebookVariant1 from 'src/components/icons/logos/socials/FacebookVariant1';
 import GitHubVariant1 from 'src/components/icons/logos/socials/GitHubVariant1';
 import InstagramVariant1 from 'src/components/icons/logos/socials/InstagramVariant1';
 import LinkedinVariant1 from 'src/components/icons/logos/socials/LinkedinVariant1';
-import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
 import TwitterVariant1 from 'src/components/icons/logos/socials/TwitterVariant1';
 
 const bem = defineBlock('AppFooter');

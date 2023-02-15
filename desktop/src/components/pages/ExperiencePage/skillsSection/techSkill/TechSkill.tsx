@@ -7,15 +7,14 @@ import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('TechSkill');
 
-type Props = {
+interface Props {
   techName: string;
   imagePath: string;
   active: boolean;
   onClick: MouseEventHandler<HTMLElement>;
-};
+}
 
-const TechSkill: FunctionComponent<Props> = ({ techName, imagePath, active, onClick }) => {
-  return (
+const TechSkill: FunctionComponent<Props> = ({ techName, imagePath, active, onClick }) => (
     <div
       className={bem('', { active })}
       onClick={onClick}
@@ -29,7 +28,6 @@ const TechSkill: FunctionComponent<Props> = ({ techName, imagePath, active, onCl
       <div className={bem('tech-name')}>{techName}</div>
     </div>
   );
-};
 
 TechSkill.propTypes = {
   techName: PropTypes.string.isRequired,

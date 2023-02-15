@@ -3,14 +3,14 @@ import 'src/components/pages/experiencePage/skillsSection/achievement/Achievemen
 import PropTypes from 'prop-types';
 import React, { FunctionComponent } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
 import { skillsImagesPath } from 'src/utils/constants';
+import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('Achievement');
 
-type Props = {
+interface Props {
   message: string;
-};
+}
 
 const Achievement: FunctionComponent<Props> = ({ message }) => (
   <div className={bem()}>

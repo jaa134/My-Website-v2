@@ -21,12 +21,12 @@ const Button: FunctionComponent<Props> = ({
   color = 'purple',
   label = null,
   children = null,
-  onClick,
+  onClick = null,
 }) => (
   <button
     type="button"
     className={bem('', size, type, color)}
-    onClick={onClick}
+    {...(onClick && { onClick })}
   >
     {children ?? label ?? ''}
   </button>

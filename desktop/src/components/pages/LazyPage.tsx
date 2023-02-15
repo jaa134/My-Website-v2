@@ -1,7 +1,7 @@
 import 'src/components/pages/LazyPage.scss';
 
 import PropTypes from 'prop-types';
-import React, { FunctionComponent, Suspense, ReactNode } from 'react';
+import React, { FunctionComponent, ReactNode,Suspense } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
