@@ -55,7 +55,7 @@ $name: 'TimelineSection';
     position: absolute;
 
     &--1 {
-      top: -10rem;
+      top: -11rem;
       left: -18rem;
     }
 
@@ -65,8 +65,8 @@ $name: 'TimelineSection';
     }
 
     &--3 {
-      top: 62rem;
-      left: -18rem;
+      top: 65rem;
+      left: -19rem;
     }
 
     .#{$name} {
@@ -80,7 +80,7 @@ $name: 'TimelineSection';
       }
 
       &__message {
-        width: 30rem;
+        width: 35rem;
         line-height: 1.5;
         letter-spacing: 0.0625rem;
         font-size: 1rem;

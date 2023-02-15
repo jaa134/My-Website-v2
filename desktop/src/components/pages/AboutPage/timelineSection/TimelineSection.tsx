@@ -25,8 +25,9 @@ const TimelineSection = () => (
         Who I Am&nbsp;<span className={bem('symbol')}>&#123;</span>
       </div>
       <div className={bem('message')}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Quis viverra nibh cras pulvinar.
+        I strive to live with an adeventurous mindset by seeking out new experiences and challenges that push me beyond
+        my comfort zone. I embrace uncertainty, risk-taking, and the unknown to learn and grow from the obstacles I
+        overcome.
       </div>
     </div>
     <div className={bem('blurb', '2')}>
@@ -34,8 +35,9 @@ const TimelineSection = () => (
         My Recent Year Was&nbsp;<span className={bem('symbol')}>&#123;</span>
       </div>
       <div className={bem('message')}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Quis viverra nibh cras pulvinar.
+        ... full of excitement and wonder! I got engaged, spent time with many family members, traveled to Europe for
+        the 1st time, and experienced the Colorado mountains through multi-pitch rock climbing, skiing, and high alpine
+        hiking. It was a year that won't be forgotten.
       </div>
     </div>
     <div className={bem('blurb', '3')}>
@@ -43,8 +45,9 @@ const TimelineSection = () => (
         So What's Next&nbsp;<span className={bem('symbol')}>&#123;</span>
       </div>
       <div className={bem('message')}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Quis viverra nibh cras pulvinar.
+        The future is not set in stone, and it's up to me to make the most of the opportunities and challenges that come
+        my way. I'll continue to set goals, work hard towards achieving them, and make positive choices to create a
+        bright future for myself.
       </div>
     </div>
     <div className={bem('picture')}>
