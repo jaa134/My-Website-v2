@@ -22,79 +22,92 @@ const AppHeader = () => (
     <div className={bem('link-column')}>
       <a
         className={bem('link', 'main')}
-        href="/"
+        href="https://github.com/jaa134?tab=repositories"
+        target="_blank"
       >
-        LINK
+        REPOS
       </a>
       <a
         className={bem('link')}
-        href="/"
+        href="https://legacy.jacob-alspaw.com"
+        target="_blank"
       >
-        LINK 1
+        Legacy Website
       </a>
       <a
         className={bem('link')}
-        href="/"
+        href="https://wordgames.jacob-alspaw.com/"
+        target="_blank"
       >
-        LINK 2
+        Word Games
       </a>
       <a
         className={bem('link')}
-        href="/"
+        href="https://planetplanner.jacob-alspaw.com/"
+        target="_blank"
       >
-        LINK 3
+        Planet Planner
+      </a>
+    </div>
+
+    <div className={bem('link-column')}>
+      <a
+        className={bem('link', 'main')}
+        href="https://blog.feedspot.com/programming_blogs/"
+        target="_blank"
+      >
+        TECH BLOGS
+      </a>
+      <a
+        className={bem('link')}
+        href="https://frontendweekly.co/"
+        target="_blank"
+      >
+        Frontend Weekly
+      </a>
+      <a
+        className={bem('link')}
+        href="https://stackoverflow.com/questions/tagged/frontend"
+        target="_blank"
+      >
+        Stack Overflow
+      </a>
+      <a
+        className={bem('link')}
+        href="https://www.reddit.com/r/programming/"
+        target="https://www.reddit.com/r/programming/"
+      >
+        Reddit
       </a>
     </div>
     <div className={bem('link-column')}>
       <a
         className={bem('link', 'main')}
-        href="/"
+        href="https://www.google.com/search?q=Jacob+Alspaw&tbm=nws"
+        target="_blank"
       >
-        LINK
+        NEWS
       </a>
       <a
         className={bem('link')}
-        href="/"
+        href="https://mdc.mo.gov/newsroom/mdc-opens-first-public-outdoor-rock-climbing-bluff-st-louis-area-rockwoods-reservation"
+        target="_blank"
       >
-        LINK 1
+        MDC Climb
       </a>
       <a
         className={bem('link')}
-        href="/"
+        href="https://athletics.case.edu/sports/mswimdive/2014-15/bios/alspaw_jacob_y49p"
+        target="_blank"
       >
-        LINK 2
+        College Swim
       </a>
       <a
         className={bem('link')}
-        href="/"
+        href="https://www.newsmagazinenetwork.com/nn/2013052235407/rockwood-swim-club-places-11th-at-open-water-festival/"
+        target="_blank"
       >
-        LINK 3
-      </a>
-    </div>
-    <div className={bem('link-column')}>
-      <a
-        className={bem('link', 'main')}
-        href="/"
-      >
-        LINK
-      </a>
-      <a
-        className={bem('link')}
-        href="/"
-      >
-        LINK 1
-      </a>
-      <a
-        className={bem('link')}
-        href="/"
-      >
-        LINK 2
-      </a>
-      <a
-        className={bem('link')}
-        href="/"
-      >
-        LINK 3
+        Open Water
       </a>
     </div>
     <div className={bem('contact-column')}>
