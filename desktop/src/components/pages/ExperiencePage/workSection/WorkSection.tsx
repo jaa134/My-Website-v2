@@ -29,7 +29,13 @@ const WorkSection = () => {
       date: 'Jan 2022 - Present',
       link: 'https://www.loftorbital.com/',
       position: 'Senior Front-End Developer',
-      bulletPoints: [],
+      bulletPoints: [
+        'Works with a diverse and talented team of Engineers in Europe and in the US to help build the next missions and apps to test and pilot spacecraft',
+        'Demonstrates in-depth knowledge of core web/browser concepts, and other web development/testing/production tools using Vue.js (2&3), TypeScript, GraphQL, Apollo Client, Webpack, and Vite',
+        'Introduced new patterns for backlog management, Jira ticket templating, Gitlab merge request templating, code linting, and code formating to increase developer productivity',
+        'Recieved a satellite pilot training and certification',
+        'Routinely engages in satellite operations to ensure satellites remain performant',
+      ],
     },
     {
       companyNameShort: 'HCL Software',
