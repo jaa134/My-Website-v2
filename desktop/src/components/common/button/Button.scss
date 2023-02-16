@@ -44,10 +44,14 @@ $name: 'Button';
 
     .#{$name} {
       &__icon {
-        display: inline-flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         width: 1rem;
+
+        svg {
+          flex: 1;
+        }
       }
     }
   }

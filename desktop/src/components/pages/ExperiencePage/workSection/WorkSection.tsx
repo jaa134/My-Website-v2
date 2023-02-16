@@ -6,6 +6,7 @@ import { resumePath } from 'src/constants/documents';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
+import Download from 'src/components/icons/general/Download';
 
 const bem = defineBlock('WorkSection');
 
@@ -200,6 +201,7 @@ const WorkSection = () => {
           size="medium"
           type="filled"
           color="purple"
+          icon={<Download />}
           label="Download Resume"
         />
       </a>

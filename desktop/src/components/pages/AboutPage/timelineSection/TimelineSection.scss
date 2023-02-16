@@ -13,9 +13,7 @@ $name: 'TimelineSection';
   &__ball {
     position: absolute;
     background-color: $white;
-    border-radius: 100%;
-    outline-offset: 0.25rem;
-    outline: 0.0625rem solid #666;
+    border-radius: 50%;
     filter: brightness(90%);
 
     &--1 {
@@ -44,6 +42,17 @@ $name: 'TimelineSection';
       left: 16.5rem;
       height: 5.5rem;
       width: 5.5rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -0.25rem;
+      right: -0.25rem;
+      bottom: -0.25rem;
+      left: -0.25rem;
+      border: 0.0625rem solid #666;
+      border-radius: 50%;
     }
   }
 

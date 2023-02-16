@@ -7,6 +7,7 @@ import { educationImagesPath } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
+import Download from 'src/components/icons/general/Download';
 
 const bem = defineBlock('EducationSection');
 
@@ -45,6 +46,9 @@ const EducationSection = () => {
       >
         <Button
           size="medium"
+          type="filled"
+          color="purple"
+          icon={<Download />}
           label="Download Transcript"
         />
       </a>
