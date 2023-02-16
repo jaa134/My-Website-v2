@@ -81,5 +81,14 @@ $name: 'HomeGlobeSection';
         width: 1.25rem;
       }
     }
+
+    &-description {
+      margin-top: 1rem;
+      max-width: 30rem;
+      line-height: 1.5;
+      font-size: 1.125rem;
+      font-weight: 300;
+      color: $white_a_90;
+    }
   }
 }
