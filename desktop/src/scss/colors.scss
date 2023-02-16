@@ -1,6 +1,7 @@
 @use 'sass:color';
 
 $black: #000000;
+$black_a_25: color.adjust($black, $alpha: -0.75);
 
 $white: #ffffff;
 $white_a_10: color.adjust($white, $alpha: -0.9);
@@ -24,3 +25,5 @@ $purple_l_15: color.adjust($purple, $lightness: 15%);
 $purple_l_20: color.adjust($purple, $lightness: 20%);
 
 $turquoise: #13fff1;
+
+$red: #eb143c;

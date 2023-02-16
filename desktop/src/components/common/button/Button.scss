@@ -25,6 +25,11 @@ $name: 'Button';
   appearance: none;
   letter-spacing: 0.03125rem;
 
+  &--disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+
   &--small {
     padding: 0.25rem 1rem;
     min-width: 6rem;
@@ -80,14 +85,16 @@ $name: 'Button';
         border-color: $purple;
         background-color: $purple;
 
-        &:hover {
-          background-color: $purple_l_10;
-          border-color: $purple_l_10;
-        }
+        &:not(.#{$name}--disabled) {
+          &:hover {
+            background-color: $purple_l_10;
+            border-color: $purple_l_10;
+          }
 
-        &:active {
-          background-color: $purple_l_20;
-          border-color: $purple_l_20;
+          &:active {
+            background-color: $purple_l_20;
+            border-color: $purple_l_20;
+          }
         }
       }
     }

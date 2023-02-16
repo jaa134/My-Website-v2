@@ -68,6 +68,7 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "globe.gl": "^2.27.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
