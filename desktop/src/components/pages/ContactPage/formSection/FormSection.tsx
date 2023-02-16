@@ -2,6 +2,7 @@ import 'src/components/pages/contactPage/formSection/FormSection.scss';
 
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -20,9 +21,11 @@ const bem = defineBlock('FormSection');
   will count as an additional email towards the free email quota.
 */
 
-const SERVICE_ID = 'service_f6vq4q1';
-const TEMPLATE_ID = 'template_stiymyn';
-const PUBLIC_KEY = 'tHKpunSrvx009HOfP';
+const EMAILJS_SERVICE_ID = 'service_f6vq4q1';
+const EMAILJS_TEMPLATE_ID = 'template_stiymyn';
+const EMAILJS_PUBLIC_KEY = 'tHKpunSrvx009HOfP';
+
+const RECAPTCHA_SITE_KEY = '6Ldf9YYkAAAAAPP_-PKo0jycyXU-yrgkdz1SCl8Q';
 
 // Per the W3C HTML5 specification
 // https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
@@ -36,9 +39,12 @@ type EmailData = {
   contact_email: string;
   contact_phone: string;
   message: string;
+  'g-recaptcha-response': string | null;
 };
 
 const FormSection = () => {
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
   const nameInput = useRef<HTMLInputElement>(null);
   const emailInput = useRef<HTMLInputElement>(null);
   const phoneInput = useRef<HTMLInputElement>(null);
@@ -72,11 +78,15 @@ const FormSection = () => {
       phoneInput.current.value = '';
       messageTextArea.current.value = '';
     }
+
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+    }
   };
 
   const sendEmail = () => {
     if (!nameInput.current || !emailInput.current || !phoneInput.current || !messageTextArea.current) {
-      notify('Oops, something went wrong!');
+      notify('Form not found!');
       return;
     }
 
@@ -85,26 +95,47 @@ const FormSection = () => {
       contact_email: emailInput.current.value,
       contact_phone: phoneInput.current.value,
       message: messageTextArea.current.value,
+      'g-recaptcha-response': null,
     };
 
-    if (validateForm(emailData)) {
-      setLoading(true);
+    if (!validateForm(emailData)) {
+      notify('Form validation failed!');
+      return;
+    }
+
+    if (!recaptchaRef.current) {
+      notify('Could not perform CAPTCHA test!');
+      return;
+    }
+
+    setLoading(true);
+
+    const onCaptchaTestSuccess = (captchaResponse: string | null) => {
+      emailData['g-recaptcha-response'] = captchaResponse;
       emailjs
-        .send(SERVICE_ID, TEMPLATE_ID, emailData, PUBLIC_KEY)
+        .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, emailData, EMAILJS_PUBLIC_KEY)
         .then(
           () => {
             notify('Your email was sent to me!');
             resetForm();
           },
           (error) => {
-            console.error(error);
             notify('Failed to send email!');
+            console.error(error);
           },
         )
         .finally(() => {
           setLoading(false);
         });
-    }
+    };
+
+    const onCaptchaTestError = (error: unknown) => {
+      notify('Failed CAPTCHA test!');
+      console.error(error);
+      setLoading(false);
+    };
+
+    recaptchaRef.current.executeAsync().then(onCaptchaTestSuccess, onCaptchaTestError);
   };
 
   return (
@@ -165,6 +196,11 @@ const FormSection = () => {
           />
         </div>
       </div>
+      <ReCAPTCHA
+        ref={recaptchaRef}
+        size="invisible"
+        sitekey={RECAPTCHA_SITE_KEY}
+      />
     </div>
   );
 };
