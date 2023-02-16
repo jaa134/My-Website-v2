@@ -5,7 +5,7 @@ import { createRoot } from 'react-dom/client';
 import reportWebVitals from 'src/reportWebVitals';
 
 if (isDesktop) {
-  window.location.replace('https://desktop-app.jacob-alspaw.com');
+  window.location.replace('https://jacob-alspaw.com');
 } else {
   const rootElement = document.getElementById('root');
   if (!rootElement) {

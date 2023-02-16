@@ -87,7 +87,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "deploy": "npm run build && rm -rf ../My-Website-BUILD/desktop-app && cp -a build/ ../My-Website-BUILD/desktop-app/",
+    "deploy": "npm run build && cp -a build/ ../My-Website-BUILD/",
     "lint": "eslint . --fix --max-warnings=0",
     "format": "prettier . --write"
   },
