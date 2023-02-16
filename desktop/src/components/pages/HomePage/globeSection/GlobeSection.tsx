@@ -9,6 +9,7 @@ import Dialog from 'src/components/common/dialog/Dialog';
 import Calendar from 'src/components/icons/general/Calendar';
 import Location from 'src/components/icons/general/Location';
 import GlobeScene, { Marker } from 'src/components/pages/homePage/globeSection/GlobeScene';
+import notify from 'src/utils/notificatons';
 
 const bem = defineBlock('HomeGlobeSection');
 
@@ -301,7 +302,7 @@ const GlobeSection = () => {
     let scene: GlobeScene | null = null;
     if (globeMountRef.current) {
       const onLoadError = () => {
-        // noop
+        notify('Failed to load globe assets!');
       };
       scene = new GlobeScene(globeMountRef.current, GLOBE_HEIGHT, GLOBE_WIDTH, markers, onClickMarker, onLoadError);
       scene.init();

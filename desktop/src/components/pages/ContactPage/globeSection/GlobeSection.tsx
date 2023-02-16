@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from 'react';
 import defineBlock from 'src/utils/defineBlock';
 
 import GlobeScene from 'src/components/pages/contactPage/globeSection/GlobeScene';
+import notify from 'src/utils/notificatons';
 
 const bem = defineBlock('ContactGlobeSection');
 
@@ -18,7 +19,7 @@ const GlobeSection = () => {
     let scene: GlobeScene | null = null;
     if (globeMountRef.current) {
       const onLoadError = () => {
-        // noop
+        notify('Failed to load globe assets!');
       };
       scene = new GlobeScene(globeMountRef.current, GLOBE_HEIGHT, GLOBE_WIDTH, onLoadError);
       scene.init();
