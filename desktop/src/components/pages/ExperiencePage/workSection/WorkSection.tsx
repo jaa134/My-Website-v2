@@ -120,6 +120,19 @@ const WorkSection = () => {
         'Roughly a year later, Spotify implemented the same features within its own mobile application',
       ],
     },
+    {
+      companyNameShort: 'CWRU Tutor',
+      companyNameLong: 'CWRU Peer Tutor',
+      date: 'Aug 2016 - May 2019',
+      link: 'https://case.edu/studentsuccess/academic-resources/peer-tutoring',
+      position: 'Teaching Assistant & Peer Tutor',
+      bulletPoints: [
+        "Reinforced course work during tutoring sessions and recitations to boost students' academic performance",
+        'Customized instructional approaches to meet the academic needs of diverse clients across a variety of courses',
+        'Collaborated with faculty members to ensure lesson plans addressed students’ strengths/weaknesses',
+        'Graded student assignments, quizzes, and tests. Kept scores updated in university database.',
+      ],
+    },
   ];
 
   const stopAutoSlideshow = () => {
