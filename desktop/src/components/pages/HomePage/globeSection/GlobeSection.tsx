@@ -92,7 +92,7 @@ const markers: Marker[] = [
     location: 'Cleveland, Ohio',
     date: 'Spring of 2019',
     description:
-      'This was a significant milestone in my life that marked the end of one chapter and the beginning of a new one. After being presented my diploma, my family and I took photos together in fron of our main campus library. The following week, I started my career as a software developer and the rest is history.',
+      'This was a significant milestone in my life that marked the end of one chapter and the beginning of a new one. After being presented my diploma, my family and I took photos together in front of our main campus library. The following week, I started my career as a software developer and the rest is history.',
     imageSrc: `${globeImagesPath}/sppdwlx2IM.jpg`,
     lat: 41.4993,
     lng: -81.6944,

@@ -524,6 +524,6 @@ export const photos: Photo[] = [
     width: 720,
     height: 960,
     title: 'Grand Canyon - 2018',
-    description: 'Little brother and I enjoying what time wwe can spend together.',
+    description: 'Little brother and I enjoying what time we can spend together.',
   },
 ];

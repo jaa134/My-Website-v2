@@ -83,7 +83,7 @@ $name: 'LogoBubble';
     display: flex;
     align-items: center;
     justify-content: center;
-    filter: grayscale(70%);
+    filter: grayscale(50%);
     opacity: 0.33;
     transition: 200ms ease-in;
 
@@ -116,16 +116,16 @@ $name: 'LogoBubble';
     .#{$name} {
       &__bubble {
         &--normal {
-          opacity: 0.6;
+          opacity: 0.55;
         }
 
         &--hover {
-          opacity: 0.4;
+          opacity: 0.45;
         }
       }
 
       &__logo {
-        filter: grayscale(0%);
+        filter: grayscale(0%) saturate(120%);
         opacity: 1;
       }
 
