@@ -5,6 +5,7 @@ export const albumImagesPath = `${imagesPath}/album`;
 export const educationImagesPath = `${imagesPath}/education`;
 export const skillsImagesPath = `${imagesPath}/skills`;
 export const globeImagesPath = `${imagesPath}/globe`;
+export const miscImagesPath = `${imagesPath}/misc`;
 
 interface Photo {
   src: string;

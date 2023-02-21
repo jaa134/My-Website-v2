@@ -1,5 +1,9 @@
 $name: 'LineSplit';
 
 .#{$name} {
-  height: 4rem;
+  width: 100%;
+
+  svg {
+    width: 100%;
+  }
 }

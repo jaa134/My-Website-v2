@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { RouteName } from 'src/constants/common';
-import { albumImagesPath } from 'src/constants/images';
+import { albumImagesPath, miscImagesPath } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
@@ -49,7 +49,7 @@ const AboutSection = () => (
       </div>
       <div className={bem('image')}>
         <img
-          src={`${albumImagesPath}/7m2FbjvtBR.jpg`}
+          src={`${miscImagesPath}/profile--small.jpg`}
           alt=""
         />
       </div>
