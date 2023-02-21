@@ -1,0 +1,114 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'AppFooter';
+$lr_padding: 4rem;
+
+.#{$name} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  box-sizing: border-box;
+  height: $footer-height;
+  width: 100%;
+  min-width: $app-min-width;
+  max-width: $app-max-width;
+  margin: auto;
+  padding: 0 $lr_padding;
+  color: $white;
+  background-image: linear-gradient(to bottom right, $purple -200%, $black 100%);
+  user-select: none;
+
+  &__logo-column {
+    margin-right: 4rem;
+
+    svg {
+      height: 7rem;
+    }
+  }
+
+  &__link-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 9rem;
+  }
+
+  &__contact-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 4rem;
+    padding: 0.25rem 0;
+    height: 9rem;
+    box-sizing: border-box;
+  }
+
+  &__link {
+    padding: 0.25rem;
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    letter-spacing: 0.0625rem;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.25rem;
+    }
+
+    &:visited {
+      color: unset;
+    }
+
+    &--main {
+      font-weight: 400;
+      opacity: 1;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  &__contact-title {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.0625rem;
+  }
+
+  &__contact-subtitle {
+    width: 15.5rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.03125rem;
+    opacity: 0.9;
+  }
+
+  &__contact-options {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  &__contact-option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: $purple;
+    cursor: pointer;
+    transition: 200ms ease-in;
+
+    &:hover {
+      background-color: $purple_l_15;
+    }
+
+    svg {
+      height: 1.75rem;
+    }
+  }
+}

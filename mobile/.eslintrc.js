@@ -24,6 +24,12 @@ module.exports = {
   ],
   overrides: [
     {
+      files: ['src/**/GlobeScene.ts'],
+      rules: {
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+      },
+    },
+    {
       files: [
         'src/**/*.spec.ts',
         'src/**/*.test.ts',
@@ -74,6 +80,7 @@ module.exports = {
     ],
     'no-self-compare': 'error',
     'no-shadow': 'off',
+    'no-underscore-dangle': 'off',
     'no-unneeded-ternary': 'error',
     'no-useless-computed-key': 'error',
     'no-useless-rename': 'error',
@@ -106,9 +113,14 @@ module.exports = {
 
     'import/no-unresolved': 'off',
 
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+
     '@typescript-eslint/array-type': 'error',
+    '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/no-duplicate-imports': 'error',
+    '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-redeclare': [
       'error',

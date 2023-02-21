@@ -1,6 +1,10 @@
 import React from 'react';
 import { isDesktop } from 'react-device-detect';
 import { createRoot } from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
+
+import App from 'src/components/App';
+import ScrollToTop from 'src/components/common/scrollToTop/ScrollToTop';
 
 import reportWebVitals from 'src/reportWebVitals';
 
@@ -15,7 +19,10 @@ if (isDesktop) {
   const root = createRoot(rootElement);
   root.render(
     <React.StrictMode>
-      <div>Hello world!</div>
+      <HashRouter>
+        <ScrollToTop />
+        <App />
+      </HashRouter>
     </React.StrictMode>,
   );
 

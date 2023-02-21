@@ -1,0 +1,106 @@
+@import 'src/scss/colors.scss';
+
+$name: 'Button';
+
+.#{$name} {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: fit-content;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  border-radius: 2rem;
+  border-width: 0.125rem;
+  border-style: solid;
+  border-color: transparent;
+  text-align: center;
+  font-weight: 300;
+  user-select: none;
+  cursor: pointer;
+  transition: 200ms ease-in;
+  appearance: none;
+  letter-spacing: 0.03125rem;
+
+  &--disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+
+  &--small {
+    padding: 0.25rem 1rem;
+    min-width: 6rem;
+    font-size: 0.875rem;
+  }
+
+  &--medium {
+    gap: 1rem;
+    padding: 0.5rem 1.75rem;
+    min-width: 8rem;
+    font-size: 1.125rem;
+
+    .#{$name} {
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1rem;
+
+        svg {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  &--large {
+    padding: 0.75rem 2rem;
+    min-width: 10rem;
+    font-size: 1.25rem;
+  }
+
+  &--outlined {
+    &.#{$name} {
+      &--white {
+        color: $white;
+        fill: $white;
+        border-color: $white;
+        background-color: transparent;
+
+        &:hover {
+          background-color: $white_a_25;
+        }
+
+        &:active {
+          background-color: $white_a_50;
+        }
+      }
+    }
+  }
+
+  &--filled {
+    &.#{$name} {
+      &--purple {
+        color: $white;
+        fill: $white;
+        border-color: $purple;
+        background-color: $purple;
+
+        &:not(.#{$name}--disabled) {
+          &:hover {
+            background-color: $purple_l_10;
+            border-color: $purple_l_10;
+          }
+
+          &:active {
+            background-color: $purple_l_20;
+            border-color: $purple_l_20;
+          }
+        }
+      }
+    }
+  }
+}

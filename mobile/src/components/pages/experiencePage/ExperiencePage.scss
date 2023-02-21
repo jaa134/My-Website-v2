@@ -1,0 +1,28 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'ExperiencePage';
+
+.#{$name} {
+  width: 100%;
+
+  &__line-split {
+    padding: 6rem 0;
+  }
+
+  &__work {
+    width: 100%;
+  }
+
+  &__education {
+    width: 100%;
+  }
+
+  &__skills {
+    width: 100%;
+  }
+
+  &__projects {
+    width: 100%;
+  }
+}

@@ -1,0 +1,42 @@
+@import 'src/scss/colors.scss';
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $black;
+  overscroll-behavior: none;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+textarea {
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.monospace {
+  font-family: 'Roboto Mono', monospace;
+}

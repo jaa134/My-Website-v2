@@ -1,0 +1,92 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'BubblesSection';
+
+.#{$name} {
+  width: 100%;
+  background: linear-gradient(to bottom, #270d3c, #0e0e0e 82.4%);
+
+  &__container {
+    position: relative;
+    height: 45rem;
+    width: 80rem;
+    margin: auto;
+
+    & > {
+      :nth-child(1) {
+        top: 8rem;
+        left: 5rem;
+      }
+
+      :nth-child(2) {
+        top: 0rem;
+        left: 15rem;
+      }
+
+      :nth-child(3) {
+        top: -4rem;
+        left: 25rem;
+      }
+
+      :nth-child(4) {
+        top: 11rem;
+        left: 43rem;
+      }
+
+      :nth-child(5) {
+        top: -4rem;
+        left: 53rem;
+      }
+
+      :nth-child(6) {
+        top: 33rem;
+        left: 11rem;
+      }
+
+      :nth-child(7) {
+        top: 13rem;
+        left: 18rem;
+      }
+
+      :nth-child(8) {
+        top: 23rem;
+        left: 40rem;
+      }
+
+      :nth-child(9) {
+        top: 21rem;
+        left: 61rem;
+      }
+
+      :nth-child(10) {
+        top: 1rem;
+        left: -8rem;
+      }
+
+      :nth-child(11) {
+        top: 18rem;
+        left: -10rem;
+      }
+
+      :nth-child(12) {
+        top: 7rem;
+        left: 79rem;
+      }
+
+      :nth-child(13) {
+        top: 24rem;
+        left: 75rem;
+      }
+
+      @media only screen and (max-width: 1600px) {
+        :nth-child(10),
+        :nth-child(11),
+        :nth-child(12),
+        :nth-child(13) {
+          display: none;
+        }
+      }
+    }
+  }
+}

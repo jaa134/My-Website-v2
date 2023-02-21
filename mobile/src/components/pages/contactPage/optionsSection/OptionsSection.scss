@@ -1,0 +1,51 @@
+@import 'src/scss/colors.scss';
+
+$name: 'OptionsSection';
+
+.#{$name} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 20rem;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    background-color: $white_a_10;
+    border-radius: 0.25rem;
+    cursor: copy;
+
+    &:hover {
+      background-color: $white_a_20;
+    }
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+      fill: $purple;
+    }
+  }
+
+  &__label {
+    margin-bottom: 0.125rem;
+    color: $turquoise;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  &__value {
+    color: $white;
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.9;
+  }
+}

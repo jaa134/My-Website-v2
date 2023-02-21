@@ -10,6 +10,9 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/react-dom": "^18.0.10",
+    "@types/react-google-recaptcha": "^2.1.5",
+    "@types/three": "^0.149.0",
+    "@types/topojson-client": "^3.1.1",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
     "babel-jest": "^27.4.2",
@@ -66,15 +69,25 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
+    "globe.gl": "^2.27.1",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-google-recaptcha": "^2.1.0",
+    "react-photo-album": "^2.0.1",
+    "react-router-dom": "^6.8.0",
+    "satellite.js": "^5.0.0",
+    "three": "^0.149.0",
+    "topojson-client": "^3.1.0",
+    "yet-another-react-lightbox": "^2.3.1"
   },
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "deploy": "npm run build && cp -a build/ ../My-Website-BUILD/mobile-site/",
+    "deploy": "npm run build && cp -a build/ ../My-Website-BUILD/",
     "lint": "eslint . --fix --max-warnings=0",
     "format": "prettier . --write"
   },

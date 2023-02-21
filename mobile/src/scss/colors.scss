@@ -1,0 +1,29 @@
+@use 'sass:color';
+
+$black: #000000;
+$black_a_25: color.adjust($black, $alpha: -0.75);
+
+$white: #ffffff;
+$white_a_10: color.adjust($white, $alpha: -0.9);
+$white_a_20: color.adjust($white, $alpha: -0.8);
+$white_a_25: color.adjust($white, $alpha: -0.75);
+$white_a_33: color.adjust($white, $alpha: -0.67);
+$white_a_50: color.adjust($white, $alpha: -0.5);
+$white_a_75: color.adjust($white, $alpha: -0.25);
+$white_a_90: color.adjust($white, $alpha: -0.1);
+
+$dark_gray: #171717;
+$dark_gray_l_10: color.adjust($dark_gray, $lightness: 10%);
+
+$light_gray: #d9d9d9;
+$light_gray_l_10: color.adjust($light_gray, $lightness: 10%);
+$light_gray_d_10: color.adjust($light_gray, $lightness: -10%);
+
+$purple: #640dfb;
+$purple_l_10: color.adjust($purple, $lightness: 10%);
+$purple_l_15: color.adjust($purple, $lightness: 15%);
+$purple_l_20: color.adjust($purple, $lightness: 20%);
+
+$turquoise: #13fff1;
+
+$red: #eb143c;

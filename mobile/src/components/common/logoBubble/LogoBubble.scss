@@ -1,0 +1,404 @@
+@import 'src/scss/colors.scss';
+
+$name: 'LogoBubble';
+
+.#{$name} {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &--s1 {
+    height: 8.125rem;
+    width: 7rem;
+
+    .#{$name} {
+      &__logo {
+        width: 2rem;
+      }
+    }
+  }
+
+  &--s2 {
+    height: 12.75rem;
+    width: 11rem;
+
+    .#{$name} {
+      &__logo {
+        width: 3.25rem;
+      }
+    }
+  }
+
+  &--s3 {
+    height: 17.375rem;
+    width: 15rem;
+
+    .#{$name} {
+      &__logo {
+        width: 4.5rem;
+      }
+    }
+  }
+
+  &--s4 {
+    height: 22rem;
+    width: 19rem;
+
+    .#{$name} {
+      &__logo {
+        width: 5.75rem;
+      }
+    }
+  }
+
+  &--s5 {
+    height: 26.625rem;
+    width: 23rem;
+
+    .#{$name} {
+      &__logo {
+        width: 7rem;
+      }
+    }
+  }
+
+  &__bubble {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    transition: opacity 200ms ease-in;
+
+    &--normal {
+      opacity: 1;
+    }
+
+    &--hover {
+      opacity: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(50%);
+    opacity: 0.33;
+    transition: 200ms ease-in;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    .#{$name} {
+      &__bubble {
+        &--normal {
+          opacity: 0.75;
+        }
+
+        &--hover {
+          opacity: 0.25;
+        }
+      }
+
+      &__logo {
+        filter: grayscale(10%);
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &--active,
+  &--active:hover {
+    .#{$name} {
+      &__bubble {
+        &--normal {
+          opacity: 0.55;
+        }
+
+        &--hover {
+          opacity: 0.45;
+        }
+      }
+
+      &__logo {
+        filter: grayscale(0%) saturate(120%);
+        opacity: 1;
+      }
+
+      &__menu {
+        &-wrapper {
+          z-index: 3;
+          display: block;
+          opacity: 1;
+          animation: fadeIn 0.25s ease-out 1;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    height: 7.5rem;
+    width: 15rem;
+    background-color: $dark_gray;
+    border: 0.0625rem solid $dark_gray_l_10;
+
+    &-wrapper {
+      position: absolute;
+      z-index: 0;
+      display: none;
+      opacity: 0;
+    }
+
+    &-slider {
+      width: 100%;
+
+      &-label {
+        margin-bottom: 0.5rem;
+        width: 100%;
+        font-size: 0.875rem;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: 0.03125rem;
+        color: $white_a_90;
+      }
+
+      &-value {
+        width: 100%;
+        height: 0.75rem;
+        background-color: $white_a_25;
+        border-radius: 0.4375rem;
+        overflow: hidden;
+
+        &-inner {
+          height: 100%;
+          width: var(--bar-width, 0);
+          background-color: $turquoise;
+          animation: animatedWidth 0.5s ease-out 1;
+
+          @keyframes animatedWidth {
+            from {
+              width: 0;
+            }
+            to {
+              width: var(--bar-width, 0);
+            }
+          }
+        }
+      }
+    }
+
+    &-arm {
+      position: absolute;
+      width: 0;
+      height: 1.75rem;
+      border-right: 0.0625rem dashed $light_gray_d_10;
+      z-index: -1;
+    }
+  }
+
+  &--menu {
+    &-left,
+    &-right {
+      &.#{$name} {
+        &--s1 {
+          .#{$name} {
+            &__menu-wrapper {
+              top: -6.75rem;
+            }
+          }
+        }
+
+        &--s2 {
+          .#{$name} {
+            &__menu-wrapper {
+              top: -5.5rem;
+            }
+          }
+        }
+
+        &--s3 {
+          .#{$name} {
+            &__menu-wrapper {
+              top: -4.25rem;
+            }
+          }
+        }
+
+        &--s4 {
+          .#{$name} {
+            &__menu-wrapper {
+              top: -2rem;
+            }
+          }
+        }
+
+        &--s5 {
+          .#{$name} {
+            &__menu-wrapper {
+              top: -1.5rem;
+            }
+          }
+        }
+      }
+
+      .#{$name} {
+        &__menu {
+          &-arm {
+            &--1 {
+              bottom: -1.625rem;
+            }
+
+            &--2 {
+              bottom: -2.5625rem;
+            }
+          }
+        }
+      }
+    }
+
+    &-left {
+      &.#{$name} {
+        &--s1 {
+          .#{$name} {
+            &__menu-wrapper {
+              right: 4.875rem;
+              top: -6.75rem;
+            }
+          }
+        }
+
+        &--s2 {
+          .#{$name} {
+            &__menu-wrapper {
+              right: 7.75rem;
+              top: -5.5rem;
+            }
+          }
+        }
+
+        &--s3 {
+          .#{$name} {
+            &__menu-wrapper {
+              right: 10.75rem;
+              top: -4.25rem;
+            }
+          }
+        }
+
+        &--s4 {
+          .#{$name} {
+            &__menu-wrapper {
+              right: 14.375rem;
+              top: -2rem;
+            }
+          }
+        }
+
+        &--s5 {
+          .#{$name} {
+            &__menu-wrapper {
+              right: 16.625rem;
+              top: -1.5rem;
+            }
+          }
+        }
+      }
+
+      .#{$name} {
+        &__menu {
+          &-arm {
+            &--1 {
+              right: 3rem;
+              transform: rotate(-40deg);
+            }
+
+            &--2 {
+              right: 1.5rem;
+              transform: rotate(-80deg);
+            }
+          }
+        }
+      }
+    }
+
+    &-right {
+      &.#{$name} {
+        &--s1 {
+          .#{$name} {
+            &__menu-wrapper {
+              left: 4.875rem;
+            }
+          }
+        }
+
+        &--s2 {
+          .#{$name} {
+            &__menu-wrapper {
+              left: 7.75rem;
+            }
+          }
+        }
+
+        &--s3 {
+          .#{$name} {
+            &__menu-wrapper {
+              left: 10.75rem;
+            }
+          }
+        }
+
+        &--s4 {
+          .#{$name} {
+            &__menu-wrapper {
+              left: 14.375rem;
+            }
+          }
+        }
+
+        &--s5 {
+          .#{$name} {
+            &__menu-wrapper {
+              left: 16.625rem;
+            }
+          }
+        }
+      }
+
+      .#{$name} {
+        &__menu {
+          &-arm {
+            &--1 {
+              left: 3rem;
+              transform: rotate(40deg);
+            }
+
+            &--2 {
+              left: 1.5rem;
+              transform: rotate(80deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
