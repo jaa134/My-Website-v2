@@ -8,7 +8,7 @@ import ScrollToTop from 'src/components/common/scrollToTop/ScrollToTop';
 
 import reportWebVitals from 'src/reportWebVitals';
 
-if (isDesktop) {
+if (process.env.NODE_ENV === 'production' && isDesktop) {
   window.location.replace('https://jacob-alspaw.com');
 } else {
   const rootElement = document.getElementById('root');

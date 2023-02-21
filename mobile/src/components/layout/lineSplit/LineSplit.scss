@@ -1,3 +1,5 @@
+@import 'src/scss/layout.scss';
+
 $name: 'LineSplit';
 
 .#{$name} {
@@ -5,5 +7,24 @@ $name: 'LineSplit';
 
   svg {
     width: 100%;
+    stroke: #00ce95;
+    stroke-opacity: 0.75;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: $small_screen_end) {
+  .#{$name} {
+    svg {
+      stroke-width: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: $medium_screen_start) {
+  .#{$name} {
+    svg {
+      stroke-width: 0.375rem;
+    }
   }
 }

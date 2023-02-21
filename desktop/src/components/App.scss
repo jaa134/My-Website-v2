@@ -9,6 +9,7 @@ $name: 'App';
   min-width: $app-min-width;
   max-width: $app-max-width;
   margin: auto;
+  overflow-x: hidden;
 
   &__content {
     display: flex;

@@ -6,10 +6,7 @@ import defineBlock from 'src/utils/defineBlock';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
-import EducationSection from 'src/components/pages/experiencePage/educationSection/EducationSection';
-import ProjectsSection from 'src/components/pages/experiencePage/projectsSection/ProjectsSection';
-import SkillsSection from 'src/components/pages/experiencePage/skillsSection/SkillsSection';
-import WorkSection from 'src/components/pages/experiencePage/workSection/WorkSection';
+import UnderConstruction from 'src/components/common/underConstruction/UnderConstruction';
 
 const bem = defineBlock('ExperiencePage');
 
@@ -28,18 +25,7 @@ const ExperiencePage = () => {
       <div className={bem('line-split')}>
         <LineSplit />
       </div>
-      <div className={bem('work')}>
-        <WorkSection />
-      </div>
-      <div className={bem('education')}>
-        <EducationSection />
-      </div>
-      <div className={bem('skills')}>
-        <SkillsSection />
-      </div>
-      <div className={bem('projects')}>
-        <ProjectsSection />
-      </div>
+      <UnderConstruction />
     </div>
   );
 };

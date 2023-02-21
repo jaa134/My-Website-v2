@@ -2,7 +2,7 @@ import React from 'react';
 
 const TwitterVariant1 = () => (
   <svg
-    viewBox="0 0 31 24"
+    viewBox="0 -1 31 25"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >

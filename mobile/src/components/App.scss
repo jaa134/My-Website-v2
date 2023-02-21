@@ -6,9 +6,8 @@ $name: 'App';
 .#{$name} {
   height: 100%;
   width: 100%;
-  min-width: $app-min-width;
-  max-width: $app-max-width;
   margin: auto;
+  overflow-x: hidden;
 
   &__content {
     display: flex;
@@ -18,11 +17,6 @@ $name: 'App';
   }
 
   &__header {
-    position: sticky;
-    z-index: 1000;
-    top: -2rem;
-    left: 0;
-    right: 0;
     width: 100%;
   }
 
@@ -32,8 +26,6 @@ $name: 'App';
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0 0 0;
-    min-height: $app-body-min-height;
   }
 
   &__footer {

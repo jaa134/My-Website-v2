@@ -1,6 +1,10 @@
-$app-min-width: 1400px;
-$app-max-width: 2000px;
-$app-vertical-margins: 6rem;
-$app-body-min-height: 30rem;
-$header-height: 6rem;
-$footer-height: 18rem;
+$app-vertical-margins: 1rem;
+$header-height: 8rem;
+
+/* Small is for Mobile Devices */
+/* Medium is for low resolution  Tablets, Ipads */
+/* Large is for Tablets Ipads portrait mode */
+$small_screen_end: 480px;
+$medium_screen_start: $small_screen_end + 1px;
+$medium_screen_end: 767px;
+$large_screen_start: $medium_screen_end + 1px;

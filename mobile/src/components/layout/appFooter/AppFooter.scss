@@ -2,63 +2,41 @@
 @import 'src/scss/layout.scss';
 
 $name: 'AppFooter';
-$lr_padding: 4rem;
 
 .#{$name} {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
   box-sizing: border-box;
-  height: $footer-height;
   width: 100%;
-  min-width: $app-min-width;
-  max-width: $app-max-width;
-  margin: auto;
-  padding: 0 $lr_padding;
   color: $white;
   background-image: linear-gradient(to bottom right, $purple -200%, $black 100%);
   user-select: none;
 
-  &__logo-column {
-    margin-right: 4rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
 
-    svg {
-      height: 7rem;
-    }
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   &__link-column {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 9rem;
-  }
-
-  &__contact-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 4rem;
-    padding: 0.25rem 0;
-    height: 9rem;
-    box-sizing: border-box;
   }
 
   &__link {
-    padding: 0.25rem;
-    font-size: 1rem;
     font-weight: 300;
-    opacity: 0.9;
     letter-spacing: 0.0625rem;
+    color: $white_a_90;
     white-space: nowrap;
-    cursor: pointer;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-      text-underline-offset: 0.25rem;
-    }
 
     &:visited {
       color: unset;
@@ -66,49 +44,177 @@ $lr_padding: 4rem;
 
     &--main {
       font-weight: 400;
-      opacity: 1;
-      margin-bottom: 0.75rem;
     }
   }
 
-  &__contact-title {
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.0625rem;
+  &__contacts {
+    box-sizing: border-box;
+    width: 100%;
   }
 
-  &__contact-subtitle {
-    width: 15.5rem;
-    font-size: 0.875rem;
-    font-weight: 300;
-    letter-spacing: 0.03125rem;
-    opacity: 0.9;
-  }
-
-  &__contact-options {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.75rem;
-  }
-
-  &__contact-option {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem;
-    height: 2rem;
-    width: 2rem;
-    background-color: $purple;
-    cursor: pointer;
-    transition: 200ms ease-in;
-
-    &:hover {
-      background-color: $purple_l_15;
+  &__contact {
+    &-title {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.0625rem;
+      color: $white;
     }
 
-    svg {
-      height: 1.75rem;
+    &-subtitle {
+      margin-bottom: 2.5rem;
+      font-size: 1.125rem;
+      font-weight: 300;
+      letter-spacing: 0.03125rem;
+      color: $white_a_90;
+    }
+
+    &-options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-option {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $purple;
+      border-radius: 0.25rem;
+      transition: 200ms ease-in;
+    }
+  }
+
+  &__rights {
+    &-bar {
+      margin-bottom: 1rem;
+      height: 0.0625rem;
+      background-color: $white_a_75;
+    }
+
+    &-message {
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: $small_screen_end) {
+  $horizontal-padding: 0.25rem;
+
+  .#{$name} {
+    padding: 2rem $app-vertical-margins 4rem $app-vertical-margins;
+
+    &__container {
+      gap: 3rem;
+      min-width: 20rem;
+      max-width: 22rem;
+    }
+
+    &__link-column {
+      gap: 0;
+    }
+
+    &__link {
+      padding: 0.375rem $horizontal-padding;
+      font-size: 0.75rem;
+
+      &--main {
+        font-size: 0.875rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    &__contacts {
+      padding: 0 $horizontal-padding;
+    }
+
+    &__contact {
+      &-option {
+        padding: 0.25rem;
+        height: 2.75rem;
+        width: 2.75rem;
+
+        svg {
+          height: 2rem;
+        }
+      }
+    }
+
+    &__rights {
+      &-bar {
+        width: 18rem;
+      }
+
+      &-message {
+        font-size: 0.875rem;
+      }
+    }
+
+    &__logo {
+      svg {
+        height: 5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $medium_screen_start) {
+  $horizontal-padding: 0.25rem;
+
+  .#{$name} {
+    padding: 2rem $app-vertical-margins 5rem $app-vertical-margins;
+
+    &__container {
+      gap: 4rem;
+      width: 28rem;
+    }
+
+    &__link-column {
+      gap: 0;
+    }
+
+    &__link {
+      padding: 0.375rem $horizontal-padding;
+      font-size: 0.875rem;
+
+      &--main {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    &__contacts {
+      padding: 0 $horizontal-padding;
+    }
+
+    &__contact {
+      &-option {
+        padding: 0.25rem;
+        height: 4rem;
+        width: 4rem;
+
+        svg {
+          height: 2.5rem;
+        }
+      }
+    }
+
+    &__rights {
+      &-bar {
+        width: 23rem;
+      }
+
+      &-message {
+        font-size: 1rem;
+      }
+    }
+
+    &__logo {
+      svg {
+        height: 6rem;
+      }
     }
   }
 }

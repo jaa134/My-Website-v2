@@ -21,9 +21,11 @@ const PageHeader: FunctionComponent<Props> = ({ title, subtitle, description }) 
   return (
     <div className={bem('', `pos-${position}`)}>
       <div className={bem('container')}>
-        <Star />
-        <Star />
-        <div className={bem('title')}>{title}</div>
+        <div className={bem('title')}>
+          <Star />
+          <Star />
+          <div>{title}</div>
+        </div>
         <div className={bem('subtitle')}>{subtitle}</div>
         <div className={bem('description')}>{description}</div>
       </div>

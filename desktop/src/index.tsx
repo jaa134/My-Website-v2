@@ -8,7 +8,7 @@ import ScrollToTop from 'src/components/common/scrollToTop/ScrollToTop';
 
 import reportWebVitals from 'src/reportWebVitals';
 
-if (isMobile) {
+if (process.env.NODE_ENV === 'production' && isMobile) {
   window.location.replace('https://mobile.jacob-alspaw.com');
 } else {
   const rootElement = document.getElementById('root');
