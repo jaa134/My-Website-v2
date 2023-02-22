@@ -7,6 +7,22 @@ $name: 'ExperiencePage';
   width: 100%;
 
   &__line-split {
-    padding: 3rem 0;
+    padding-top: 3rem;
+  }
+
+  &__work {
+    padding-top: 3rem;
+  }
+
+  &__education {
+    padding-top: 5rem;
+  }
+
+  &__skills {
+    padding-top: 5rem;
+  }
+
+  &__projects {
+    padding-top: 5rem;
   }
 }

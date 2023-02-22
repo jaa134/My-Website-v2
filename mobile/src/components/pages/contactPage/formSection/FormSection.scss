@@ -8,7 +8,7 @@ $name: 'FormSection';
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 $app_vertical_margins;
+  padding: 0 var(--app-vertical-margins);
 
   &__title {
     font-weight: 300;
@@ -83,7 +83,7 @@ $name: 'FormSection';
   }
 }
 
-@media (max-width: $small_screen_end) {
+@media (max-width: $small-screen-end) {
   .#{$name} {
     &__title {
       margin-bottom: 0.5rem;
@@ -107,7 +107,7 @@ $name: 'FormSection';
   }
 }
 
-@media (min-width: $medium_screen_start) and (max-width: $medium_screen_end) {
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
   .#{$name} {
     &__title {
       margin-bottom: 0.5rem;

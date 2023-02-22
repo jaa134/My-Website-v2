@@ -40,12 +40,14 @@ $name: 'ProjectsSection';
     padding: 2rem 0;
     width: 60rem;
     border-bottom: 0.0625rem solid $white_a_75;
-    opacity: 0.9;
     text-decoration: none;
 
     &:hover {
       .#{$name}__project {
         &-logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 2.5rem;
           fill: $white;
         }

@@ -18,16 +18,14 @@ $name: 'Button';
   border-style: solid;
   border-color: transparent;
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   user-select: none;
-  cursor: pointer;
   transition: 200ms ease-in;
   appearance: none;
   letter-spacing: 0.03125rem;
 
   &--disabled {
     opacity: 0.8;
-    cursor: not-allowed;
   }
 
   &--small {
@@ -70,10 +68,6 @@ $name: 'Button';
         border-color: $white;
         background-color: transparent;
 
-        &:hover {
-          background-color: $white_a_25;
-        }
-
         &:active {
           background-color: $white_a_50;
         }
@@ -90,11 +84,6 @@ $name: 'Button';
         background-color: $purple;
 
         &:not(.#{$name}--disabled) {
-          &:hover {
-            background-color: $purple_l_10;
-            border-color: $purple_l_10;
-          }
-
           &:active {
             background-color: $purple_l_20;
             border-color: $purple_l_20;

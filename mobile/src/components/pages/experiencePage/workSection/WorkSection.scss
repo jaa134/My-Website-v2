@@ -1,0 +1,353 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'WorkSection';
+
+.#{$name} {
+  margin: auto;
+  padding: 0 var(--app-vertical-margins);
+  color: $white;
+
+  &__title {
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    color: $purple_l_20;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    color: $white;
+  }
+
+  &__bar {
+    height: 0.0625rem;
+    background-color: $white_a_50;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__panel {
+    position: relative;
+    flex: 1;
+    box-sizing: border-box;
+    background-color: $dark_gray;
+
+    &::before {
+      position: absolute;
+      content: '';
+      transform: rotate(45deg);
+      background-color: $black;
+    }
+  }
+
+  &__panel-navigation {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      border: 0.0625rem solid $white_a_75;
+      border-radius: 50%;
+      background: none;
+      transition: 200ms ease-out;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+
+      &:active:not(:disabled) {
+        background-color: $white_a_25;
+      }
+
+      &--prev {
+        transform: rotate(-90deg);
+      }
+
+      &--next {
+        transform: rotate(90deg);
+      }
+
+      svg {
+        fill: $white_a_75;
+      }
+    }
+  }
+
+  &__panel-date {
+    color: $turquoise;
+    letter-spacing: 0.0625rem;
+  }
+
+  a.#{$name}__panel-title {
+    display: inline-block;
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    color: $purple;
+    text-decoration: none;
+  }
+
+  &__panel-positon,
+  &__panel-bullet {
+    color: $white_a_90;
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+  }
+
+  &__panel-bullet {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__download-button {
+    display: block;
+    width: fit-content;
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 1.125rem;
+      font-size: 1.125rem;
+    }
+
+    &__bar {
+      margin-bottom: 1.5rem;
+      width: 18rem;
+    }
+
+    &__panel {
+      position: relative;
+      padding: 1.5rem 1.5rem 2.25rem 1.5rem;
+
+      &::before {
+        bottom: -2rem;
+        left: -2rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &__panel-navigation {
+      top: 1.25rem;
+      right: 1.25rem;
+      gap: 1rem;
+
+      &-button {
+        height: 1.75rem;
+        width: 1.75rem;
+
+        svg {
+          width: 0.75rem;
+        }
+      }
+    }
+
+    &__panel-date {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    a.#{$name}__panel-title {
+      margin-bottom: 1.25rem;
+      font-size: 2rem;
+    }
+
+    &__panel-positon {
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+    }
+
+    &__panel-bullets {
+      margin: 0;
+      padding-inline-start: 1.5rem;
+    }
+
+    &__panel-bullet {
+      margin-bottom: 0.625rem;
+      font-size: 0.875rem;
+
+      &::marker {
+        font-size: 0.75em;
+      }
+    }
+
+    &__download-button {
+      margin: 1.5rem auto 0 auto;
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 1.25rem;
+      font-size: 1.125rem;
+    }
+
+    &__bar {
+      margin-bottom: 1.625rem;
+      width: 18rem;
+    }
+
+    &__panel {
+      position: relative;
+      padding: 1.75rem 2.25rem 2.5rem 2.25rem;
+
+      &::before {
+        bottom: -2rem;
+        left: -2rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &__panel-navigation {
+      top: 1.25rem;
+      right: 1.25rem;
+      gap: 1rem;
+
+      &-button {
+        height: 1.75rem;
+        width: 1.75rem;
+
+        svg {
+          width: 0.75rem;
+        }
+      }
+    }
+
+    &__panel-date {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    a.#{$name}__panel-title {
+      margin-bottom: 1.25rem;
+      font-size: 2rem;
+    }
+
+    &__panel-positon {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    &__panel-bullets {
+      margin: 0;
+      padding-inline-start: 1.75rem;
+    }
+
+    &__panel-bullet {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+
+      &::marker {
+        font-size: 0.75em;
+      }
+    }
+
+    &__download-button {
+      margin: 1.625rem auto 0 auto;
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.75rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+    }
+
+    &__bar {
+      margin-bottom: 2rem;
+      width: 20rem;
+    }
+
+    &__panel {
+      position: relative;
+      padding: 2rem 3rem 3rem 3rem;
+
+      &::before {
+        bottom: -2rem;
+        left: -2rem;
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &__panel-navigation {
+      top: 1.75rem;
+      right: 3rem;
+      gap: 1rem;
+
+      &-button {
+        height: 1.75rem;
+        width: 1.75rem;
+
+        svg {
+          width: 0.75rem;
+        }
+      }
+    }
+
+    &__panel-date {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    a.#{$name}__panel-title {
+      margin-bottom: 1.5rem;
+      font-size: 3rem;
+    }
+
+    &__panel-positon {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    &__panel-bullets {
+      margin: 0;
+      padding-inline-start: 2rem;
+    }
+
+    &__panel-bullet {
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+
+      &::marker {
+        font-size: 0.75em;
+      }
+    }
+
+    &__download-button {
+      margin: 2rem auto 0 auto;
+    }
+  }
+}

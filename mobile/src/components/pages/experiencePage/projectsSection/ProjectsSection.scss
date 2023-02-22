@@ -1,0 +1,162 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'ProjectsSection';
+
+.#{$name} {
+  position: relative;
+  background-image: radial-gradient(91.85% 122.42% at 17.19% 8.15%, $purple 0%, #621dda 32.81%, $purple 100%);
+
+  &__message {
+    position: absolute;
+    top: var(--app-vertical-margins);
+    right: var(--app-vertical-margins);
+    display: flex;
+    align-items: center;
+    color: $white;
+
+    svg {
+      fill: $white;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  a.#{$name}__project {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 0.0625rem solid $white_a_75;
+    text-decoration: none;
+
+    .#{$name}__project {
+      &-logo {
+        fill: $white;
+      }
+
+      &-name {
+        flex: 1;
+        font-weight: 300;
+        letter-spacing: 0.0625rem;
+        color: $white;
+      }
+
+      &-nav-icon {
+        fill: $white;
+      }
+    }
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    padding: 4rem var(--app-vertical-margins) 2rem var(--app-vertical-margins);
+
+    &__message {
+      font-size: 1.125rem;
+      gap: 0.75rem;
+
+      svg {
+        height: 1.125rem;
+      }
+    }
+
+    a.#{$name}__project {
+      gap: 2rem;
+      padding: 1rem 0.5rem;
+
+      .#{$name}__project {
+        &-logo {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 1.25rem;
+        }
+
+        &-name {
+          font-size: 1.25rem;
+        }
+
+        &-nav-icon {
+          width: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    padding: 4rem var(--app-vertical-margins) 3rem var(--app-vertical-margins);
+
+    &__message {
+      font-size: 1.125rem;
+      gap: 0.75rem;
+
+      svg {
+        height: 1.125rem;
+      }
+    }
+
+    a.#{$name}__project {
+      gap: 2.25rem;
+      padding: 1.125rem 0.5rem;
+
+      .#{$name}__project {
+        &-logo {
+          width: 1.25rem;
+        }
+
+        &-name {
+          font-size: 1.375rem;
+        }
+
+        &-nav-icon {
+          width: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    padding: 4rem var(--app-vertical-margins) 3rem var(--app-vertical-margins);
+
+    &__message {
+      font-size: 1.25rem;
+      gap: 1rem;
+
+      svg {
+        height: 1.25rem;
+      }
+    }
+
+    a.#{$name}__project {
+      gap: 2.25rem;
+      padding: 1.25rem 0.75rem;
+
+      .#{$name}__project {
+        &-logo {
+          width: 1.375rem;
+        }
+
+        &-name {
+          font-size: 1.5rem;
+        }
+
+        &-nav-icon {
+          width: 1.125rem;
+        }
+      }
+    }
+  }
+}

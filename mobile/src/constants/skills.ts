@@ -1,6 +1,6 @@
 import { skillsImagesPath } from 'src/constants/images';
 
-export interface SkillLink {
+export interface Skill {
   displayText: string;
   imagePath: string;
   href?: string | null;
@@ -11,7 +11,7 @@ export interface SkillLink {
   };
 }
 
-export const languages: SkillLink[] = [
+export const languages: Skill[] = [
   {
     displayText: 'JavaScript',
     href: 'https://www.javascript.com/',
@@ -154,7 +154,7 @@ export const languages: SkillLink[] = [
   },
 ];
 
-export const technologies: SkillLink[] = [
+export const technologies: Skill[] = [
   {
     displayText: 'React',
     href: 'https://reactjs.org/',
@@ -547,7 +547,7 @@ export const technologies: SkillLink[] = [
   },
 ];
 
-export const services: SkillLink[] = [
+export const services: Skill[] = [
   {
     displayText: 'GitHub',
     href: 'https://github.com/',
@@ -620,7 +620,7 @@ export const services: SkillLink[] = [
   },
 ];
 
-export const devPractices: SkillLink[] = [
+export const devPractices: Skill[] = [
   {
     displayText: 'Agile',
     imagePath: `${skillsImagesPath}/DevelopmentGeneral.svg`,
@@ -676,7 +676,7 @@ export const devPractices: SkillLink[] = [
     },
   },
   {
-    displayText: 'Pull requests & review processes',
+    displayText: 'Code review processes',
     imagePath: `${skillsImagesPath}/DevelopmentGeneral.svg`,
     values: {
       knowledge: 100,
@@ -694,7 +694,7 @@ export const devPractices: SkillLink[] = [
     },
   },
   {
-    displayText: 'UI/UX design review',
+    displayText: 'Design review',
     imagePath: `${skillsImagesPath}/DevelopmentGeneral.svg`,
     values: {
       knowledge: 100,

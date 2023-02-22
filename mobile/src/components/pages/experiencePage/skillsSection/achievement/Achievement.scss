@@ -1,0 +1,83 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'Achievement';
+
+.#{$name} {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: $dark_gray;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__message {
+    letter-spacing: 0.03125rem;
+    line-height: 1.5;
+    font-weight: 300;
+    color: $white_a_90;
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    justify-content: center;
+    gap: 0.875rem;
+    padding: 0.875rem;
+
+    &__image {
+      img {
+        height: 2.25rem;
+        width: 2.25rem;
+      }
+    }
+
+    &__message {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    justify-content: left;
+    gap: 1.75rem;
+    padding: 1rem 1.75rem;
+
+    &__image {
+      img {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+
+    &__message {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    justify-content: left;
+    gap: 2rem;
+    padding: 1rem 2rem;
+
+    &__image {
+      img {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+
+    &__message {
+      font-size: 1rem;
+    }
+  }
+}

@@ -99,11 +99,11 @@ $name: 'AppFooter';
   }
 }
 
-@media (max-width: $small_screen_end) {
+@media (max-width: $small-screen-end) {
   $horizontal-padding: 0.25rem;
 
   .#{$name} {
-    padding: 2rem $app-vertical-margins 4rem $app-vertical-margins;
+    padding: 2rem var(--app-vertical-margins) 4rem var(--app-vertical-margins);
 
     &__container {
       gap: 3rem;
@@ -159,11 +159,11 @@ $name: 'AppFooter';
   }
 }
 
-@media (min-width: $medium_screen_start) {
+@media (min-width: $medium-screen-start) {
   $horizontal-padding: 0.25rem;
 
   .#{$name} {
-    padding: 2rem $app-vertical-margins 5rem $app-vertical-margins;
+    padding: 2rem var(--app-vertical-margins) 5rem var(--app-vertical-margins);
 
     &__container {
       gap: 4rem;

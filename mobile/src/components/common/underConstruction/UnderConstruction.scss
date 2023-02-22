@@ -21,10 +21,10 @@ $name: 'UnderConstruction';
   }
 }
 
-@media (max-width: $small_screen_end) {
+@media (max-width: $small-screen-end) {
   .#{$name} {
     gap: 1rem;
-    padding: 4rem $app-vertical-margins;
+    padding: 4rem var(--app-vertical-margins);
 
     &__icon {
       width: 2rem;
@@ -38,10 +38,10 @@ $name: 'UnderConstruction';
   }
 }
 
-@media (min-width: $medium_screen_start) and (max-width: $medium_screen_end) {
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
   .#{$name} {
     gap: 1.5rem;
-    padding: 5rem $app-vertical-margins;
+    padding: 5rem var(--app-vertical-margins);
 
     &__icon {
       width: 2.75rem;
@@ -58,7 +58,7 @@ $name: 'UnderConstruction';
 @media (min-width: $large_screen_start) {
   .#{$name} {
     gap: 2rem;
-    padding: 6rem $app-vertical-margins;
+    padding: 6rem var(--app-vertical-margins);
 
     &__icon {
       width: 4rem;

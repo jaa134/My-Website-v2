@@ -14,7 +14,7 @@ $menu-width: 15rem;
   box-sizing: border-box;
   height: $header-height;
   margin: auto;
-  padding: 0 $app-vertical-margins;
+  padding: 0 var(--app-vertical-margins);
   color: $white;
 
   &__menu {
@@ -58,6 +58,7 @@ $menu-width: 15rem;
       outline: none;
       border: none;
       border-radius: 0.25rem;
+      user-select: none;
 
       &:active {
         & > * {

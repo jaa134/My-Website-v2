@@ -1,0 +1,78 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'TechSkill';
+
+.#{$name} {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: $dark_gray;
+
+  &:active {
+    background: linear-gradient(109.12deg, #640dfb -1.55%, rgba(100, 13, 251, 0.38) 89.65%);
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__tech-name {
+    text-align: left;
+    line-height: 1.5;
+    letter-spacing: 0.03125rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: $white_a_90;
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    width: calc(33.3% - 0.666rem);
+
+    &__tech-name {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    justify-content: left;
+    gap: 1.75rem;
+    padding: 0 1.5rem;
+    width: calc(50% - 0.5rem);
+
+    &__tech-name {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    justify-content: left;
+    gap: 2rem;
+    padding: 0 1.5rem;
+    width: calc(33.3% - 0.666rem);
+
+    &__tech-name {
+      display: block;
+    }
+  }
+}

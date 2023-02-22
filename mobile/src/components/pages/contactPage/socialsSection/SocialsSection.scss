@@ -8,7 +8,7 @@ $name: 'SocialsSection';
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 $app_vertical_margins;
+  padding: 0 var(--app-vertical-margins);
 
   &__title {
     letter-spacing: 0.03125rem;
@@ -83,7 +83,7 @@ $name: 'SocialsSection';
   }
 }
 
-@media (max-width: $small_screen_end) {
+@media (max-width: $small-screen-end) {
   .#{$name} {
     &__title {
       margin-bottom: 1rem;
@@ -109,7 +109,7 @@ $name: 'SocialsSection';
   }
 }
 
-@media (min-width: $medium_screen_start) {
+@media (min-width: $medium-screen-start) {
   .#{$name} {
     &__title {
       margin-bottom: 2rem;

@@ -10,7 +10,7 @@ $name: 'ContactGlobeSection';
   justify-content: center;
   box-sizing: border-box;
   margin: auto;
-  padding: 0 $app_vertical_margins;
+  padding: 0 var(--app-vertical-margins);
 
   &__title {
     margin: auto;
@@ -48,7 +48,7 @@ $name: 'ContactGlobeSection';
   }
 }
 
-@media (max-width: $small_screen_end) {
+@media (max-width: $small-screen-end) {
   .#{$name} {
     &__title {
       margin-bottom: 0.5rem;
@@ -62,7 +62,7 @@ $name: 'ContactGlobeSection';
   }
 }
 
-@media (min-width: $medium_screen_start) {
+@media (min-width: $medium-screen-start) {
   .#{$name} {
     &__title {
       margin-bottom: 1rem;

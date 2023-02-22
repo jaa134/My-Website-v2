@@ -13,7 +13,7 @@ $name: 'LineSplit';
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: $small_screen_end) {
+@media (max-width: $small-screen-end) {
   .#{$name} {
     svg {
       stroke-width: 0.5rem;
@@ -21,7 +21,7 @@ $name: 'LineSplit';
   }
 }
 
-@media (min-width: $medium_screen_start) {
+@media (min-width: $medium-screen-start) {
   .#{$name} {
     svg {
       stroke-width: 0.375rem;

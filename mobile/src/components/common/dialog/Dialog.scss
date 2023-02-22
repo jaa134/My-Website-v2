@@ -1,13 +1,11 @@
 @import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
 
 $name: 'Dialog';
 
 .#{$name} {
   position: relative;
-  width: fit-content;
-  min-width: 40rem;
-  max-width: 60rem;
-  padding: 2.5rem 4rem;
+  box-sizing: border-box;
   border-radius: 0.25rem;
   background-color: $dark_gray;
 
@@ -26,20 +24,9 @@ $name: 'Dialog';
 
   &__close {
     position: absolute;
-    top: 1.75rem;
-    right: 1.75rem;
-    width: 0.75rem;
-    cursor: pointer;
 
     svg {
       fill: $white_a_75;
-      transition: 200ms ease-out;
-    }
-
-    &:hover {
-      svg {
-        fill: $white_a_90;
-      }
     }
   }
 
@@ -51,20 +38,92 @@ $name: 'Dialog';
   }
 
   &__title {
-    font-size: 2.5rem;
     font-weight: 300;
     color: $white_a_90;
     letter-spacing: 0.0625rem;
-  }
-
-  &__body {
-    padding: 3rem 0;
   }
 
   &__footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1.5rem;
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    padding: 2rem 1.5rem;
+    width: 90%;
+    min-width: 22rem;
+
+    &__close {
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 0.625rem;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+    }
+
+    &__body {
+      padding: 2rem 0 3rem 0;
+    }
+
+    &__footer {
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    padding: 2rem 3rem;
+    width: 87.5%;
+    min-width: 30rem;
+
+    &__close {
+      top: 0.75rem;
+      right: 0.75rem;
+      width: 0.625rem;
+    }
+
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__body {
+      padding: 2.75rem 0;
+    }
+
+    &__footer {
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    padding: 2.5rem 4rem;
+    width: 75%;
+    min-width: 40rem;
+
+    &__close {
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 0.75rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__body {
+      padding: 3rem 0;
+    }
+
+    &__footer {
+      gap: 1.5rem;
+    }
   }
 }

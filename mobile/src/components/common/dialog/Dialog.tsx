@@ -32,6 +32,7 @@ const Dialog: FunctionComponent<Props> = ({ open, title, children, primaryAction
   if (primaryAction) {
     primaryActionButton = (
       <Button
+        size="medium"
         type="filled"
         color="purple"
         label={primaryAction.label}
@@ -72,15 +73,7 @@ const Dialog: FunctionComponent<Props> = ({ open, title, children, primaryAction
           <div className={bem('title')}>{title}</div>
         </div>
         <div className={bem('body')}>{children}</div>
-        <div className={bem('footer')}>
-          <Button
-            type="outlined"
-            color="white"
-            label="Close"
-            onClick={onClose}
-          />
-          {primaryActionButton}
-        </div>
+        <div className={bem('footer')}>{primaryActionButton}</div>
       </div>
     </div>,
     document.body,
