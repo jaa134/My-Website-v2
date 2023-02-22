@@ -6,6 +6,8 @@ import defineBlock from 'src/utils/defineBlock';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
+import GallerySection from 'src/components/pages/aboutPage/gallerySection/GallerySection';
+//import TimelineSection from 'src/components/pages/aboutPage/timelineSection/TimelineSection';
 import UnderConstruction from 'src/components/common/underConstruction/UnderConstruction';
 
 const bem = defineBlock('AboutPage');
@@ -22,7 +24,15 @@ const AboutPage = () => (
     <div className={bem('line-split')}>
       <LineSplit />
     </div>
+    {/*
+    <div className={bem('timeline')}>
+      <TimelineSection />
+    </div>
+    */}
     <UnderConstruction />
+    <div className={bem('gallery')}>
+      <GallerySection />
+    </div>
   </div>
 );
 
