@@ -5,4 +5,24 @@ $name: 'HomePage';
 
 .#{$name} {
   width: 100%;
+
+  &__about {
+    padding-top: 0;
+  }
+
+  &__waves {
+    padding-top: 3rem;
+  }
+
+  &__bubbles {
+    padding-top: 0;
+  }
+
+  &__experience {
+    padding-top: 0;
+  }
+
+  &__contact {
+    padding-top: 0;
+  }
 }
