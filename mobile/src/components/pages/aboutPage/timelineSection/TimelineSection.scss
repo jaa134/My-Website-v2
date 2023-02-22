@@ -4,11 +4,22 @@
 $name: 'TimelineSection';
 
 .#{$name} {
-  position: relative;
-  margin: auto;
-  padding-right: 12.5rem;
-  width: 25rem;
-  stroke: $purple;
+  width: 100%;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    margin: auto;
+    width: 15rem;
+  }
+
+  &__line {
+    padding: 18rem 0 1.75rem 0;
+    width: 100%;
+    fill: none;
+    stroke: $purple;
+    stroke-linecap: round;
+  }
 
   &__ball {
     position: absolute;
@@ -17,31 +28,38 @@ $name: 'TimelineSection';
     filter: brightness(90%);
 
     &--1 {
-      top: -0.375rem;
-      left: 23rem;
+      top: 17.625rem;
+      left: 6.5rem;
       height: 1rem;
       width: 1rem;
     }
 
     &--2 {
-      top: 21rem;
-      left: 0.75rem;
+      top: 36rem;
+      left: 10.75rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    &--3 {
+      top: 54rem;
+      left: 10rem;
+      height: 2rem;
+      width: 2rem;
+    }
+
+    &--4 {
+      top: 85rem;
+      left: 12.75rem;
       height: 2.5rem;
       width: 2.5rem;
     }
 
-    &--3 {
-      top: 50rem;
-      left: 0.75rem;
-      height: 4rem;
-      width: 4rem;
-    }
-
-    &--4 {
-      top: 82.5rem;
-      left: 16.5rem;
-      height: 5.5rem;
-      width: 5.5rem;
+    &--5 {
+      top: 99.75rem;
+      left: 6rem;
+      height: 3rem;
+      width: 3rem;
     }
 
     &::before {
@@ -63,36 +81,15 @@ $name: 'TimelineSection';
   &__blurb {
     position: absolute;
 
-    &--1 {
-      top: -11rem;
-      left: -18rem;
-    }
-
-    &--2 {
-      top: 23rem;
-      left: 20rem;
-    }
-
-    &--3 {
-      top: 65rem;
-      left: -19rem;
-    }
-
     .#{$name} {
-      letter-spacing: 0.0625rem;
-
       &__title {
-        margin-bottom: 1rem;
-        font-size: 1.5rem;
         font-weight: 300;
         color: $turquoise;
       }
 
       &__message {
-        width: 35rem;
         line-height: 1.5;
         letter-spacing: 0.0625rem;
-        font-size: 1rem;
         font-weight: 300;
         color: $white;
       }
@@ -101,13 +98,13 @@ $name: 'TimelineSection';
 
   &__picture {
     position: absolute;
-    top: -10rem;
-    left: 30rem;
+    top: 13rem;
+    left: 8.25rem;
 
     img {
       margin: auto;
-      width: 18rem;
-      height: 24rem;
+      width: 15rem;
+      height: 20rem;
       border-radius: 1rem;
       border: none;
       outline: none;
@@ -126,11 +123,11 @@ $name: 'TimelineSection';
 
   &__year {
     position: absolute;
-    top: 17rem;
-    left: -15rem;
-    font-size: 8rem;
+    top: 50rem;
+    left: -5rem;
+    font-size: 6rem;
     font-weight: 700;
-    line-height: 1;
+    line-height: 0.875;
     letter-spacing: 0.25rem;
     transform: rotate(-10deg);
 
@@ -160,49 +157,51 @@ $name: 'TimelineSection';
 
   &__image-grid {
     position: absolute;
-    top: 34rem;
-    left: 20rem;
+    top: 64rem;
+    left: calc(50% - 14.875rem);
+    height: 18rem;
+    width: 29.75rem;
+    background: $black;
+    overflow: hidden;
 
     .#{$name} {
-      &__logo,
-      &__color-box {
-        width: 9rem;
-        height: 9rem;
-      }
-
       &__logo {
         position: absolute;
-        top: 10rem;
-        left: 13rem;
+        top: 5.5rem;
+        left: 11.375rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 1rem;
         box-sizing: border-box;
+        padding: 1rem;
+        width: 7rem;
+        height: 7rem;
       }
 
       &__color-box {
         position: absolute;
+        width: 5.5rem;
+        height: 5.5rem;
         border-radius: 1rem;
 
         &--1 {
           background-color: $turquoise;
           top: 0rem;
-          left: 13rem;
+          left: 12.125rem;
         }
 
         &--2 {
           background-color: $purple;
-          top: 20rem;
-          left: 26rem;
+          top: 12.5rem;
+          left: 12.125rem;
         }
       }
 
       &__image {
         position: absolute;
-        border-radius: 1rem;
-        border: none;
         outline: none;
+        border: none;
+        border-radius: 1rem;
         object-fit: cover;
 
         &::before {
@@ -216,22 +215,120 @@ $name: 'TimelineSection';
         &--1 {
           top: 0rem;
           left: 0rem;
-          width: 12rem;
-          height: 19rem;
+          width: 11.375rem;
+          height: 18rem;
         }
 
         &--2 {
           top: 0rem;
-          left: 23rem;
-          width: 12rem;
-          height: 19rem;
+          left: 18.375rem;
+          width: 11.375rem;
+          height: 18rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    &__blurb {
+      &--1 {
+        top: 0rem;
+        left: -1.625rem;
+        width: 18.25rem;
+      }
+
+      &--2 {
+        top: 38rem;
+        left: -3rem;
+        width: 16rem;
+      }
+
+      &--3 {
+        top: 88rem;
+        left: -2.5rem;
+        width: 17rem;
+      }
+
+      .#{$name} {
+        &__title {
+          margin-bottom: 0.5rem;
+          font-size: 1.25rem;
         }
 
-        &--3 {
-          top: 20rem;
-          left: 0rem;
-          width: 25rem;
-          height: 9rem;
+        &__message {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    &__blurb {
+      &--1 {
+        top: 0rem;
+        left: calc(50% - 12.5rem);
+        width: 25rem;
+      }
+
+      &--2 {
+        top: 37rem;
+        left: -5rem;
+        width: 18rem;
+      }
+
+      &--3 {
+        top: 88rem;
+        left: -5rem;
+        width: 18rem;
+      }
+
+      .#{$name} {
+        &__title {
+          margin-bottom: 0.625rem;
+          font-size: 1.375rem;
+        }
+
+        &__message {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    &__blurb {
+      &--1 {
+        top: 0rem;
+        left: calc(50% - 16.5rem);
+        width: 33rem;
+      }
+
+      &--2 {
+        top: 36.5rem;
+        left: -7.5rem;
+        width: 20rem;
+      }
+
+      &--3 {
+        top: 88rem;
+        left: -7.5rem;
+        width: 20rem;
+      }
+
+      .#{$name} {
+        &__title {
+          margin-bottom: 0.625rem;
+          font-size: 1.5rem;
+        }
+
+        &__message {
+          font-size: 1.125rem;
         }
       }
     }
