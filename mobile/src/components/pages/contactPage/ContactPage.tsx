@@ -6,7 +6,10 @@ import defineBlock from 'src/utils/defineBlock';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
-import UnderConstruction from 'src/components/common/underConstruction/UnderConstruction';
+import OptionsSection from 'src/components/pages/contactPage/optionsSection/OptionsSection';
+import FormSection from 'src/components/pages/contactPage/formSection/FormSection';
+import SocialsSection from 'src/components/pages/contactPage/socialsSection/SocialsSection';
+import GlobeSection from 'src/components/pages/contactPage/globeSection/GlobeSection';
 
 const bem = defineBlock('ContactPage');
 
@@ -22,7 +25,18 @@ const ContactPage = () => (
     <div className={bem('line-split')}>
       <LineSplit />
     </div>
-    <UnderConstruction />
+    <div className={bem('options')}>
+      <OptionsSection />
+    </div>
+    <div className={bem('form')}>
+      <FormSection />
+    </div>
+    <div className={bem('socials')}>
+      <SocialsSection />
+    </div>
+    <div className={bem('globe')}>
+      <GlobeSection />
+    </div>
   </div>
 );
 

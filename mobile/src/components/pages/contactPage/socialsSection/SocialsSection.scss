@@ -1,0 +1,136 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'SocialsSection';
+
+.#{$name} {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $app_vertical_margins;
+
+  &__title {
+    letter-spacing: 0.03125rem;
+    font-weight: 300;
+    color: $turquoise;
+  }
+
+  &__symbol {
+    color: $purple;
+    font-weight: 400;
+    margin-left: 0.25rem;
+  }
+
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  &__item-container {
+    border-radius: 0.25rem;
+    background-color: $white;
+    overflow: hidden;
+    transition: 200ms ease-out;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    transition: inherit;
+
+    &:visited {
+      color: unset;
+    }
+
+    &--linkedin {
+      background-color: #5013ff;
+    }
+
+    &--github {
+      background-color: #ff5cd1;
+    }
+
+    &--facebook {
+      background-color: #666666;
+    }
+
+    &--instagram {
+      background-color: #df9bff;
+    }
+
+    &--twitter {
+      background-color: #0085ff;
+    }
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  &__handle {
+    position: absolute;
+    color: $white;
+  }
+}
+
+@media (max-width: $small_screen_end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+    }
+
+    &__item-container {
+      height: 6rem;
+      width: 100%;
+    }
+
+    &__item {
+      svg {
+        width: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__handle {
+      bottom: 0.5rem;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@media (min-width: $medium_screen_start) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    &__item-container {
+      height: 10rem;
+      width: 12rem;
+    }
+
+    &__item {
+      svg {
+        width: 4.25rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__handle {
+      bottom: 1rem;
+      font-size: 1rem;
+    }
+  }
+}

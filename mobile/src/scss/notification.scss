@@ -6,6 +6,7 @@ $name: 'Notification';
   position: relative;
   z-index: 99;
   overflow: hidden;
+  margin-top: 0.5rem;
   padding: 1rem 4rem 1rem 1rem;
   max-width: 20rem;
   font-weight: 500;
@@ -16,10 +17,6 @@ $name: 'Notification';
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   transition-timing-function: ease-out;
-
-  &:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
 
   &__message {
   }
@@ -55,13 +52,13 @@ $name: 'Notification';
   &__container {
     position: fixed;
     z-index: 9999;
-    top: 2rem;
-    right: 2rem;
+    top: 0.5rem;
+    right: 1rem;
   }
 
   @keyframes slideIn {
     from {
-      transform: translateX(calc(100% + 2rem));
+      transform: translateX(calc(100% + 1rem));
     }
 
     to {

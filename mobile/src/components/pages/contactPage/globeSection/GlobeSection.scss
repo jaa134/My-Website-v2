@@ -1,0 +1,77 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'ContactGlobeSection';
+
+.#{$name} {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0 $app_vertical_margins;
+
+  &__title {
+    margin: auto;
+    font-weight: 300;
+    letter-spacing: 0.03125rem;
+    color: $turquoise;
+    text-align: center;
+  }
+
+  &__symbol {
+    color: $purple;
+    font-weight: 400;
+    margin-left: 0.25rem;
+  }
+
+  &__subtitle {
+    margin: auto;
+    max-width: 25rem;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.03125rem;
+    color: $white_a_90;
+    text-align: center;
+  }
+
+  &__globe {
+    margin: -5.5rem auto;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+
+    .scene-container {
+      left: calc(50% - 300px);
+    }
+  }
+}
+
+@media (max-width: $small_screen_end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.5rem;
+      font-size: 1.75rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: $medium_screen_start) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 2rem;
+      font-size: 1.125rem;
+    }
+  }
+}

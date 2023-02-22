@@ -1,0 +1,152 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'FormSection';
+
+.#{$name} {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 $app_vertical_margins;
+
+  &__title {
+    font-weight: 300;
+    color: $white;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    line-height: 1.5;
+    color: $white_a_90;
+    text-align: center;
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+
+    &-loader {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $black_a_25;
+    }
+
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-element {
+      flex: 1;
+      box-sizing: border-box;
+      padding: 0.875rem 1.375rem;
+      letter-spacing: 0.03125rem;
+      color: $white_a_90;
+      background-color: $white_a_10;
+      border: none;
+      line-height: 1.5;
+      resize: vertical;
+
+      &--invalid {
+        outline: 0.125rem solid $red;
+      }
+
+      &::placeholder {
+        color: $white_a_50;
+      }
+
+      &:focus:not(.#{$name}__form-element--invalid) {
+        outline: none;
+      }
+    }
+  }
+
+  .Button {
+    margin-top: 1rem;
+  }
+
+  .grecaptcha-badge {
+    z-index: 999;
+  }
+}
+
+@media (max-width: $small_screen_end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.5rem;
+      font-size: 1.75rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    &__form {
+      &-row {
+        flex-wrap: wrap;
+      }
+
+      &-element {
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: $medium_screen_start) and (max-width: $medium_screen_end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 2rem;
+      font-size: 1.125rem;
+    }
+
+    &__form {
+      &-row {
+        flex-wrap: wrap;
+      }
+
+      &-element {
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 2rem;
+      font-size: 1.125rem;
+    }
+
+    &__form {
+      &-row {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}
