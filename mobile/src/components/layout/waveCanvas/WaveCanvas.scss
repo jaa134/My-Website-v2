@@ -12,3 +12,21 @@ $name: 'WaveCanvas';
     height: 100%;
   }
 }
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    height: 3rem;
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    height: 4rem;
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    height: 5rem;
+  }
+}

@@ -18,7 +18,7 @@ const ContactSection = () => (
     </div>
     <Link to={RouteName.Contact}>
       <Button
-        size="large"
+        size="medium"
         type="filled"
         color="purple"
         label="Let's Talk"
