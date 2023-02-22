@@ -2,6 +2,7 @@ import { assetsPath } from 'src/constants/common';
 
 export const imagesPath = `${assetsPath}/images`;
 export const albumImagesPath = `${imagesPath}/album`;
+export const collageImagesPath = `${imagesPath}/collage`;
 export const educationImagesPath = `${imagesPath}/education`;
 export const skillsImagesPath = `${imagesPath}/skills`;
 export const globeImagesPath = `${imagesPath}/globe`;

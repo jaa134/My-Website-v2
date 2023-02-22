@@ -5,9 +5,13 @@ $name: 'Dialog';
 
 .#{$name} {
   position: relative;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+  max-height: 100vh;
   border-radius: 0.25rem;
   background-color: $dark_gray;
+  overflow: hidden;
 
   &__wrapper {
     position: fixed;
@@ -43,6 +47,12 @@ $name: 'Dialog';
     letter-spacing: 0.0625rem;
   }
 
+  &__body {
+    padding: 1rem 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   &__footer {
     display: flex;
     align-items: center;
@@ -63,15 +73,13 @@ $name: 'Dialog';
     }
 
     &__title {
+      padding-bottom: 1rem;
       font-size: 1.5rem;
-    }
-
-    &__body {
-      padding: 2rem 0 3rem 0;
     }
 
     &__footer {
       gap: 1.5rem;
+      padding-top: 1.5rem;
     }
   }
 }
@@ -89,15 +97,13 @@ $name: 'Dialog';
     }
 
     &__title {
+      padding-bottom: 1.5rem;
       font-size: 1.75rem;
-    }
-
-    &__body {
-      padding: 2.75rem 0;
     }
 
     &__footer {
       gap: 1.5rem;
+      padding-top: 2rem;
     }
   }
 }
@@ -115,15 +121,13 @@ $name: 'Dialog';
     }
 
     &__title {
+      padding-bottom: 2rem;
       font-size: 2rem;
-    }
-
-    &__body {
-      padding: 3rem 0;
     }
 
     &__footer {
       gap: 1.5rem;
+      padding-top: 2rem;
     }
   }
 }
