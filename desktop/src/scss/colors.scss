@@ -2,6 +2,7 @@
 
 $black: #000000;
 $black_a_25: color.adjust($black, $alpha: -0.75);
+$black_a_50: color.adjust($black, $alpha: -0.5);
 
 $white: #ffffff;
 $white_a_10: color.adjust($white, $alpha: -0.9);

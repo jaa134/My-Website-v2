@@ -3,23 +3,29 @@
 
 $name: 'ExperienceSection';
 
+$card-border-width: calc($app-vertical-margins / 2);
+$card-border: $card-border-width solid $black;
+
 .#{$name} {
   box-sizing: border-box;
-  padding: 6rem $app-vertical-margins;
+  padding: 6rem 0;
   width: 100%;
-  height: 100%;
+
+  &__header {
+    padding: 0 $app-vertical-margins;
+  }
 
   &__title {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.75rem;
     font-weight: 300;
-    font-size: 1.5rem;
     letter-spacing: 0.0625rem;
     color: $purple_l_20;
   }
 
   &__subtitle {
+    font-size: 1.25rem;
     font-weight: 300;
-    font-size: 1.375rem;
     letter-spacing: 0.0625rem;
     color: $white;
 
@@ -30,40 +36,122 @@ $name: 'ExperienceSection';
 
   &__bar {
     margin-bottom: 2rem;
-    height: 0.0625rem;
     width: 20rem;
-    background-color: $white;
-    opacity: 0.9;
+    height: 0.0625rem;
+    background-color: $white_a_50;
+  }
+
+  &__carousel-container {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 $app-vertical-margins;
+    width: calc(100% - (2 * $app-vertical-margins));
+    overflow: hidden;
+  }
+
+  &__carousel {
+    width: 100%;
+
+    &-nav {
+      position: absolute;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 3rem;
+      outline: 0;
+      border: 0;
+      background: $black_a_25;
+      transition: 200ms ease-out;
+      cursor: pointer;
+
+      &:hover {
+        background: $black_a_50;
+      }
+
+      &--prev {
+        left: 0;
+
+        svg {
+          transform: rotate(-90deg);
+        }
+      }
+
+      &--next {
+        right: 0;
+
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        fill: $white_a_90;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.75rem auto 0 auto;
+      height: 2.25rem;
+      width: 17rem;
+      border: 0.0625rem solid $white_a_25;
+      border-radius: 1.125rem;
+    }
+
+    &-button {
+      margin: 0;
+      padding: 0;
+      height: 1rem;
+      width: 3rem;
+      outline: none;
+      border: 0.25rem solid $black;
+      border-radius: 0.5rem;
+      background: $white;
+      transition: 200ms ease-out;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        background: $purple_l_10;
+      }
+
+      &--selected,
+      &--selected:hover {
+        background: $purple;
+        width: 5rem;
+      }
+    }
   }
 
   &__cards {
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: flex-start;
   }
 
   &__card {
     position: relative;
-    flex: 1;
+    flex: 0 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    box-sizing: border-box;
     height: 25rem;
+    min-width: 30rem;
+    max-width: 45rem;
+    border-left: $card-border;
+    border-right: $card-border;
     background: $purple;
     background-image: radial-gradient(137.98% 137.98% at 24.23% 20.46%, $purple 16.15%, #49deff 100%);
-    transition: 200ms ease-out;
-
-    &:hover {
-      background-image: unset;
-      transform: scale(1.05);
-    }
-
-    @media only screen and (max-width: 1600px) {
-      flex: 1 0 calc(50% - 2rem);
-    }
+    overflow: hidden;
+    cursor: grab;
   }
 
   &__card-title {
@@ -71,42 +159,48 @@ $name: 'ExperienceSection';
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 2rem 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 2rem 1rem;
     white-space: nowrap;
     text-align: center;
-    font-size: 1.625rem;
+    font-size: 2rem;
     font-weight: 300;
     letter-spacing: 0.03125rem;
     color: $white;
   }
 
-  &__bubble-text {
+  &__bubbles {
+    position: relative;
+    top: -1.5rem;
+    width: 27rem;
+    height: 13.5rem;
+  }
+
+  &__bubble {
     position: absolute;
-    padding: 0.5rem 2rem;
-    margin: 1rem 0;
+    padding: 0.5rem 2.25rem;
     width: fit-content;
-    line-height: 1;
-    font-size: 2.5rem;
-    background: $white;
     border-radius: 2rem;
-    -webkit-text-stroke: 0.0625rem $black;
+    font-size: 2.5rem;
+    line-height: 1;
+    background: $white;
     color: white;
     font-weight: 600;
+    -webkit-text-stroke: 0.0625rem $black;
 
     &:nth-child(1) {
-      top: 3rem;
+      top: 0rem;
       left: 20%;
     }
 
     &:nth-child(2) {
-      top: 8rem;
+      top: 5rem;
       left: 50%;
     }
 
     &:nth-child(3) {
-      top: 13rem;
+      top: 10rem;
       left: 30%;
     }
   }
@@ -116,56 +210,55 @@ $name: 'ExperienceSection';
       position: absolute;
       top: 4rem;
       width: 7.75rem;
-      height: 14rem;
+      height: 13.5rem;
+      border-radius: 0.75rem;
       background: radial-gradient(
         115.98% 115.98% at -37.96% -29%,
         $purple 0%,
         rgba(223, 211, 244, 0.728125) 30.21%,
         rgba(255, 255, 255, 0.1) 100%
       );
-      border-radius: 0.75rem;
     }
 
     &-outer {
       position: absolute;
       top: 3.5rem;
-
       width: 8.5rem;
-      height: 15rem;
-
+      height: 14.5rem;
+      border-radius: 0.75rem;
       background: radial-gradient(
         115.98% 115.98% at -37.96% -29%,
         $purple 0%,
         rgba(223, 211, 244, 0.728125) 30.21%,
         rgba(255, 255, 255, 0.1) 100%
       );
-      border-radius: 0.75rem;
     }
   }
 
   &__project-grid {
+    position: absolute;
+    top: 3.5rem;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     width: 14.5rem;
-    margin-bottom: 3rem;
-  }
 
-  &__project-grid-box {
-    width: 4.5rem;
-    height: 4.5rem;
-    background: radial-gradient(
-      115.98% 115.98% at -37.96% -29%,
-      $purple 0%,
-      rgba(223, 211, 244, 0.728125) 30.21%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
-    border-radius: 0.75rem;
+    &-box {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 0.75rem;
+      background: radial-gradient(
+        115.98% 115.98% at -37.96% -29%,
+        $purple 0%,
+        rgba(223, 211, 244, 0.728125) 30.21%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+    }
   }
 
   &__seek-logo {
-    margin-bottom: 3rem;
-    width: 13rem;
-    opacity: 1;
+    position: absolute;
+    top: 3.5rem;
+    width: 14.5rem;
   }
 }
