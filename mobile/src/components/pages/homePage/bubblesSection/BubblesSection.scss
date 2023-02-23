@@ -62,7 +62,7 @@ $name: 'BubblesSection';
       // Sass
       :nth-child(5) {
         top: -1rem;
-        left: 7rem;
+        left: 8rem;
       }
 
       // React
@@ -79,8 +79,8 @@ $name: 'BubblesSection';
 
       // Angular
       :nth-child(8) {
-        top: 11rem;
-        left: -21rem;
+        top: 8.5rem;
+        left: -26.5rem;
       }
 
       // Git
@@ -91,8 +91,8 @@ $name: 'BubblesSection';
 
       // GraphQL
       :nth-child(10) {
-        top: 28rem;
-        left: -22rem;
+        top: 27rem;
+        left: -27rem;
       }
 
       // Jest
@@ -110,7 +110,25 @@ $name: 'BubblesSection';
       // Java
       :nth-child(13) {
         top: 8.5rem;
-        left: 14rem;
+        left: 16rem;
+      }
+
+      // Vite
+      :nth-child(14) {
+        top: 22.5rem;
+        left: 17rem;
+      }
+
+      // Webpack
+      :nth-child(15) {
+        top: 0rem;
+        left: -22rem;
+      }
+
+      // NPM
+      :nth-child(16) {
+        top: 40rem;
+        left: -24rem;
       }
     }
   }

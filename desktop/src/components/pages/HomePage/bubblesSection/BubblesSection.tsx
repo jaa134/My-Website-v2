@@ -197,7 +197,7 @@ const BubblesSection = () => {
     {
       id: 'NPM',
       logo: <NPM />,
-      size: 's2',
+      size: 's1',
       menuPosition: 'left',
       values: {
         knowledge: 70,

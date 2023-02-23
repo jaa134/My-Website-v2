@@ -18,6 +18,9 @@ import ReactJS from 'src/components/icons/logos/tech/ReactJS';
 import Sass from 'src/components/icons/logos/tech/Sass';
 import TypeScript from 'src/components/icons/logos/tech/TypeScript';
 import Vue from 'src/components/icons/logos/tech/Vue';
+import Vite from 'src/components/icons/logos/tech/Vite';
+import Webpack from 'src/components/icons/logos/tech/Webpack';
+import NPM from 'src/components/icons/logos/tech/NPM';
 
 const bem = defineBlock('BubblesSection');
 
@@ -114,7 +117,7 @@ const BubblesSection = () => {
     {
       id: 'Angular',
       logo: <Angular />,
-      size: 's1',
+      size: 's2',
       menuPosition: 'right',
       values: {
         knowledge: 40,
@@ -134,7 +137,7 @@ const BubblesSection = () => {
     {
       id: 'GraphQL',
       logo: <GraphQL />,
-      size: 's1',
+      size: 's2',
       menuPosition: 'right',
       values: {
         knowledge: 80,
@@ -166,6 +169,36 @@ const BubblesSection = () => {
       logo: <Java />,
       size: 's1',
       menuPosition: 'left',
+      values: {
+        knowledge: 70,
+        experience: 80,
+      },
+    },
+    {
+      id: 'Vite',
+      logo: <Vite />,
+      size: 's2',
+      menuPosition: 'left',
+      values: {
+        knowledge: 60,
+        experience: 30,
+      },
+    },
+    {
+      id: 'Webpack',
+      logo: <Webpack />,
+      size: 's1',
+      menuPosition: 'right',
+      values: {
+        knowledge: 80,
+        experience: 80,
+      },
+    },
+    {
+      id: 'NPM',
+      logo: <NPM />,
+      size: 's1',
+      menuPosition: 'right',
       values: {
         knowledge: 70,
         experience: 80,
