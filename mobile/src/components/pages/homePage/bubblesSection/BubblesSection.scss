@@ -100,8 +100,7 @@ $name: 'BubblesSection';
     height: 40rem;
 
     &__container {
-      top: -5rem;
-      transform: scale(0.75);
+      transform: scale(0.75) translateY(-5rem);
     }
   }
 }
@@ -111,8 +110,7 @@ $name: 'BubblesSection';
     height: 47.5rem;
 
     &__container {
-      top: -1rem;
-      transform: scale(0.875);
+      transform: scale(0.875) translateY(-1rem);
     }
   }
 }
@@ -122,8 +120,7 @@ $name: 'BubblesSection';
     height: 50rem;
 
     &__container {
-      top: 0rem;
-      transform: scale(1);
+      transform: scale(1) translateY(0);
     }
   }
 }
