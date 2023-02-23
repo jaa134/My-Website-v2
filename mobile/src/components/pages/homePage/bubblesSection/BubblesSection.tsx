@@ -175,6 +175,12 @@ const BubblesSection = () => {
 
   return (
     <div className={bem()}>
+      <div className={bem('header')}>
+        <div className={bem('title')}>Skills</div>
+        <div className={bem('subtitle', '1')}>Programming Languages /</div>
+        <div className={bem('subtitle', '2')}>Technical Expertise /</div>
+        <div className={bem('bar')} />
+      </div>
       <div className={bem('container')}>
         {bubbles.map((bubble) => (
           <LogoBubble

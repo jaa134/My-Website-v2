@@ -8,12 +8,8 @@ $card-border: $card-border-width solid $black;
 
 .#{$name} {
   box-sizing: border-box;
-  padding: 6rem 0;
+  padding: 6rem $app-vertical-margins;
   width: 100%;
-
-  &__header {
-    padding: 0 $app-vertical-margins;
-  }
 
   &__title {
     margin-bottom: 0.25rem;
@@ -44,8 +40,7 @@ $card-border: $card-border-width solid $black;
   &__carousel-container {
     position: relative;
     box-sizing: border-box;
-    margin: 0 $app-vertical-margins;
-    width: calc(100% - (2 * $app-vertical-margins));
+    width: 100%;
     overflow: hidden;
   }
 

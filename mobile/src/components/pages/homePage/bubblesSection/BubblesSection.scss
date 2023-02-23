@@ -7,6 +7,27 @@ $name: 'BubblesSection';
   width: 100%;
   background: linear-gradient(to bottom, #270d3c, #0e0e0e 82.4%);
 
+  &__header {
+    padding: 1rem var(--app-vertical-margins);
+  }
+
+  &__title {
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    color: $purple_l_20;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    color: $white;
+  }
+
+  &__bar {
+    height: 0.0625rem;
+    background-color: $white_a_50;
+  }
+
   &__container {
     position: relative;
     width: 1px;
@@ -97,30 +118,84 @@ $name: 'BubblesSection';
 
 @media (max-width: $small-screen-end) {
   .#{$name} {
-    height: 40rem;
+    height: 47.5rem;
+
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.125rem;
+
+      &--2 {
+        margin-bottom: 1.125rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 1.5rem;
+      width: 18rem;
+    }
 
     &__container {
-      transform: scale(0.75) translateY(-5rem);
+      transform: scale(0.75) translateY(-8rem);
     }
   }
 }
 
 @media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
   .#{$name} {
-    height: 47.5rem;
+    height: 54rem;
+
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.125rem;
+
+      &--2 {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 1.625rem;
+      width: 18rem;
+    }
 
     &__container {
-      transform: scale(0.875) translateY(-1rem);
+      transform: scale(0.875) translateY(-4rem);
     }
   }
 }
 
 @media (min-width: $large_screen_start) {
   .#{$name} {
-    height: 50rem;
+    height: 63rem;
+
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.75rem;
+    }
+
+    &__subtitle {
+      font-size: 1.25rem;
+
+      &--2 {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 2rem;
+      width: 20rem;
+    }
 
     &__container {
-      transform: scale(1) translateY(0);
+      transform: scale(1) translateY(0rem);
     }
   }
 }

@@ -18,6 +18,9 @@ import ReactJS from 'src/components/icons/logos/tech/ReactJS';
 import Sass from 'src/components/icons/logos/tech/Sass';
 import TypeScript from 'src/components/icons/logos/tech/TypeScript';
 import Vue from 'src/components/icons/logos/tech/Vue';
+import Vite from 'src/components/icons/logos/tech/Vite';
+import Webpack from 'src/components/icons/logos/tech/Webpack';
+import NPM from 'src/components/icons/logos/tech/NPM';
 
 const bem = defineBlock('BubblesSection');
 
@@ -42,7 +45,7 @@ const BubblesSection = () => {
 
   const bubbles: readonly BubbleData[] = [
     {
-      id: 'bubble-1',
+      id: 'TypeScript',
       logo: <TypeScript />,
       size: 's3',
       menuPosition: 'right',
@@ -52,7 +55,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-2',
+      id: 'Angular',
       logo: <Angular />,
       size: 's1',
       menuPosition: 'left',
@@ -62,7 +65,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-3',
+      id: 'CSS',
       logo: <CSS />,
       size: 's4',
       menuPosition: 'right',
@@ -72,7 +75,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-4',
+      id: 'GraphQL',
       logo: <GraphQL />,
       size: 's2',
       menuPosition: 'left',
@@ -82,7 +85,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-5',
+      id: 'HTML',
       logo: <HTML />,
       size: 's5',
       menuPosition: 'left',
@@ -92,7 +95,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-6',
+      id: 'Jest',
       logo: <Jest />,
       size: 's1',
       menuPosition: 'right',
@@ -102,7 +105,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-7',
+      id: 'JavaScript',
       logo: <JavaScript />,
       size: 's5',
       menuPosition: 'left',
@@ -112,7 +115,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-8',
+      id: 'Vue',
       logo: <Vue />,
       size: 's4',
       menuPosition: 'right',
@@ -122,7 +125,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-9',
+      id: 'Git',
       logo: <Git />,
       size: 's2',
       menuPosition: 'left',
@@ -132,7 +135,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-10',
+      id: 'Jira',
       logo: <Jira />,
       size: 's2',
       menuPosition: 'right',
@@ -142,7 +145,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-11',
+      id: 'ReactJS',
       logo: <ReactJS />,
       size: 's4',
       menuPosition: 'right',
@@ -152,7 +155,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-12',
+      id: 'Java',
       logo: <Java />,
       size: 's1',
       menuPosition: 'left',
@@ -162,7 +165,7 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-13',
+      id: 'Sass',
       logo: <Sass />,
       size: 's3',
       menuPosition: 'left',
@@ -171,10 +174,46 @@ const BubblesSection = () => {
         experience: 100,
       },
     },
+    {
+      id: 'Vite',
+      logo: <Vite />,
+      size: 's1',
+      menuPosition: 'left',
+      values: {
+        knowledge: 60,
+        experience: 30,
+      },
+    },
+    {
+      id: 'Webpack',
+      logo: <Webpack />,
+      size: 's1',
+      menuPosition: 'left',
+      values: {
+        knowledge: 80,
+        experience: 80,
+      },
+    },
+    {
+      id: 'NPM',
+      logo: <NPM />,
+      size: 's2',
+      menuPosition: 'left',
+      values: {
+        knowledge: 70,
+        experience: 80,
+      },
+    },
   ];
 
   return (
     <div className={bem()}>
+      <div className={bem('header')}>
+        <div className={bem('title')}>Skills</div>
+        <div className={bem('subtitle', '1')}>Programming Languages /</div>
+        <div className={bem('subtitle', '2')}>Technical Expertise /</div>
+        <div className={bem('bar')} />
+      </div>
       <div className={bem('background')}></div>
       <div className={bem('container')}>
         {bubbles.map((bubble) => (

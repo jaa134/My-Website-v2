@@ -15,13 +15,13 @@ $name: 'WaveCanvas';
 
 @media (max-width: $small-screen-end) {
   .#{$name} {
-    height: 3rem;
+    height: 2.5rem;
   }
 }
 
 @media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
   .#{$name} {
-    height: 4rem;
+    height: 3.75rem;
   }
 }
 
