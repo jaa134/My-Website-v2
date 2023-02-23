@@ -3,67 +3,94 @@
 
 $name: 'ExperienceSection';
 
+$card-border-width: calc(var(--app-vertical-margins) / 2);
+$card-border: $card-border-width solid $black;
+
 .#{$name} {
   box-sizing: border-box;
-  padding: 6rem $app-vertical-margins;
   width: 100%;
-  height: 100%;
+
+  &__header {
+    padding: 0 var(--app-vertical-margins);
+  }
 
   &__title {
-    margin-bottom: 0.75rem;
     font-weight: 300;
-    font-size: 1.5rem;
     letter-spacing: 0.0625rem;
     color: $purple_l_20;
   }
 
   &__subtitle {
     font-weight: 300;
-    font-size: 1.375rem;
     letter-spacing: 0.0625rem;
     color: $white;
-
-    &--2 {
-      margin-bottom: 1.5rem;
-    }
   }
 
   &__bar {
-    margin-bottom: 2rem;
     height: 0.0625rem;
-    width: 20rem;
-    background-color: $white;
-    opacity: 0.9;
+    background-color: $white_a_50;
+  }
+
+  &__carousel {
+    padding: 0 $card-border-width;
+    overflow: hidden;
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1.75rem auto 0 auto;
+      height: 2.25rem;
+      width: 17rem;
+      border: 0.0625rem solid $white_a_25;
+      border-radius: 1.125rem;
+    }
+
+    &-button {
+      margin: 0;
+      padding: 0;
+      height: 1rem;
+      width: 3rem;
+      outline: none;
+      border: 0.25rem solid $black;
+      border-radius: 0.5rem;
+      background: $white;
+      transition: 200ms ease-out;
+
+      &:active {
+        background: $purple_l_10;
+      }
+
+      &--selected {
+        background: $purple;
+        width: 5rem;
+      }
+    }
   }
 
   &__cards {
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    justify-content: flex-start;
   }
 
   &__card {
     position: relative;
-    flex: 1;
+    flex: 0 0 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    box-sizing: border-box;
     height: 25rem;
+    min-width: 0;
+    max-width: 30rem;
+    border-left: $card-border;
+    border-right: $card-border;
     background: $purple;
     background-image: radial-gradient(137.98% 137.98% at 24.23% 20.46%, $purple 16.15%, #49deff 100%);
-    transition: 200ms ease-out;
-
-    &:hover {
-      background-image: unset;
-      transform: scale(1.05);
-    }
-
-    @media only screen and (max-width: 1600px) {
-      flex: 1 0 calc(50% - 2rem);
-    }
+    overflow: hidden;
   }
 
   &__card-title {
@@ -167,5 +194,71 @@ $name: 'ExperienceSection';
     margin-bottom: 3rem;
     width: 13rem;
     opacity: 1;
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.125rem;
+
+      &--2 {
+        margin-bottom: 1.125rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 1.5rem;
+      width: 18rem;
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.125rem;
+
+      &--2 {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 1.625rem;
+      width: 18rem;
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.75rem;
+    }
+
+    &__subtitle {
+      font-size: 1.25rem;
+
+      &--2 {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 2rem;
+      width: 20rem;
+    }
   }
 }
