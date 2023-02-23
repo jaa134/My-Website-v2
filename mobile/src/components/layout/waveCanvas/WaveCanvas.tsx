@@ -23,9 +23,6 @@ const WaveCanvas: FC = () => {
       wave.draw(canvasContext, canvasContext.canvas.width, canvasContext.canvas.height, frequency);
     });
     frequency += 0.005;
-    requestAnimationFrame(() => {
-      renderWaves(canvasContext);
-    });
   };
 
   useEffect(() => {
