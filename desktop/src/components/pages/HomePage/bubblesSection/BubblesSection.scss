@@ -4,88 +4,104 @@
 $name: 'BubblesSection';
 
 .#{$name} {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  background: linear-gradient(to bottom, #270d3c, #0e0e0e 82.4%);
+
+  &__background {
+    width: 100%;
+    height: 45rem;
+    background: linear-gradient(to bottom, #270d3c, #0e0e0e 82.4%);
+  }
 
   &__container {
-    position: relative;
-    height: 45rem;
-    width: 80rem;
+    position: absolute;
+    top: -7.5rem;
+    height: 55rem;
+    width: 1600px;
+    max-width: 100%;
     margin: auto;
+    overflow: hidden;
 
     & > {
+      // TypeScript
       :nth-child(1) {
-        top: 8rem;
-        left: 5rem;
+        top: 15rem;
+        left: 14rem;
       }
 
+      // Angular
       :nth-child(2) {
-        top: 0rem;
-        left: 15rem;
-      }
-
-      :nth-child(3) {
-        top: -4rem;
-        left: 25rem;
-      }
-
-      :nth-child(4) {
-        top: 11rem;
-        left: 43rem;
-      }
-
-      :nth-child(5) {
-        top: -4rem;
-        left: 53rem;
-      }
-
-      :nth-child(6) {
-        top: 33rem;
-        left: 11rem;
-      }
-
-      :nth-child(7) {
-        top: 13rem;
-        left: 18rem;
-      }
-
-      :nth-child(8) {
-        top: 23rem;
-        left: 40rem;
-      }
-
-      :nth-child(9) {
-        top: 21rem;
-        left: 61rem;
-      }
-
-      :nth-child(10) {
-        top: 1rem;
-        left: -8rem;
-      }
-
-      :nth-child(11) {
-        top: 18rem;
-        left: -10rem;
-      }
-
-      :nth-child(12) {
         top: 7rem;
-        left: 79rem;
+        left: 24rem;
       }
 
+      // CSS
+      :nth-child(3) {
+        top: 3rem;
+        left: 34rem;
+      }
+
+      // GraphQL
+      :nth-child(4) {
+        top: 18rem;
+        left: 52rem;
+      }
+
+      // HTML
+      :nth-child(5) {
+        top: 3rem;
+        left: 63rem;
+      }
+
+      // Jest
+      :nth-child(6) {
+        top: 40rem;
+        left: 20rem;
+      }
+
+      // JavaScript
+      :nth-child(7) {
+        top: 20rem;
+        left: 27rem;
+      }
+
+      // Vue
+      :nth-child(8) {
+        top: 30rem;
+        left: 49rem;
+      }
+
+      // Git
+      :nth-child(9) {
+        top: 28rem;
+        left: 70rem;
+      }
+
+      // Jira
+      :nth-child(10) {
+        top: 8rem;
+        left: 1.5rem;
+      }
+
+      // React
+      :nth-child(11) {
+        top: 25rem;
+        left: -0.5rem;
+      }
+
+      // Java
+      :nth-child(12) {
+        top: 14rem;
+        left: 88.5rem;
+      }
+
+      // Sass
       :nth-child(13) {
-        top: 24rem;
-        left: 75rem;
-      }
-
-      @media only screen and (max-width: 1600px) {
-        :nth-child(10),
-        :nth-child(11),
-        :nth-child(12),
-        :nth-child(13) {
-          display: none;
-        }
+        top: 31rem;
+        left: 84.5rem;
       }
     }
   }

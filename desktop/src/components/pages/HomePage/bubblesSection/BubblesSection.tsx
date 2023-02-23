@@ -1,6 +1,6 @@
 import 'src/components/pages/homePage/bubblesSection/BubblesSection.scss';
 
-import React, { ReactElement,useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -175,6 +175,7 @@ const BubblesSection = () => {
 
   return (
     <div className={bem()}>
+      <div className={bem('background')}></div>
       <div className={bem('container')}>
         {bubbles.map((bubble) => (
           <LogoBubble
