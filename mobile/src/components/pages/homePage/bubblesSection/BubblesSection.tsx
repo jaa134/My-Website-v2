@@ -1,6 +1,6 @@
 import 'src/components/pages/homePage/bubblesSection/BubblesSection.scss';
 
-import React, { ReactElement,useState } from 'react';
+import React, { ReactElement, useState } from 'react';
 
 import defineBlock from 'src/utils/defineBlock';
 
@@ -42,9 +42,9 @@ const BubblesSection = () => {
 
   const bubbles: readonly BubbleData[] = [
     {
-      id: 'bubble-1',
+      id: 'TypeScript',
       logo: <TypeScript />,
-      size: 's3',
+      size: 's2',
       menuPosition: 'right',
       values: {
         knowledge: 90,
@@ -52,19 +52,19 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-2',
-      logo: <Angular />,
-      size: 's1',
+      id: 'JavaScript',
+      logo: <JavaScript />,
+      size: 's4',
       menuPosition: 'left',
       values: {
-        knowledge: 40,
-        experience: 20,
+        knowledge: 90,
+        experience: 80,
       },
     },
     {
-      id: 'bubble-3',
-      logo: <CSS />,
-      size: 's4',
+      id: 'HTML',
+      logo: <HTML />,
+      size: 's3',
       menuPosition: 'right',
       values: {
         knowledge: 100,
@@ -72,19 +72,19 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-4',
-      logo: <GraphQL />,
-      size: 's2',
-      menuPosition: 'left',
+      id: 'CSS',
+      logo: <CSS />,
+      size: 's3',
+      menuPosition: 'right',
       values: {
-        knowledge: 80,
-        experience: 80,
+        knowledge: 100,
+        experience: 100,
       },
     },
     {
-      id: 'bubble-5',
-      logo: <HTML />,
-      size: 's5',
+      id: 'Sass',
+      logo: <Sass />,
+      size: 's2',
       menuPosition: 'left',
       values: {
         knowledge: 100,
@@ -92,7 +92,57 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-6',
+      id: 'ReactJS',
+      logo: <ReactJS />,
+      size: 's5',
+      menuPosition: 'right',
+      values: {
+        knowledge: 80,
+        experience: 70,
+      },
+    },
+    {
+      id: 'Vue',
+      logo: <Vue />,
+      size: 's5',
+      menuPosition: 'left',
+      values: {
+        knowledge: 90,
+        experience: 70,
+      },
+    },
+    {
+      id: 'Angular',
+      logo: <Angular />,
+      size: 's1',
+      menuPosition: 'right',
+      values: {
+        knowledge: 40,
+        experience: 20,
+      },
+    },
+    {
+      id: 'Git',
+      logo: <Git />,
+      size: 's1',
+      menuPosition: 'right',
+      values: {
+        knowledge: 90,
+        experience: 90,
+      },
+    },
+    {
+      id: 'GraphQL',
+      logo: <GraphQL />,
+      size: 's1',
+      menuPosition: 'right',
+      values: {
+        knowledge: 80,
+        experience: 80,
+      },
+    },
+    {
+      id: 'Jest',
       logo: <Jest />,
       size: 's1',
       menuPosition: 'right',
@@ -102,73 +152,23 @@ const BubblesSection = () => {
       },
     },
     {
-      id: 'bubble-7',
-      logo: <JavaScript />,
-      size: 's5',
-      menuPosition: 'left',
-      values: {
-        knowledge: 90,
-        experience: 80,
-      },
-    },
-    {
-      id: 'bubble-8',
-      logo: <Vue />,
-      size: 's4',
-      menuPosition: 'right',
-      values: {
-        knowledge: 90,
-        experience: 70,
-      },
-    },
-    {
-      id: 'bubble-9',
-      logo: <Git />,
-      size: 's2',
-      menuPosition: 'left',
-      values: {
-        knowledge: 90,
-        experience: 90,
-      },
-    },
-    {
-      id: 'bubble-10',
+      id: 'Jira',
       logo: <Jira />,
-      size: 's2',
-      menuPosition: 'right',
+      size: 's1',
+      menuPosition: 'left',
       values: {
         knowledge: 90,
         experience: 90,
       },
     },
     {
-      id: 'bubble-11',
-      logo: <ReactJS />,
-      size: 's4',
-      menuPosition: 'right',
-      values: {
-        knowledge: 80,
-        experience: 70,
-      },
-    },
-    {
-      id: 'bubble-12',
+      id: 'Java',
       logo: <Java />,
       size: 's1',
       menuPosition: 'left',
       values: {
         knowledge: 70,
         experience: 80,
-      },
-    },
-    {
-      id: 'bubble-13',
-      logo: <Sass />,
-      size: 's3',
-      menuPosition: 'left',
-      values: {
-        knowledge: 100,
-        experience: 100,
       },
     },
   ];

@@ -16,6 +16,7 @@ body {
   background-color: $black;
   overscroll-behavior: none;
   font-family: 'Red Hat Text', sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #root {

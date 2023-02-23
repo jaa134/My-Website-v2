@@ -9,84 +9,118 @@ $name: 'BubblesSection';
 
   &__container {
     position: relative;
+    width: 1px;
     height: 45rem;
-    width: 80rem;
     margin: auto;
 
     & > {
+      // TypeScript
       :nth-child(1) {
-        top: 8rem;
-        left: 5rem;
+        top: 23.5rem;
+        left: -7rem;
       }
 
+      // JavaScript
       :nth-child(2) {
-        top: 0rem;
-        left: 15rem;
+        top: 10.5rem;
+        left: 1.5rem;
       }
 
+      // HTML
       :nth-child(3) {
-        top: -4rem;
-        left: 25rem;
+        top: 30rem;
+        left: -18rem;
       }
 
+      // CSS
       :nth-child(4) {
-        top: 11rem;
-        left: 43rem;
+        top: 15.5rem;
+        left: -20rem;
       }
 
+      // Sass
       :nth-child(5) {
-        top: -4rem;
-        left: 53rem;
+        top: -1rem;
+        left: 7rem;
       }
 
+      // React
       :nth-child(6) {
-        top: 33rem;
-        left: 11rem;
+        top: -5rem;
+        left: -18rem;
       }
 
+      // Vue
       :nth-child(7) {
-        top: 13rem;
-        left: 18rem;
+        top: 25rem;
+        left: 0rem;
       }
 
+      // Angular
       :nth-child(8) {
-        top: 23rem;
-        left: 40rem;
+        top: 11rem;
+        left: -21rem;
       }
 
+      // Git
       :nth-child(9) {
-        top: 21rem;
-        left: 61rem;
+        top: 16rem;
+        left: -5rem;
       }
 
+      // GraphQL
       :nth-child(10) {
-        top: 1rem;
-        left: -8rem;
+        top: 28rem;
+        left: -22rem;
       }
 
+      // Jest
       :nth-child(11) {
-        top: 18rem;
-        left: -10rem;
+        top: 40rem;
+        left: -4.5rem;
       }
 
+      // Jira
       :nth-child(12) {
-        top: 7rem;
-        left: 79rem;
+        top: 7.5rem;
+        left: 2.5rem;
       }
 
+      // Java
       :nth-child(13) {
-        top: 24rem;
-        left: 75rem;
+        top: 8.5rem;
+        left: 14rem;
       }
+    }
+  }
+}
 
-      @media only screen and (max-width: 1600px) {
-        :nth-child(10),
-        :nth-child(11),
-        :nth-child(12),
-        :nth-child(13) {
-          display: none;
-        }
-      }
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    height: 40rem;
+
+    &__container {
+      transform: scale(0.75) translateY(-5rem);
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    height: 47.5rem;
+
+    &__container {
+      transform: scale(0.875) translateY(-1rem);
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    height: 50rem;
+
+    &__container {
+      transform: scale(1) translateY(0);
     }
   }
 }

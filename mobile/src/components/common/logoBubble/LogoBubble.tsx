@@ -31,10 +31,7 @@ const LogoBubble: FunctionComponent<Props> = ({ size, menuPositon, values, activ
   );
 
   return (
-    <div
-      className={bem('', size, `menu-${menuPositon}`, { active })}
-      onClick={onClick}
-    >
+    <div className={bem('', size, `menu-${menuPositon}`, { active })}>
       <div className={bem('menu-wrapper')}>
         <div className={bem('menu')}>
           {renderSlider('Knowledge', values.knowledge)}
@@ -44,7 +41,12 @@ const LogoBubble: FunctionComponent<Props> = ({ size, menuPositon, values, activ
         <div className={bem('menu-arm', '2')} />
       </div>
 
-      <div className={bem('logo')}>{children}</div>
+      <div
+        className={bem('logo')}
+        onClick={onClick}
+      >
+        {children}
+      </div>
 
       <svg
         className={bem('bubble', 'normal')}
@@ -355,7 +357,7 @@ const LogoBubble: FunctionComponent<Props> = ({ size, menuPositon, values, activ
       </svg>
 
       <svg
-        className={bem('bubble', 'hover')}
+        className={bem('bubble', 'shiny')}
         viewBox="0 0 460 534"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

@@ -69,12 +69,13 @@ $name: 'LogoBubble';
     z-index: 2;
     width: 100%;
     transition: opacity 200ms ease-in;
+    pointer-events: none;
 
     &--normal {
       opacity: 1;
     }
 
-    &--hover {
+    &--shiny {
       opacity: 0;
     }
   }
@@ -92,34 +93,14 @@ $name: 'LogoBubble';
     }
   }
 
-  &:hover {
-    .#{$name} {
-      &__bubble {
-        &--normal {
-          opacity: 0.75;
-        }
-
-        &--hover {
-          opacity: 0.25;
-        }
-      }
-
-      &__logo {
-        filter: grayscale(10%);
-        opacity: 0.9;
-      }
-    }
-  }
-
-  &--active,
-  &--active:hover {
+  &--active {
     .#{$name} {
       &__bubble {
         &--normal {
           opacity: 0.55;
         }
 
-        &--hover {
+        &--shiny {
           opacity: 0.45;
         }
       }
