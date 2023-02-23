@@ -25,10 +25,10 @@ const Vite = () => (
         y2="344"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#41D1FF" />
+        <stop stopColor="#41D1FF" />
         <stop
           offset="1"
-          stop-color="#BD34FE"
+          stopColor="#BD34FE"
         />
       </linearGradient>
       <linearGradient
