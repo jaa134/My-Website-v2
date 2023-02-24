@@ -3,7 +3,7 @@ import 'src/components/common/pageHeader/PageHeader.scss';
 import PropTypes from 'prop-types';
 import React, { FunctionComponent, useState } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Star from 'src/components/icons/general/Star';
 

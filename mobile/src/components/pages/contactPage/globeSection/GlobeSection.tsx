@@ -2,7 +2,7 @@ import 'src/components/pages/contactPage/globeSection/GlobeSection.scss';
 
 import React, { useEffect, useRef } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import GlobeScene from 'src/components/pages/contactPage/globeSection/GlobeScene';
 import notify from 'src/utils/notificatons';

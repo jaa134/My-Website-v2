@@ -5,7 +5,7 @@ import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { RouteName } from 'src/constants/common';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import AppFooter from 'src/components/layout/appFooter/AppFooter';
 import AppHeader from 'src/components/layout/appHeader/AppHeader';

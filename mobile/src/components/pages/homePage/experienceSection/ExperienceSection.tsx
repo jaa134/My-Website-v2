@@ -4,8 +4,8 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
 import useEmblaCarousel from 'embla-carousel-react';
 
-import defineBlock from 'src/utils/defineBlock';
-import numberWithinRange from 'src/utils/mathUtils';
+import defineBlock from 'src/utils/css';
+import numberWithinRange from 'src/utils/math';
 
 const bem = defineBlock('ExperienceSection');
 

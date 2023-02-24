@@ -9,7 +9,7 @@ import Captions from 'yet-another-react-lightbox/plugins/captions';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
 import { photos } from 'src/constants/images';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
 import Plus from 'src/components/icons/general/Plus';

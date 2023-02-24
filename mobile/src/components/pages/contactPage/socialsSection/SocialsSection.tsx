@@ -3,7 +3,7 @@ import 'src/components/pages/contactPage/socialsSection/SocialsSection.scss';
 import React from 'react';
 
 import { Handle, Link } from 'src/constants/common';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import FacebookVariant1 from 'src/components/icons/logos/socials/FacebookVariant1';
 import GitHubVariant1 from 'src/components/icons/logos/socials/GitHubVariant1';

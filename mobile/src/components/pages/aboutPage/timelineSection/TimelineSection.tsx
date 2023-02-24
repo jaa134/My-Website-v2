@@ -3,7 +3,7 @@ import 'src/components/pages/aboutPage/timelineSection/TimelineSection.scss';
 import React from 'react';
 
 import { albumImagesPath } from 'src/constants/images';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
 

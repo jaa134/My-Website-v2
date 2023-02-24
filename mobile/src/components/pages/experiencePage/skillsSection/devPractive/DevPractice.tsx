@@ -3,7 +3,7 @@ import 'src/components/pages/experiencePage/skillsSection/devPractive/DevPractic
 import PropTypes from 'prop-types';
 import React, { FunctionComponent, MouseEventHandler } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('DevPractice');
 

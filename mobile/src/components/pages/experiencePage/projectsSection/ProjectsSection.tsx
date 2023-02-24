@@ -2,7 +2,7 @@ import 'src/components/pages/experiencePage/projectsSection/ProjectsSection.scss
 
 import React, { ReactElement } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('ProjectsSection');
 
@@ -117,7 +117,8 @@ const ProjectsSection = () => {
             key={project.name}
             className={bem('project')}
             href={project.link}
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <div className={bem('project-logo')}>{project.logo}</div>
             <div className={bem('project-name')}>{project.name}</div>

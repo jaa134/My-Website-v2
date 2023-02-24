@@ -2,7 +2,7 @@ import 'src/components/common/underConstruction/UnderConstruction.scss';
 
 import React, { FunctionComponent } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('UnderConstruction');
 

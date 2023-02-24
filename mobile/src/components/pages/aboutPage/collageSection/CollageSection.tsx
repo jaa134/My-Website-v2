@@ -2,7 +2,7 @@ import 'src/components/pages/aboutPage/collageSection/CollageSection.scss';
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 import { collageImagesPath } from 'src/constants/images';
 
 const bem = defineBlock('CollageSection');

@@ -4,7 +4,7 @@ import React from 'react';
 
 import { transcriptPath } from 'src/constants/documents';
 import { educationImagesPath } from 'src/constants/images';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
 import Download from 'src/components/icons/general/Download';

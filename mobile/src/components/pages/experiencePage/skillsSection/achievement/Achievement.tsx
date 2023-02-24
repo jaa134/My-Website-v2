@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, { FunctionComponent } from 'react';
 
 import { skillsImagesPath } from 'src/constants/images';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('Achievement');
 

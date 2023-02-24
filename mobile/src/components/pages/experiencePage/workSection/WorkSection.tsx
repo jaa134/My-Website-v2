@@ -3,7 +3,7 @@ import 'src/components/pages/experiencePage/workSection/WorkSection.scss';
 import React, { useRef, useState } from 'react';
 
 import { resumePath } from 'src/constants/documents';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
 import Download from 'src/components/icons/general/Download';

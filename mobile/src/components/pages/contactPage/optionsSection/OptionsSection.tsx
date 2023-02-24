@@ -3,9 +3,9 @@ import 'src/components/pages/contactPage/optionsSection/OptionsSection.scss';
 import React from 'react';
 
 import { EMAIL_ADDRESS, LOCATION, PHONE_NUMBER } from 'src/constants/common';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 import notify from 'src/utils/notificatons';
-import copyText from 'src/utils/textUtils';
+import copyText from 'src/utils/text';
 
 import Email from 'src/components/icons/general/Email';
 import Location from 'src/components/icons/general/Location';

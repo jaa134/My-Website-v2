@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import { RouteName } from 'src/constants/common';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import MyLogoVariant1 from 'src/components/icons/logos/personal/MyLogoVariant1';
 import Close from 'src/components/icons/general/Close';

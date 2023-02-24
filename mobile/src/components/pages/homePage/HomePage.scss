@@ -13,6 +13,10 @@ $name: 'HomePage';
   &__bubbles {
     padding-top: 0;
   }
+
+  &__map {
+    padding-bottom: var(--app-vertical-margins);
+  }
 }
 
 @media (max-width: $small-screen-end) {
@@ -26,6 +30,10 @@ $name: 'HomePage';
     }
 
     &__contact {
+      padding-top: 3rem;
+    }
+
+    &__map {
       padding-top: 3rem;
     }
   }
@@ -44,6 +52,10 @@ $name: 'HomePage';
     &__contact {
       padding-top: 4rem;
     }
+
+    &__map {
+      padding-top: 4rem;
+    }
   }
 }
 
@@ -58,6 +70,10 @@ $name: 'HomePage';
     }
 
     &__contact {
+      padding-top: 5rem;
+    }
+
+    &__map {
       padding-top: 5rem;
     }
   }

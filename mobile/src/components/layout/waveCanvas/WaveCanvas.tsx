@@ -2,7 +2,7 @@ import 'src/components/layout/waveCanvas/WaveCanvas.scss';
 
 import React, { FC, useEffect, useRef } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import WaveEntity from 'src/components/layout/waveCanvas/WaveEntity';
 

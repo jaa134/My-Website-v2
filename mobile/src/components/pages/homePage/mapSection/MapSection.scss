@@ -1,0 +1,214 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'MapSection';
+
+.#{$name} {
+  &__header {
+    padding: 0 var(--app-vertical-margins);
+  }
+
+  &__title {
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    color: $purple_l_20;
+  }
+
+  &__subtitle {
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    color: $white;
+  }
+
+  &__bar {
+    height: 0.0625rem;
+    background-color: $white_a_50;
+  }
+
+  &__dialog {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &-location,
+    &-date {
+      display: flex;
+      align-items: center;
+      font-weight: 300;
+      letter-spacing: 0.0625rem;
+      color: $white_a_90;
+      fill: $white_a_90;
+    }
+
+    &-description {
+      line-height: 1.5;
+      font-weight: 300;
+      color: $white_a_90;
+    }
+
+    &-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: $dark_gray_l_10;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.125rem;
+
+      &--2 {
+        margin-bottom: 1.125rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 1.5rem;
+      width: 18rem;
+    }
+
+    &__dialog {
+      &-content {
+        gap: 2rem;
+      }
+
+      &-location,
+      &-date {
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.125rem;
+
+        svg {
+          width: 1.125rem;
+        }
+      }
+
+      &-description {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+
+      &-image {
+        img {
+          height: 50vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.125rem;
+
+      &--2 {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 1.625rem;
+      width: 18rem;
+    }
+
+    &__dialog {
+      &-content {
+        gap: 2rem;
+      }
+
+      &-location,
+      &-date {
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.125rem;
+
+        svg {
+          width: 1.125rem;
+        }
+      }
+
+      &-description {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+
+      &-image {
+        img {
+          height: 41.5vw;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    &__title {
+      margin-bottom: 0.25rem;
+      font-size: 1.75rem;
+    }
+
+    &__subtitle {
+      font-size: 1.25rem;
+
+      &--2 {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__bar {
+      margin-bottom: 2rem;
+      width: 20rem;
+    }
+
+    &__dialog {
+      &-content {
+        gap: 2rem;
+      }
+
+      &-location,
+      &-date {
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+
+        svg {
+          width: 1.125rem;
+        }
+      }
+
+      &-description {
+        margin-top: 1rem;
+        font-size: 1.125rem;
+      }
+
+      &-image {
+        img {
+          height: 33vw;
+        }
+      }
+    }
+  }
+}

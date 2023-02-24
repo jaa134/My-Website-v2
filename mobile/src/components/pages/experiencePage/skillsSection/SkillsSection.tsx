@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import { devPractices, languages, services, Skill, technologies } from 'src/constants/skills';
 import { Achievement as AchievementType, achievements } from 'src/constants/achievements';
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Dialog from 'src/components/common/dialog/Dialog';
 import Achievement from 'src/components/pages/experiencePage/skillsSection/achievement/Achievement';

@@ -1,0 +1,155 @@
+@import 'src/scss/colors.scss';
+@import 'src/scss/layout.scss';
+
+$name: 'MapCanvas';
+
+.#{$name} {
+  .ol-map {
+    box-sizing: border-box;
+    padding: 0 var(--app-vertical-margins);
+    width: 100%;
+  }
+
+  .ol-control {
+    position: absolute;
+
+    button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0;
+      outline: none;
+      border: 0.0625rem solid $black_a_50;
+      border-radius: 0.25rem;
+      background-color: rgba(255, 255, 255, 1);
+      color: $black;
+
+      svg {
+        fill: $black_a_75;
+      }
+    }
+  }
+
+  .ol-zoom {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      &:first-child {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:last-child {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $small-screen-end) {
+  .#{$name} {
+    .ol-map {
+      height: 20rem;
+    }
+
+    .ol-control {
+      button {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    .ol-full-screen {
+      top: 0.5rem;
+      right: 0.5rem;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
+    .ol-zoom {
+      top: 3rem;
+      right: 0.5rem;
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+  .#{$name} {
+    .ol-map {
+      height: 25rem;
+    }
+
+    .ol-control {
+      button {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+    }
+
+    .ol-full-screen {
+      top: 0.75rem;
+      right: 0.75rem;
+
+      svg {
+        width: 1.125rem;
+        height: 1.125rem;
+      }
+    }
+
+    .ol-zoom {
+      top: 3.5rem;
+      right: 0.75rem;
+
+      svg {
+        width: 1.125rem;
+        height: 1.125rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $large_screen_start) {
+  .#{$name} {
+    .ol-map {
+      height: 30rem;
+    }
+
+    .ol-control {
+      button {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .ol-full-screen {
+      top: 1rem;
+      right: 1rem;
+
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+
+    .ol-zoom {
+      top: 4rem;
+      right: 1rem;
+
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+}

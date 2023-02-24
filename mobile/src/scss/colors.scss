@@ -1,7 +1,13 @@
 @use 'sass:color';
 
 $black: #000000;
+$black_a_10: color.adjust($black, $alpha: -0.9);
+$black_a_20: color.adjust($black, $alpha: -0.8);
 $black_a_25: color.adjust($black, $alpha: -0.75);
+$black_a_33: color.adjust($black, $alpha: -0.67);
+$black_a_50: color.adjust($black, $alpha: -0.5);
+$black_a_75: color.adjust($black, $alpha: -0.25);
+$black_a_90: color.adjust($black, $alpha: -0.1);
 
 $white: #ffffff;
 $white_a_10: color.adjust($white, $alpha: -0.9);
