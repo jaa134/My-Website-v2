@@ -1,5 +1,5 @@
 import React from 'react';
-import { isDesktop } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ import ScrollToTop from 'src/components/common/scrollToTop/ScrollToTop';
 
 import reportWebVitals from 'src/reportWebVitals';
 
-if (process.env.NODE_ENV === 'production' && isDesktop) {
+if (process.env.NODE_ENV === 'production' && !isMobile) {
   window.location.replace('https://jacob-alspaw.com');
 } else {
   const rootElement = document.getElementById('root');
