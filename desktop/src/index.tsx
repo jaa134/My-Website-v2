@@ -13,10 +13,10 @@ const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
     <div>
-      <div>isMobile: {isMobile}</div>
-      <div>isMobileOnly: {isMobileOnly}</div>
-      <div>isTablet: {isTablet}</div>
-      <div>isDesktop: {isDesktop}</div>
+      <div>isMobile: {isMobile ? 'yes' : 'no'}</div>
+      <div>isMobileOnly: {isMobileOnly ? 'yes' : 'no'}</div>
+      <div>isTablet: {isTablet ? 'yes' : 'no'}</div>
+      <div>isDesktop: {isDesktop ? 'yes' : 'no'}</div>
       <div>deviceType: {deviceType}</div>
     </div>
   </React.StrictMode>,
