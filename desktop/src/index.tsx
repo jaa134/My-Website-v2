@@ -1,5 +1,5 @@
 import React from 'react';
-import { deviceDetect, deviceType, isDesktop, isMobile, isMobileOnly, isTablet } from 'react-device-detect';
+import { deviceType, isDesktop, isMobile, isMobileOnly, isTablet } from 'react-device-detect';
 import { createRoot } from 'react-dom/client';
 
 import reportWebVitals from 'src/reportWebVitals';
