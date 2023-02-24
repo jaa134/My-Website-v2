@@ -33,7 +33,170 @@ type BubbleData = {
     knowledge: number;
     experience: number;
   };
-}
+};
+
+const bubbles: readonly BubbleData[] = [
+  {
+    id: 'TypeScript',
+    logo: <TypeScript />,
+    size: 's2',
+    menuPosition: 'right',
+    values: {
+      knowledge: 90,
+      experience: 80,
+    },
+  },
+  {
+    id: 'JavaScript',
+    logo: <JavaScript />,
+    size: 's4',
+    menuPosition: 'left',
+    values: {
+      knowledge: 90,
+      experience: 80,
+    },
+  },
+  {
+    id: 'HTML',
+    logo: <HTML />,
+    size: 's3',
+    menuPosition: 'right',
+    values: {
+      knowledge: 100,
+      experience: 100,
+    },
+  },
+  {
+    id: 'CSS',
+    logo: <CSS />,
+    size: 's3',
+    menuPosition: 'right',
+    values: {
+      knowledge: 100,
+      experience: 100,
+    },
+  },
+  {
+    id: 'Sass',
+    logo: <Sass />,
+    size: 's2',
+    menuPosition: 'left',
+    values: {
+      knowledge: 100,
+      experience: 100,
+    },
+  },
+  {
+    id: 'ReactJS',
+    logo: <ReactJS />,
+    size: 's5',
+    menuPosition: 'right',
+    values: {
+      knowledge: 80,
+      experience: 70,
+    },
+  },
+  {
+    id: 'Vue',
+    logo: <Vue />,
+    size: 's5',
+    menuPosition: 'left',
+    values: {
+      knowledge: 90,
+      experience: 70,
+    },
+  },
+  {
+    id: 'Angular',
+    logo: <Angular />,
+    size: 's2',
+    menuPosition: 'right',
+    values: {
+      knowledge: 40,
+      experience: 20,
+    },
+  },
+  {
+    id: 'Git',
+    logo: <Git />,
+    size: 's1',
+    menuPosition: 'right',
+    values: {
+      knowledge: 90,
+      experience: 90,
+    },
+  },
+  {
+    id: 'GraphQL',
+    logo: <GraphQL />,
+    size: 's2',
+    menuPosition: 'right',
+    values: {
+      knowledge: 80,
+      experience: 80,
+    },
+  },
+  {
+    id: 'Jest',
+    logo: <Jest />,
+    size: 's1',
+    menuPosition: 'right',
+    values: {
+      knowledge: 90,
+      experience: 90,
+    },
+  },
+  {
+    id: 'Jira',
+    logo: <Jira />,
+    size: 's1',
+    menuPosition: 'left',
+    values: {
+      knowledge: 90,
+      experience: 90,
+    },
+  },
+  {
+    id: 'Java',
+    logo: <Java />,
+    size: 's1',
+    menuPosition: 'left',
+    values: {
+      knowledge: 70,
+      experience: 80,
+    },
+  },
+  {
+    id: 'Vite',
+    logo: <Vite />,
+    size: 's2',
+    menuPosition: 'left',
+    values: {
+      knowledge: 60,
+      experience: 30,
+    },
+  },
+  {
+    id: 'Webpack',
+    logo: <Webpack />,
+    size: 's1',
+    menuPosition: 'right',
+    values: {
+      knowledge: 80,
+      experience: 80,
+    },
+  },
+  {
+    id: 'NPM',
+    logo: <NPM />,
+    size: 's1',
+    menuPosition: 'right',
+    values: {
+      knowledge: 70,
+      experience: 80,
+    },
+  },
+];
 
 const BubblesSection = () => {
   const [activeBubble, setActiveBubble] = useState<BubbleData | null>(null);
@@ -42,169 +205,6 @@ const BubblesSection = () => {
     const newActiveBubble = bubble.id === activeBubble?.id ? null : bubble;
     setActiveBubble(newActiveBubble);
   };
-
-  const bubbles: readonly BubbleData[] = [
-    {
-      id: 'TypeScript',
-      logo: <TypeScript />,
-      size: 's2',
-      menuPosition: 'right',
-      values: {
-        knowledge: 90,
-        experience: 80,
-      },
-    },
-    {
-      id: 'JavaScript',
-      logo: <JavaScript />,
-      size: 's4',
-      menuPosition: 'left',
-      values: {
-        knowledge: 90,
-        experience: 80,
-      },
-    },
-    {
-      id: 'HTML',
-      logo: <HTML />,
-      size: 's3',
-      menuPosition: 'right',
-      values: {
-        knowledge: 100,
-        experience: 100,
-      },
-    },
-    {
-      id: 'CSS',
-      logo: <CSS />,
-      size: 's3',
-      menuPosition: 'right',
-      values: {
-        knowledge: 100,
-        experience: 100,
-      },
-    },
-    {
-      id: 'Sass',
-      logo: <Sass />,
-      size: 's2',
-      menuPosition: 'left',
-      values: {
-        knowledge: 100,
-        experience: 100,
-      },
-    },
-    {
-      id: 'ReactJS',
-      logo: <ReactJS />,
-      size: 's5',
-      menuPosition: 'right',
-      values: {
-        knowledge: 80,
-        experience: 70,
-      },
-    },
-    {
-      id: 'Vue',
-      logo: <Vue />,
-      size: 's5',
-      menuPosition: 'left',
-      values: {
-        knowledge: 90,
-        experience: 70,
-      },
-    },
-    {
-      id: 'Angular',
-      logo: <Angular />,
-      size: 's2',
-      menuPosition: 'right',
-      values: {
-        knowledge: 40,
-        experience: 20,
-      },
-    },
-    {
-      id: 'Git',
-      logo: <Git />,
-      size: 's1',
-      menuPosition: 'right',
-      values: {
-        knowledge: 90,
-        experience: 90,
-      },
-    },
-    {
-      id: 'GraphQL',
-      logo: <GraphQL />,
-      size: 's2',
-      menuPosition: 'right',
-      values: {
-        knowledge: 80,
-        experience: 80,
-      },
-    },
-    {
-      id: 'Jest',
-      logo: <Jest />,
-      size: 's1',
-      menuPosition: 'right',
-      values: {
-        knowledge: 90,
-        experience: 90,
-      },
-    },
-    {
-      id: 'Jira',
-      logo: <Jira />,
-      size: 's1',
-      menuPosition: 'left',
-      values: {
-        knowledge: 90,
-        experience: 90,
-      },
-    },
-    {
-      id: 'Java',
-      logo: <Java />,
-      size: 's1',
-      menuPosition: 'left',
-      values: {
-        knowledge: 70,
-        experience: 80,
-      },
-    },
-    {
-      id: 'Vite',
-      logo: <Vite />,
-      size: 's2',
-      menuPosition: 'left',
-      values: {
-        knowledge: 60,
-        experience: 30,
-      },
-    },
-    {
-      id: 'Webpack',
-      logo: <Webpack />,
-      size: 's1',
-      menuPosition: 'right',
-      values: {
-        knowledge: 80,
-        experience: 80,
-      },
-    },
-    {
-      id: 'NPM',
-      logo: <NPM />,
-      size: 's1',
-      menuPosition: 'right',
-      values: {
-        knowledge: 70,
-        experience: 80,
-      },
-    },
-  ];
 
   return (
     <div className={bem()}>

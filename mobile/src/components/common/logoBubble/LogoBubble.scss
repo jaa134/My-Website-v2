@@ -68,7 +68,6 @@ $name: 'LogoBubble';
     position: absolute;
     z-index: 2;
     width: 100%;
-    transition: opacity 200ms ease-in;
     pointer-events: none;
 
     &--normal {
@@ -86,7 +85,6 @@ $name: 'LogoBubble';
     justify-content: center;
     filter: grayscale(50%);
     opacity: 0.33;
-    transition: 200ms ease-in;
 
     svg {
       width: 100%;
@@ -115,7 +113,6 @@ $name: 'LogoBubble';
           z-index: 3;
           display: block;
           opacity: 1;
-          animation: fadeIn 0.25s ease-out 1;
         }
       }
     }
@@ -164,16 +161,6 @@ $name: 'LogoBubble';
           height: 100%;
           width: var(--bar-width, 0);
           background-color: $turquoise;
-          animation: animatedWidth 0.5s ease-out 1;
-
-          @keyframes animatedWidth {
-            from {
-              width: 0;
-            }
-            to {
-              width: var(--bar-width, 0);
-            }
-          }
         }
       }
     }
@@ -371,15 +358,5 @@ $name: 'LogoBubble';
         }
       }
     }
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
