@@ -8,7 +8,7 @@ $name: 'Dialog';
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  max-height: calc(100vh - var(--app-vertical-margins));
+  max-height: calc(100% - var(--app-vertical-margins));
   border-radius: 0.25rem;
   background-color: $dark_gray;
   overflow: hidden;
