@@ -3,7 +3,7 @@ import 'src/components/pages/homePage/mapSection/map/MapCanvas.scss';
 import { Feature, Map, View } from 'ol';
 import { Point } from 'ol/geom';
 import { fromLonLat } from 'ol/proj';
-import { OSM, Vector } from 'ol/source';
+import { /* OSM */ Vector } from 'ol/source';
 import { Icon, Style } from 'ol/style';
 import { apply } from 'ol-mapbox-style';
 import PropTypes from 'prop-types';
@@ -15,7 +15,6 @@ import Controls from 'src/components/pages/homePage/mapSection/map/controls/Cont
 import FullScreenControl from 'src/components/pages/homePage/mapSection/map/controls/FullScreenControl';
 import ZoomControl from 'src/components/pages/homePage/mapSection/map/controls/ZoomControl';
 import Layers from 'src/components/pages/homePage/mapSection/map/layers/Layers';
-import TileLayer from 'src/components/pages/homePage/mapSection/map/layers/TileLayer';
 import VectorLayer from 'src/components/pages/homePage/mapSection/map/layers/VectorLayer';
 import MapContext from 'src/components/pages/homePage/mapSection/map/MapContext';
 
@@ -46,7 +45,7 @@ const markerStyle = new Style({
 
 type Props = {
   onClickMarker: (marker: Marker) => void;
-}
+};
 
 const MapCanvas: FunctionComponent<Props> = ({ onClickMarker }) => {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -117,10 +116,12 @@ const MapCanvas: FunctionComponent<Props> = ({ onClickMarker }) => {
           className="ol-map"
         >
           <Layers>
+            {/*
             <TileLayer
               source={new OSM()}
               zIndex={0}
             />
+            */}
             <VectorLayer
               source={new Vector({ features: markerFeatures })}
               style={markerStyle}
