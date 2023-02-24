@@ -1,13 +1,13 @@
 import 'src/components/pages/contactPage/formSection/FormSection.scss';
 
-import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 import defineBlock from 'src/utils/css';
+import notify from 'src/utils/notificatons';
 
 import Button from 'src/components/common/button/Button';
-import notify from 'src/utils/notificatons';
 import LoadingSpinner from 'src/components/common/loadingSpinner/LoadingSpinner';
 
 const bem = defineBlock('FormSection');
@@ -30,7 +30,7 @@ const RECAPTCHA_SITE_KEY = '6Ldf9YYkAAAAAPP_-PKo0jycyXU-yrgkdz1SCl8Q';
 // Per the W3C HTML5 specification
 // https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address
 const EMAIL_VALIDATION_REGEX =
-  /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 
 const PHONE_VALIDATION_REGEX = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
 

@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { FunctionComponent, PropsWithChildren } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 
-type Props = PropsWithChildren<{}>;
+type Props = {
+  children: ReactNode;
+}
 
-const Layers: FunctionComponent<Props> = ({ children }) => {
-  return <div>{children}</div>;
-};
+const Layers: FunctionComponent<Props> = ({ children }) => <div>{children}</div>;
 
 Layers.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export default Layers;

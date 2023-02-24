@@ -1,8 +1,9 @@
-import { useContext, useEffect } from 'react';
 import { Zoom } from 'ol/control';
+import { useContext, useEffect } from 'react';
+
+import { htmlToElement } from 'src/utils/dom';
 
 import MapContext from 'src/components/pages/homePage/mapSection/map/MapContext';
-import { htmlToElement } from 'src/utils/dom';
 
 const ZoomControl = () => {
   const { map } = useContext(MapContext);
@@ -17,7 +18,7 @@ const ZoomControl = () => {
       const zoomInLabel = htmlToElement(zoomInString) ?? '+';
       const zoomOutLabel = htmlToElement(zoomOutString) ?? '-';
 
-      let zoomControl = new Zoom({ zoomInLabel, zoomOutLabel });
+      const zoomControl = new Zoom({ zoomInLabel, zoomOutLabel });
       map.addControl(zoomControl);
 
       return () => {
@@ -25,7 +26,9 @@ const ZoomControl = () => {
       };
     }
 
-    return;
+    return () => {
+      // noop
+    };
   }, [map]);
 
   return null;

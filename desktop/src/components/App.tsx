@@ -4,12 +4,13 @@ import 'src/components/App.scss';
 import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import { RouteName } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 
 import AppFooter from 'src/components/layout/appFooter/AppFooter';
 import AppHeader from 'src/components/layout/appHeader/AppHeader';
 import LazyPage from 'src/components/pages/LazyPage';
+
+import { RouteName } from 'src/constants/common';
 
 const NotFoundPage = lazy(() => import('src/components/pages/notFoundPage/NotFoundPage'));
 const HomePage = lazy(() => import('src/components/pages/homePage/HomePage'));

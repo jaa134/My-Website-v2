@@ -1,6 +1,6 @@
 import { globeImagesPath } from 'src/constants/images';
 
-export interface Marker {
+export type Marker = {
   title: string;
   location: string;
   date: string;
@@ -8,7 +8,7 @@ export interface Marker {
   imageSrc: string;
   lat: number;
   lng: number;
-}
+};
 
 export const markers: Marker[] = [
   {

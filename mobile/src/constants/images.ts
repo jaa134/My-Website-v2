@@ -8,13 +8,13 @@ export const skillsImagesPath = `${imagesPath}/skills`;
 export const globeImagesPath = `${imagesPath}/globe`;
 export const miscImagesPath = `${imagesPath}/misc`;
 
-interface Photo {
+type Photo = {
   src: string;
   width: number;
   height: number;
   title: string;
   description: string;
-}
+};
 
 export const photos: Photo[] = [
   {

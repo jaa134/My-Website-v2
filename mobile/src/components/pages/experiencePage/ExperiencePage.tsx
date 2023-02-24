@@ -6,10 +6,10 @@ import defineBlock from 'src/utils/css';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
-import WorkSection from 'src/components/pages/experiencePage/workSection/WorkSection';
 import EducationSection from 'src/components/pages/experiencePage/educationSection/EducationSection';
-import SkillsSection from 'src/components/pages/experiencePage/skillsSection/SkillsSection';
 import ProjectsSection from 'src/components/pages/experiencePage/projectsSection/ProjectsSection';
+import SkillsSection from 'src/components/pages/experiencePage/skillsSection/SkillsSection';
+import WorkSection from 'src/components/pages/experiencePage/workSection/WorkSection';
 
 const bem = defineBlock('ExperiencePage');
 

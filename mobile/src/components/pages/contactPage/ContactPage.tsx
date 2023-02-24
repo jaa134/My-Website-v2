@@ -6,10 +6,10 @@ import defineBlock from 'src/utils/css';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
-import OptionsSection from 'src/components/pages/contactPage/optionsSection/OptionsSection';
 import FormSection from 'src/components/pages/contactPage/formSection/FormSection';
-import SocialsSection from 'src/components/pages/contactPage/socialsSection/SocialsSection';
 import GlobeSection from 'src/components/pages/contactPage/globeSection/GlobeSection';
+import OptionsSection from 'src/components/pages/contactPage/optionsSection/OptionsSection';
+import SocialsSection from 'src/components/pages/contactPage/socialsSection/SocialsSection';
 
 const bem = defineBlock('ContactPage');
 

@@ -3,11 +3,12 @@ import 'src/components/layout/appHeader/AppHeader.scss';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { RouteName } from 'src/constants/common';
 import defineBlock from 'src/utils/css';
 
-import MyLogoVariant1 from 'src/components/icons/logos/personal/MyLogoVariant1';
 import Close from 'src/components/icons/general/Close';
+import MyLogoVariant1 from 'src/components/icons/logos/personal/MyLogoVariant1';
+
+import { RouteName } from 'src/constants/common';
 
 const bem = defineBlock('AppHeader');
 
@@ -27,19 +28,21 @@ const AppHeader = () => {
       <div className={bem('menu', { open: isMenuOpen })}>
         <button
           className={bem('menu-button')}
+          type="button"
           onClick={toggleMenuOpen}
         >
-          <div></div>
-          <div></div>
-          <div></div>
+          <div />
+          <div />
+          <div />
         </button>
         <div
           className={bem('menu-backdrop')}
           onClick={toggleMenuOpen}
-        ></div>
+        />
         <div className={bem('menu-navigation')}>
           <button
             className={bem('menu-close')}
+            type="button"
             onClick={toggleMenuOpen}
           >
             <Close />

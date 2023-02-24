@@ -7,7 +7,7 @@ import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('DevPractice');
 
-interface Props {
+type Props = {
   techName: string;
   imagePath: string;
   active: boolean;
@@ -17,6 +17,7 @@ interface Props {
 const DevPractice: FunctionComponent<Props> = ({ techName, imagePath, active, onClick }) => (
   <button
     className={bem('', { active })}
+    type="button"
     onClick={onClick}
   >
     <div className={bem('image')}>

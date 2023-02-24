@@ -1,26 +1,26 @@
 import 'src/components/pages/homePage/mapSection/map/MapCanvas.scss';
 
-import PropTypes from 'prop-types';
-import React, { useRef, useState, useEffect, FunctionComponent } from 'react';
-import { apply } from 'ol-mapbox-style';
-import { Map, View, Feature } from 'ol';
+import { Feature, Map, View } from 'ol';
 import { Point } from 'ol/geom';
-import { OSM, Vector } from 'ol/source';
-import { Style, Icon } from 'ol/style';
 import { fromLonLat } from 'ol/proj';
-
-import { globeImagesPath } from 'src/constants/images';
-import { Marker, markers } from 'src/constants/globeMarkers';
+import { OSM, Vector } from 'ol/source';
+import { Icon, Style } from 'ol/style';
+import { apply } from 'ol-mapbox-style';
+import PropTypes from 'prop-types';
+import React, { FunctionComponent, useEffect, useMemo, useRef, useState } from 'react';
 
 import defineBlock from 'src/utils/css';
 
-import MapContext from 'src/components/pages/homePage/mapSection/map/MapContext';
-import Layers from 'src/components/pages/homePage/mapSection/map/layers/Layers';
-import TileLayer from 'src/components/pages/homePage/mapSection/map/layers/TileLayer';
-import VectorLayer from 'src/components/pages/homePage/mapSection/map/layers/VectorLayer';
 import Controls from 'src/components/pages/homePage/mapSection/map/controls/Controls';
 import FullScreenControl from 'src/components/pages/homePage/mapSection/map/controls/FullScreenControl';
 import ZoomControl from 'src/components/pages/homePage/mapSection/map/controls/ZoomControl';
+import Layers from 'src/components/pages/homePage/mapSection/map/layers/Layers';
+import TileLayer from 'src/components/pages/homePage/mapSection/map/layers/TileLayer';
+import VectorLayer from 'src/components/pages/homePage/mapSection/map/layers/VectorLayer';
+import MapContext from 'src/components/pages/homePage/mapSection/map/MapContext';
+
+import { Marker, markers } from 'src/constants/globeMarkers';
+import { globeImagesPath } from 'src/constants/images';
 
 const bem = defineBlock('MapCanvas');
 
@@ -46,11 +46,12 @@ const markerStyle = new Style({
 
 type Props = {
   onClickMarker: (marker: Marker) => void;
-};
+}
 
 const MapCanvas: FunctionComponent<Props> = ({ onClickMarker }) => {
   const mapRef = useRef<HTMLDivElement>(null);
   const [map, setMap] = useState<Map | null>(null);
+  const mapContext = useMemo(() => ({ map }), [map]);
 
   // on component mount
   useEffect(() => {
@@ -62,7 +63,7 @@ const MapCanvas: FunctionComponent<Props> = ({ onClickMarker }) => {
         maxZoom: 4,
       });
 
-      let mapObject = new Map({
+      const mapObject = new Map({
         view,
         layers: [],
         controls: [],
@@ -102,12 +103,15 @@ const MapCanvas: FunctionComponent<Props> = ({ onClickMarker }) => {
       setMap(mapObject);
       return () => mapObject.setTarget(undefined);
     }
-    return;
+
+    return () => {
+      // noop
+    };
   }, []);
 
   return (
     <div className={bem()}>
-      <MapContext.Provider value={{ map }}>
+      <MapContext.Provider value={mapContext}>
         <div
           ref={mapRef}
           className="ol-map"

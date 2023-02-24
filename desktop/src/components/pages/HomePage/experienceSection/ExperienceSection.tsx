@@ -1,22 +1,23 @@
 import 'src/components/pages/homePage/experienceSection/ExperienceSection.scss';
 
+import useEmblaCarousel from 'embla-carousel-react';
 import React, { useCallback, useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
-import useEmblaCarousel from 'embla-carousel-react';
 
 import defineBlock from 'src/utils/defineBlock';
 import numberWithinRange from 'src/utils/mathUtils';
+
 import Chevron from 'src/components/icons/general/Chevron';
 
 const bem = defineBlock('ExperienceSection');
 
+const CARD_INDEXES = [...Array(4).keys()];
 const TWEEN_FACTOR = 1.5;
 
 const ExperienceSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [tweenValues, setTweenValues] = useState<number[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
 
@@ -60,10 +61,9 @@ const ExperienceSection = () => {
     if (!emblaApi) return;
 
     onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on('select', onSelect);
     emblaApi.on('reInit', onSelect);
-  }, [emblaApi, setScrollSnaps, onSelect]);
+  }, [emblaApi, onSelect]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -157,21 +157,24 @@ const ExperienceSection = () => {
         </div>
         <button
           className={bem('carousel-nav', 'prev')}
+          type="button"
           onClick={scrollPrev}
         >
           <Chevron />
         </button>
         <button
           className={bem('carousel-nav', 'next')}
+          type="button"
           onClick={scrollNext}
         >
           <Chevron />
         </button>
       </div>
       <div className={bem('carousel-buttons')}>
-        {scrollSnaps.map((_, index) => (
+        {CARD_INDEXES.map((index) => (
           <button
             key={index}
+            type="button"
             className={bem('carousel-button', { selected: index === selectedIndex })}
             onClick={() => scrollTo(index)}
           />

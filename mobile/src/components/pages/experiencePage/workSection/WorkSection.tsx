@@ -2,16 +2,17 @@ import 'src/components/pages/experiencePage/workSection/WorkSection.scss';
 
 import React, { useRef, useState } from 'react';
 
-import { resumePath } from 'src/constants/documents';
 import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
-import Download from 'src/components/icons/general/Download';
 import Chevron from 'src/components/icons/general/Chevron';
+import Download from 'src/components/icons/general/Download';
+
+import { resumePath } from 'src/constants/documents';
 
 const bem = defineBlock('WorkSection');
 
-interface PanelData {
+type PanelData = {
   companyNameShort: string;
   companyNameLong: string;
   date: string;
@@ -150,6 +151,7 @@ const WorkSection = () => {
       <div className={bem('panel-navigation')}>
         <button
           className={bem('panel-navigation-button', 'prev')}
+          type="button"
           disabled={panelIndex === 0}
           onClick={decrementPanelIndex}
         >
@@ -157,6 +159,7 @@ const WorkSection = () => {
         </button>
         <button
           className={bem('panel-navigation-button', 'next')}
+          type="button"
           disabled={panelIndex === panels.length - 1}
           onClick={incrementPanelIndex}
         >

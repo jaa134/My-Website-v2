@@ -2,7 +2,6 @@ import 'src/components/layout/appFooter/AppFooter.scss';
 
 import React from 'react';
 
-import { Link } from 'src/constants/common';
 import defineBlock from 'src/utils/css';
 
 import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
@@ -11,6 +10,8 @@ import GitHubVariant1 from 'src/components/icons/logos/socials/GitHubVariant1';
 import InstagramVariant1 from 'src/components/icons/logos/socials/InstagramVariant1';
 import LinkedinVariant1 from 'src/components/icons/logos/socials/LinkedinVariant1';
 import TwitterVariant1 from 'src/components/icons/logos/socials/TwitterVariant1';
+
+import { Link } from 'src/constants/common';
 
 const bem = defineBlock('AppFooter');
 
@@ -167,7 +168,7 @@ const AppHeader = () => (
         </div>
       </div>
       <div className={bem('rights')}>
-        <div className={bem('rights-bar')}></div>
+        <div className={bem('rights-bar')} />
         <div className={bem('rights-message')}>All rights reserved to Jacob Alspaw 2023</div>
       </div>
       <div className={bem('logo')}>

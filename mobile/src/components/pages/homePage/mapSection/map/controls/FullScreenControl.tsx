@@ -1,8 +1,9 @@
-import { useContext, useEffect } from 'react';
 import { FullScreen } from 'ol/control';
+import { useContext, useEffect } from 'react';
+
+import { htmlToElement } from 'src/utils/dom';
 
 import MapContext from 'src/components/pages/homePage/mapSection/map/MapContext';
-import { htmlToElement } from 'src/utils/dom';
 
 const FullScreenControl = () => {
   const { map } = useContext(MapContext);
@@ -17,7 +18,7 @@ const FullScreenControl = () => {
       const expandLabel = htmlToElement(expandString) ?? '⤢';
       const collapseLabel = htmlToElement(coompressString) ?? 'x';
 
-      let fullScreenControl = new FullScreen({ label: expandLabel, labelActive: collapseLabel });
+      const fullScreenControl = new FullScreen({ label: expandLabel, labelActive: collapseLabel });
       map.addControl(fullScreenControl);
 
       return () => {
@@ -25,7 +26,9 @@ const FullScreenControl = () => {
       };
     }
 
-    return;
+    return () => {
+      // noop
+    };
   }, [map]);
 
   return null;

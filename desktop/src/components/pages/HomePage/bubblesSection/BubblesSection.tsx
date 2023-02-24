@@ -14,17 +14,17 @@ import Java from 'src/components/icons/logos/tech/Java';
 import JavaScript from 'src/components/icons/logos/tech/JavaScript';
 import Jest from 'src/components/icons/logos/tech/Jest';
 import Jira from 'src/components/icons/logos/tech/Jira';
+import NPM from 'src/components/icons/logos/tech/NPM';
 import ReactJS from 'src/components/icons/logos/tech/ReactJS';
 import Sass from 'src/components/icons/logos/tech/Sass';
 import TypeScript from 'src/components/icons/logos/tech/TypeScript';
-import Vue from 'src/components/icons/logos/tech/Vue';
 import Vite from 'src/components/icons/logos/tech/Vite';
+import Vue from 'src/components/icons/logos/tech/Vue';
 import Webpack from 'src/components/icons/logos/tech/Webpack';
-import NPM from 'src/components/icons/logos/tech/NPM';
 
 const bem = defineBlock('BubblesSection');
 
-interface BubbleData {
+type BubbleData = {
   id: string;
   logo: ReactElement;
   size: 's1' | 's2' | 's3' | 's4' | 's5';
@@ -214,7 +214,7 @@ const BubblesSection = () => {
         <div className={bem('subtitle', '2')}>Technical Expertise /</div>
         <div className={bem('bar')} />
       </div>
-      <div className={bem('background')}></div>
+      <div className={bem('background')} />
       <div className={bem('container')}>
         {bubbles.map((bubble) => (
           <LogoBubble

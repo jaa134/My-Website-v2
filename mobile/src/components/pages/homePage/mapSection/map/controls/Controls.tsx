@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, { PropsWithChildren, FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 
-type Props = PropsWithChildren<{}>;
+type Props = {
+  children: ReactNode;
+}
 
-const Controls: FunctionComponent<Props> = ({ children }) => {
-  return <div>{children}</div>;
-};
+const Controls: FunctionComponent<Props> = ({ children }) => <div>{children}</div>;
 
 Controls.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
 };
 
 export default Controls;

@@ -2,13 +2,14 @@ import 'src/components/pages/experiencePage/skillsSection/SkillsSection.scss';
 
 import React, { useState } from 'react';
 
-import { devPractices, languages, services, SkillLink, technologies } from 'src/constants/skills';
-import { Achievement as AchievementType, achievements } from 'src/constants/achievements';
 import defineBlock from 'src/utils/defineBlock';
 
 import Dialog from 'src/components/common/dialog/Dialog';
 import Achievement from 'src/components/pages/experiencePage/skillsSection/achievement/Achievement';
 import TechSkill from 'src/components/pages/experiencePage/skillsSection/techSkill/TechSkill';
+
+import { Achievement as AchievementType, achievements } from 'src/constants/achievements';
+import { devPractices, languages, services, SkillLink, technologies } from 'src/constants/skills';
 
 const bem = defineBlock('SkillsSection');
 

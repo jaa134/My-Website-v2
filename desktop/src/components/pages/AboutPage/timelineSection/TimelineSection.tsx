@@ -2,10 +2,11 @@ import 'src/components/pages/aboutPage/timelineSection/TimelineSection.scss';
 
 import React from 'react';
 
-import { albumImagesPath } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
 
 import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
+
+import { albumImagesPath } from 'src/constants/images';
 
 const bem = defineBlock('TimelineSection');
 

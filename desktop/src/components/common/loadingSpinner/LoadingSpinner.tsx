@@ -7,7 +7,7 @@ import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('LoadingSpinner');
 
-interface Props {
+type Props = {
   size?: 'small' | 'medium' | 'large';
   color?: 'purple' | 'white';
 }

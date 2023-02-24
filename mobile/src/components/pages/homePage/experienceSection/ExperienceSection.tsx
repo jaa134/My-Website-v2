@@ -1,21 +1,21 @@
 import 'src/components/pages/homePage/experienceSection/ExperienceSection.scss';
 
+import useEmblaCarousel from 'embla-carousel-react';
 import React, { useCallback, useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
-import useEmblaCarousel from 'embla-carousel-react';
 
 import defineBlock from 'src/utils/css';
 import numberWithinRange from 'src/utils/math';
 
 const bem = defineBlock('ExperienceSection');
 
+const CARD_INDEXES = [...Array(4).keys()];
 const TWEEN_FACTOR = 2.5;
 
 const ExperienceSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [tweenValues, setTweenValues] = useState<number[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
 
@@ -55,10 +55,9 @@ const ExperienceSection = () => {
     if (!emblaApi) return;
 
     onSelect();
-    setScrollSnaps(emblaApi.scrollSnapList());
     emblaApi.on('select', onSelect);
     emblaApi.on('reInit', onSelect);
-  }, [emblaApi, setScrollSnaps, onSelect]);
+  }, [emblaApi, onSelect]);
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -148,10 +147,11 @@ const ExperienceSection = () => {
         </div>
       </div>
       <div className={bem('carousel-buttons')}>
-        {scrollSnaps.map((_, index) => (
+        {CARD_INDEXES.map((index) => (
           <button
             key={index}
             className={bem('carousel-button', { selected: index === selectedIndex })}
+            type="button"
             onClick={() => scrollTo(index)}
           />
         ))}

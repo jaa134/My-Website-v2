@@ -3,9 +3,9 @@ import 'src/components/pages/contactPage/globeSection/GlobeSection.scss';
 import React, { useEffect, useRef } from 'react';
 
 import defineBlock from 'src/utils/css';
+import notify from 'src/utils/notificatons';
 
 import GlobeScene from 'src/components/pages/contactPage/globeSection/GlobeScene';
-import notify from 'src/utils/notificatons';
 
 const bem = defineBlock('ContactGlobeSection');
 

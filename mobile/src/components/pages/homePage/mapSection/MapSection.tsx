@@ -4,11 +4,12 @@ import React, { useState } from 'react';
 
 import defineBlock from 'src/utils/css';
 
-import MapCanvas from 'src/components/pages/homePage/mapSection/map/MapCanvas';
-import { Marker } from 'src/constants/globeMarkers';
 import Dialog from 'src/components/common/dialog/Dialog';
-import Location from 'src/components/icons/general/Location';
 import Calendar from 'src/components/icons/general/Calendar';
+import Location from 'src/components/icons/general/Location';
+import MapCanvas from 'src/components/pages/homePage/mapSection/map/MapCanvas';
+
+import { Marker } from 'src/constants/globeMarkers';
 
 const bem = defineBlock('MapSection');
 

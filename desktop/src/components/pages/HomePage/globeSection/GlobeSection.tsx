@@ -2,14 +2,15 @@ import 'src/components/pages/homePage/globeSection/GlobeSection.scss';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-import { globeImagesPath } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
+import notify from 'src/utils/notificatons';
 
 import Dialog from 'src/components/common/dialog/Dialog';
 import Calendar from 'src/components/icons/general/Calendar';
 import Location from 'src/components/icons/general/Location';
 import GlobeScene, { Marker } from 'src/components/pages/homePage/globeSection/GlobeScene';
-import notify from 'src/utils/notificatons';
+
+import { globeImagesPath } from 'src/constants/images';
 
 const bem = defineBlock('HomeGlobeSection');
 

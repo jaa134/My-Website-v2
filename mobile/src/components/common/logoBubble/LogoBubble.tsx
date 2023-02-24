@@ -7,7 +7,7 @@ import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('LogoBubble');
 
-interface Props {
+type Props = {
   size: 's1' | 's2' | 's3' | 's4' | 's5';
   menuPositon: 'left' | 'right';
   values: {

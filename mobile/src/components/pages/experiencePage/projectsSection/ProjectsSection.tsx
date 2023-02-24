@@ -6,7 +6,7 @@ import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('ProjectsSection');
 
-interface ProjectData {
+type ProjectData = {
   name: string;
   link: string;
   logo: ReactElement;

@@ -9,7 +9,7 @@ import LoadingSpinner from 'src/components/common/loadingSpinner/LoadingSpinner'
 
 const bem = defineBlock('LazyPage');
 
-interface Props {
+type Props = {
   children: ReactNode;
 }
 

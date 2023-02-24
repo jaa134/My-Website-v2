@@ -11,7 +11,7 @@ import Close from 'src/components/icons/general/Close';
 
 const bem = defineBlock('Dialog');
 
-interface Props {
+type Props = {
   open: boolean;
   title: string;
   children: ReactElement;

@@ -1,21 +1,21 @@
-import PropTypes from 'prop-types';
-import { useContext, useEffect, FunctionComponent } from 'react';
 import OLTileLayer from 'ol/layer/Tile';
 import TileSource from 'ol/source/Tile';
+import PropTypes from 'prop-types';
+import { FunctionComponent, useContext, useEffect } from 'react';
 
 import MapContext from 'src/components/pages/homePage/mapSection/map/MapContext';
 
 type Props = {
   source: TileSource;
   zIndex?: number;
-};
+}
 
 const TileLayer: FunctionComponent<Props> = ({ source, zIndex = 0 }) => {
   const { map } = useContext(MapContext);
 
   useEffect(() => {
     if (map) {
-      let tileLayer = new OLTileLayer({
+      const tileLayer = new OLTileLayer({
         source,
         zIndex,
       });
@@ -26,7 +26,9 @@ const TileLayer: FunctionComponent<Props> = ({ source, zIndex = 0 }) => {
       };
     }
 
-    return;
+    return () => {
+      // noop
+    };
   }, [map]);
 
   return null;

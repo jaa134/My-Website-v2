@@ -2,15 +2,16 @@ import 'src/components/pages/experiencePage/workSection/WorkSection.scss';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-import { resumePath } from 'src/constants/documents';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
 import Download from 'src/components/icons/general/Download';
 
+import { resumePath } from 'src/constants/documents';
+
 const bem = defineBlock('WorkSection');
 
-interface PanelData {
+type PanelData = {
   companyNameShort: string;
   companyNameLong: string;
   date: string;

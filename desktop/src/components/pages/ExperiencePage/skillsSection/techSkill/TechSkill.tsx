@@ -7,7 +7,7 @@ import defineBlock from 'src/utils/defineBlock';
 
 const bem = defineBlock('TechSkill');
 
-interface Props {
+type Props = {
   techName: string;
   imagePath: string;
   active: boolean;

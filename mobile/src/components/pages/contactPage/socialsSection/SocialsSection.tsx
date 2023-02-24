@@ -2,7 +2,6 @@ import 'src/components/pages/contactPage/socialsSection/SocialsSection.scss';
 
 import React from 'react';
 
-import { Handle, Link } from 'src/constants/common';
 import defineBlock from 'src/utils/css';
 
 import FacebookVariant1 from 'src/components/icons/logos/socials/FacebookVariant1';
@@ -10,6 +9,8 @@ import GitHubVariant1 from 'src/components/icons/logos/socials/GitHubVariant1';
 import InstagramVariant1 from 'src/components/icons/logos/socials/InstagramVariant1';
 import LinkedinVariant1 from 'src/components/icons/logos/socials/LinkedinVariant1';
 import TwitterVariant1 from 'src/components/icons/logos/socials/TwitterVariant1';
+
+import { Handle, Link } from 'src/constants/common';
 
 const bem = defineBlock('SocialsSection');
 

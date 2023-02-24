@@ -1,7 +1,7 @@
-export interface Achievement {
+export type Achievement = {
   id: string;
   message: string;
-}
+};
 
 export const achievements: Achievement[] = [
   {

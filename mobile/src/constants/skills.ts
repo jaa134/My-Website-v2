@@ -1,6 +1,6 @@
 import { skillsImagesPath } from 'src/constants/images';
 
-export interface Skill {
+export type Skill = {
   displayText: string;
   imagePath: string;
   href?: string | null;
@@ -9,7 +9,7 @@ export interface Skill {
     experience: number;
     fondness: number;
   };
-}
+};
 
 export const languages: Skill[] = [
   {

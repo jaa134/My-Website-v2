@@ -2,16 +2,17 @@ import 'src/components/pages/experiencePage/educationSection/EducationSection.sc
 
 import React from 'react';
 
-import { transcriptPath } from 'src/constants/documents';
-import { educationImagesPath } from 'src/constants/images';
 import defineBlock from 'src/utils/defineBlock';
 
 import Button from 'src/components/common/button/Button';
 import Download from 'src/components/icons/general/Download';
 
+import { transcriptPath } from 'src/constants/documents';
+import { educationImagesPath } from 'src/constants/images';
+
 const bem = defineBlock('EducationSection');
 
-interface EducationData {
+type EducationData = {
   name: string;
   link: string;
   pic: string;

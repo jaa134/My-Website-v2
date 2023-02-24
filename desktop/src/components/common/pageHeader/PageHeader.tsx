@@ -9,7 +9,7 @@ import Star from 'src/components/icons/general/Star';
 
 const bem = defineBlock('PageHeader');
 
-interface Props {
+type Props = {
   title: string;
   subtitle: string;
   description: string;

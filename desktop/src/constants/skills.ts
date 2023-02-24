@@ -1,6 +1,6 @@
 import { skillsImagesPath } from 'src/constants/images';
 
-export interface SkillLink {
+export type SkillLink = {
   displayText: string;
   imagePath: string;
   href?: string | null;
@@ -9,7 +9,7 @@ export interface SkillLink {
     experience: number;
     fondness: number;
   };
-}
+};
 
 export const languages: SkillLink[] = [
   {

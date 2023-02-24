@@ -114,11 +114,12 @@ module.exports = {
     'import/no-unresolved': 'off',
 
     'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/control-has-associated-label': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
 
     '@typescript-eslint/array-type': 'error',
     '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     '@typescript-eslint/no-duplicate-imports': 'error',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-namespace': 'off',
@@ -129,6 +130,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-shadow': ['error'],
+    '@typescript-eslint/prefer-interface': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
 
     'simple-import-sort/imports': [

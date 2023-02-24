@@ -3,12 +3,13 @@ import 'src/components/layout/appHeader/AppHeader.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { RouteName } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 import { useScrollPosition } from 'src/utils/hooks';
 
 import Button from 'src/components/common/button/Button';
 import MyLogoVariant1 from 'src/components/icons/logos/personal/MyLogoVariant1';
+
+import { RouteName } from 'src/constants/common';
 
 const bem = defineBlock('AppHeader');
 

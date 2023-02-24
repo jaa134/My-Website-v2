@@ -2,7 +2,6 @@ import 'src/components/layout/appFooter/AppFooter.scss';
 
 import React from 'react';
 
-import { Link } from 'src/constants/common';
 import defineBlock from 'src/utils/defineBlock';
 
 import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
@@ -11,6 +10,8 @@ import GitHubVariant1 from 'src/components/icons/logos/socials/GitHubVariant1';
 import InstagramVariant1 from 'src/components/icons/logos/socials/InstagramVariant1';
 import LinkedinVariant1 from 'src/components/icons/logos/socials/LinkedinVariant1';
 import TwitterVariant1 from 'src/components/icons/logos/socials/TwitterVariant1';
+
+import { Link } from 'src/constants/common';
 
 const bem = defineBlock('AppFooter');
 

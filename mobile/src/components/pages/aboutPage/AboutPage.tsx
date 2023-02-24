@@ -6,8 +6,8 @@ import defineBlock from 'src/utils/css';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
-import GallerySection from 'src/components/pages/aboutPage/gallerySection/GallerySection';
 import CollageSection from 'src/components/pages/aboutPage/collageSection/CollageSection';
+import GallerySection from 'src/components/pages/aboutPage/gallerySection/GallerySection';
 import TimelineSection from 'src/components/pages/aboutPage/timelineSection/TimelineSection';
 
 const bem = defineBlock('AboutPage');
