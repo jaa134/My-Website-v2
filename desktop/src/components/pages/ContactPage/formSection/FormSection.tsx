@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import React, { useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 import notify from 'src/utils/notificatons';
 
 import Button from 'src/components/common/button/Button';

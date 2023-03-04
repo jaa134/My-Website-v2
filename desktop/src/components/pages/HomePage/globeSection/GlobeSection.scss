@@ -1,26 +1,27 @@
-@import 'src/scss/colors.scss';
-@import 'src/scss/layout.scss';
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
 
 $name: 'HomeGlobeSection';
 
 .#{$name} {
   position: relative;
   box-sizing: border-box;
-  padding: 6rem $app-vertical-margins;
+  padding: 6rem;
   width: 100%;
   height: 100%;
 
   &__title {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.75rem;
     font-weight: 300;
-    font-size: 1.5rem;
     letter-spacing: 0.0625rem;
     color: $purple_l_20;
   }
 
   &__subtitle {
-    font-weight: 300;
     font-size: 1.375rem;
+    font-weight: 300;
+    line-height: 1.375;
     letter-spacing: 0.0625rem;
     color: $white;
 

@@ -1,5 +1,5 @@
-@import 'src/scss/colors.scss';
-@import 'src/scss/layout.scss';
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
 
 $name: 'AboutPage';
 
@@ -10,7 +10,7 @@ $name: 'AboutPage';
     padding-top: 3rem;
   }
 
-  &__images {
+  &__collage {
     padding-top: 3rem;
   }
 

@@ -2,7 +2,7 @@ import 'src/components/pages/homePage/bubblesSection/BubblesSection.scss';
 
 import React, { ReactElement, useState } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import LogoBubble from 'src/components/common/logoBubble/LogoBubble';
 import Angular from 'src/components/icons/logos/tech/Angular';
@@ -33,7 +33,7 @@ type BubbleData = {
     knowledge: number;
     experience: number;
   };
-}
+};
 
 const BubblesSection = () => {
   const [activeBubble, setActiveBubble] = useState<BubbleData | null>(null);

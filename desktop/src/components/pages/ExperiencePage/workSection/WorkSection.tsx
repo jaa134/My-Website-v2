@@ -2,7 +2,7 @@ import 'src/components/pages/experiencePage/workSection/WorkSection.scss';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
 import Download from 'src/components/icons/general/Download';
@@ -18,7 +18,7 @@ type PanelData = {
   link: string;
   position: string;
   bulletPoints: string[];
-}
+};
 
 const WorkSection = () => {
   const panelIndexInterval = useRef<NodeJS.Timer | null>(null);

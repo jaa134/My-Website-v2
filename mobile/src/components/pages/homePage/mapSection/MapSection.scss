@@ -1,5 +1,5 @@
-@import 'src/scss/colors.scss';
-@import 'src/scss/layout.scss';
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
 
 $name: 'MapSection';
 
@@ -16,6 +16,7 @@ $name: 'MapSection';
 
   &__subtitle {
     font-weight: 300;
+    line-height: 1.375;
     letter-spacing: 0.0625rem;
     color: $white;
   }

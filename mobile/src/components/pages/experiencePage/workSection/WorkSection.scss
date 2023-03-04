@@ -1,5 +1,5 @@
-@import 'src/scss/colors.scss';
-@import 'src/scss/layout.scss';
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
 
 $name: 'WorkSection';
 
@@ -16,6 +16,7 @@ $name: 'WorkSection';
 
   &__subtitle {
     font-weight: 300;
+    line-height: 1.375;
     letter-spacing: 0.0625rem;
     color: $white;
   }
@@ -105,6 +106,8 @@ $name: 'WorkSection';
   }
 
   &__panel-bullet {
+    line-height: 1.375;
+
     &:last-child {
       margin-bottom: 0;
     }

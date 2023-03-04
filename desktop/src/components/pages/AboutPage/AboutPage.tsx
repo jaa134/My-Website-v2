@@ -2,10 +2,11 @@ import 'src/components/pages/aboutPage/AboutPage.scss';
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
+import CollageSection from 'src/components/pages/aboutPage/collageSection/CollageSection';
 import GallerySection from 'src/components/pages/aboutPage/gallerySection/GallerySection';
 import TimelineSection from 'src/components/pages/aboutPage/timelineSection/TimelineSection';
 
@@ -22,6 +23,9 @@ const AboutPage = () => (
     </div>
     <div className={bem('line-split')}>
       <LineSplit />
+    </div>
+    <div className={bem('collage')}>
+      <CollageSection />
     </div>
     <div className={bem('timeline')}>
       <TimelineSection />

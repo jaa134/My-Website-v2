@@ -1,5 +1,5 @@
-@import 'src/scss/colors.scss';
-@import 'src/scss/layout.scss';
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
 
 $name: 'ContactGlobeSection';
 
@@ -10,7 +10,10 @@ $name: 'ContactGlobeSection';
   justify-content: center;
   box-sizing: border-box;
   margin: auto;
-  padding: 0 var(--app-vertical-margins);
+
+  &__header {
+    padding: 0 var(--app-vertical-margins);
+  }
 
   &__title {
     margin: auto;

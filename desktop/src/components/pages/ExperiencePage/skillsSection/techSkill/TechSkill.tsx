@@ -3,7 +3,7 @@ import 'src/components/pages/experiencePage/skillsSection/techSkill/TechSkill.sc
 import PropTypes from 'prop-types';
 import React, { FunctionComponent, MouseEventHandler } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('TechSkill');
 
@@ -12,22 +12,22 @@ type Props = {
   imagePath: string;
   active: boolean;
   onClick: MouseEventHandler<HTMLElement>;
-}
+};
 
 const TechSkill: FunctionComponent<Props> = ({ techName, imagePath, active, onClick }) => (
-    <div
-      className={bem('', { active })}
-      onClick={onClick}
-    >
-      <div className={bem('image')}>
-        <img
-          src={imagePath}
-          alt=""
-        />
-      </div>
-      <div className={bem('tech-name')}>{techName}</div>
+  <div
+    className={bem('', { active })}
+    onClick={onClick}
+  >
+    <div className={bem('image')}>
+      <img
+        src={imagePath}
+        alt=""
+      />
     </div>
-  );
+    <div className={bem('tech-name')}>{techName}</div>
+  </div>
+);
 
 TechSkill.propTypes = {
   techName: PropTypes.string.isRequired,

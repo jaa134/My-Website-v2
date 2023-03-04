@@ -2,7 +2,7 @@ import 'src/components/pages/experiencePage/skillsSection/SkillsSection.scss';
 
 import React, { useState } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Dialog from 'src/components/common/dialog/Dialog';
 import Achievement from 'src/components/pages/experiencePage/skillsSection/achievement/Achievement';
@@ -49,7 +49,7 @@ const SkillsSection = () => {
     <>
       <div className={bem()}>
         <div className={bem('title')}>Skills &#60;&#47;</div>
-        <div className={bem('subtitle')}>Full List Of My Technical Skills</div>
+        <div className={bem('subtitle')}>My Technical Skills List</div>
         <div className={bem('bar')} />
 
         <div className={bem('section-title')}>Languages</div>

@@ -24,7 +24,7 @@ const AboutPage = () => (
     <div className={bem('line-split')}>
       <LineSplit />
     </div>
-    <div className={bem('images')}>
+    <div className={bem('collage')}>
       <CollageSection />
     </div>
     <div className={bem('timeline')}>

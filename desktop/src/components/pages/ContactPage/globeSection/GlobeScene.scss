@@ -1,4 +1,4 @@
-@import 'src/scss/colors.scss';
+@import 'src/scss/vars/colors.scss';
 
 $name: 'ContactGlobeScene';
 
@@ -9,10 +9,11 @@ $name: 'ContactGlobeScene';
     align-items: center;
     justify-content: center;
     padding-bottom: 2rem;
+
     .#{$name} {
       &__marker-text {
         color: #eeeeee;
-        font-size: 0.75rem;
+        font-size: 1rem;
         margin-bottom: 0.5rem;
       }
     }

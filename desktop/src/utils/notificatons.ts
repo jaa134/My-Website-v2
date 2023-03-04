@@ -1,6 +1,6 @@
 import 'src/scss/notification.scss';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const CONTAINER_ID = 'notifyContainer';
 

@@ -3,7 +3,7 @@ import 'src/components/common/logoBubble/LogoBubble.scss';
 import PropTypes from 'prop-types';
 import React, { FunctionComponent, MouseEventHandler, ReactElement } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('LogoBubble');
 
@@ -17,7 +17,7 @@ type Props = {
   active: boolean;
   children: ReactElement;
   onClick: MouseEventHandler<HTMLElement>;
-}
+};
 
 const LogoBubble: FunctionComponent<Props> = ({ size, menuPositon, values, active, children, onClick }) => {
   const renderSlider = (label: string, value: number) => (

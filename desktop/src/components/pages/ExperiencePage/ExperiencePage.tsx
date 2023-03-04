@@ -2,7 +2,7 @@ import 'src/components/pages/experiencePage/ExperiencePage.scss';
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import PageHeader from 'src/components/common/pageHeader/PageHeader';
 import LineSplit from 'src/components/layout/lineSplit/LineSplit';
@@ -22,7 +22,7 @@ const ExperiencePage = () => {
         <PageHeader
           title="Work Experience"
           subtitle="What I've Been Up To"
-          description={`A total of ${yearsOfExp} years in industry designing, developing, and launching highly responsive websites and mobile applications.`}
+          description={`I have a total of ${yearsOfExp} years in industry designing, developing, and launching highly responsive websites and mobile applications.`}
         />
       </div>
       <div className={bem('line-split')}>

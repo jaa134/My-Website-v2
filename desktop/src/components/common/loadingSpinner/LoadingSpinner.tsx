@@ -3,14 +3,14 @@ import 'src/components/common/loadingSpinner/LoadingSpinner.scss';
 import PropTypes from 'prop-types';
 import React, { FunctionComponent } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('LoadingSpinner');
 
 type Props = {
   size?: 'small' | 'medium' | 'large';
   color?: 'purple' | 'white';
-}
+};
 
 const LoadingSpinner: FunctionComponent<Props> = ({ size = 'medium', color = 'purple' }) => (
   <div className={bem('', size, color)}>

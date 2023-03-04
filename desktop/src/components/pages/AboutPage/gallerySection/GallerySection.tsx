@@ -8,7 +8,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import Captions from 'yet-another-react-lightbox/plugins/captions';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
 import Plus from 'src/components/icons/general/Plus';

@@ -1,4 +1,4 @@
-@import 'src/scss/colors.scss';
+@import 'src/scss/vars/colors.scss';
 
 $name: 'FormSection';
 
@@ -10,8 +10,8 @@ $name: 'FormSection';
   color: $white;
 
   &__title {
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.25rem;
     font-weight: 300;
   }
 
@@ -54,7 +54,8 @@ $name: 'FormSection';
       }
 
       &::placeholder {
-        color: $white_a_50;
+        color: $white;
+        opacity: 0.5;
       }
 
       &:focus:not(.#{$name}__form-element--invalid) {

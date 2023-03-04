@@ -1,10 +1,9 @@
-import 'src/scss/common.scss';
 import 'src/components/App.scss';
 
 import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import AppFooter from 'src/components/layout/appFooter/AppFooter';
 import AppHeader from 'src/components/layout/appHeader/AppHeader';

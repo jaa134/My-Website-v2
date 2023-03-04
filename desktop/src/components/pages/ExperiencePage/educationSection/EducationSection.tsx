@@ -2,7 +2,7 @@ import 'src/components/pages/experiencePage/educationSection/EducationSection.sc
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
 import Download from 'src/components/icons/general/Download';
@@ -17,7 +17,7 @@ type EducationData = {
   link: string;
   pic: string;
   description: string;
-}
+};
 
 const EducationSection = () => {
   const universities: readonly EducationData[] = [

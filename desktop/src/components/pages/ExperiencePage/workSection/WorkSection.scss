@@ -1,5 +1,5 @@
-@import 'src/scss/colors.scss';
-@import 'src/scss/layout.scss';
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
 
 $name: 'WorkSection';
 
@@ -10,17 +10,18 @@ $name: 'WorkSection';
   color: $white;
 
   &__title {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.75rem;
     font-weight: 300;
-    font-size: 1.5rem;
     letter-spacing: 0.0625rem;
     color: $purple_l_20;
   }
 
   &__subtitle {
     margin-bottom: 1.5rem;
-    font-weight: 300;
     font-size: 1.375rem;
+    font-weight: 300;
+    line-height: 1.375;
     letter-spacing: 0.0625rem;
     color: $white;
   }
@@ -114,7 +115,7 @@ $name: 'WorkSection';
     flex: 1;
     box-sizing: border-box;
     padding: 2rem 5rem;
-    height: 30rem;
+    height: 32rem;
     background-color: $dark_gray;
 
     &::before {
@@ -172,6 +173,7 @@ $name: 'WorkSection';
 
   &__panel-bullet {
     font-size: 1rem;
+    line-height: 1.375rem;
 
     &::marker {
       font-size: 0.75em;

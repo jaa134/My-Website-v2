@@ -1,4 +1,4 @@
-@import 'src/scss/colors.scss';
+@import 'src/scss/vars/colors.scss';
 
 $name: 'ProjectsSection';
 
@@ -74,6 +74,10 @@ $name: 'ProjectsSection';
       &-logo {
         width: 2rem;
         fill: $white_a_90;
+
+        svg {
+          width: 100%;
+        }
       }
 
       &-name {

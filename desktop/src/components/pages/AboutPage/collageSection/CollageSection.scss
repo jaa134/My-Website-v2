@@ -1,0 +1,97 @@
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
+
+$name: 'CollageSection';
+
+.#{$name} {
+  position: relative;
+  margin: auto;
+  width: 1px;
+  height: 40rem;
+
+  &__image {
+    position: absolute;
+    height: 8rem;
+    width: 5rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    object-fit: cover;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient($purple, $black);
+    }
+
+    &:nth-child(1) {
+      top: 3rem;
+      left: -16rem;
+      height: 18rem;
+      width: 15rem;
+      transform: rotate(-7.5deg);
+    }
+
+    &:nth-child(2) {
+      top: 2rem;
+      left: 3.5rem;
+      height: 12rem;
+      width: 15rem;
+      transform: rotate(7.5deg);
+    }
+
+    &:nth-child(3) {
+      top: 25rem;
+      left: -12.75rem;
+      height: 13rem;
+      width: 11rem;
+      transform: rotate(-15deg);
+    }
+
+    &:nth-child(4) {
+      top: 18rem;
+      left: 4.5rem;
+      height: 16rem;
+      width: 12rem;
+      transform: rotate(20deg);
+    }
+
+    &:nth-child(5) {
+      top: 3rem;
+      left: -38rem;
+      height: 14rem;
+      width: 16rem;
+      object-position: -4rem 0;
+      transform: rotate(-5deg);
+    }
+
+    &:nth-child(6) {
+      top: 23rem;
+      left: -36rem;
+      height: 13rem;
+      width: 18rem;
+      transform: rotate(10deg);
+    }
+
+    &:nth-child(7) {
+      top: 4rem;
+      left: 21.5rem;
+      height: 15.5rem;
+      width: 12rem;
+      transform: rotate(-5deg);
+    }
+
+    &:nth-child(8) {
+      top: 23.5rem;
+      left: 21rem;
+      height: 13rem;
+      width: 16rem;
+      transform: rotate(-15deg);
+    }
+  }
+}

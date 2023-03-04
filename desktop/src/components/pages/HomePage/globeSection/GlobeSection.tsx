@@ -2,7 +2,7 @@ import 'src/components/pages/homePage/globeSection/GlobeSection.scss';
 
 import React, { useEffect, useRef, useState } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 import notify from 'src/utils/notificatons';
 
 import Dialog from 'src/components/common/dialog/Dialog';

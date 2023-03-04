@@ -1,5 +1,8 @@
-@import 'src/scss/colors.scss';
-@import 'src/scss/layout.scss';
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
+
+// Use normalize.css as a reset sheet
+@import-normalize;
 
 html {
   margin: 0;
@@ -44,20 +47,16 @@ textarea {
   font-family: 'Roboto Mono', monospace;
 }
 
-@media (max-width: $small-screen-end) {
-  :root {
+:root {
+  @media (max-width: $small-screen-end) {
     --app-vertical-margins: 1rem;
   }
-}
 
-@media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
-  :root {
+  @media (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
     --app-vertical-margins: 1.5rem;
   }
-}
 
-@media (min-width: $large_screen_start) {
-  :root {
+  @media (min-width: $large_screen_start) {
     --app-vertical-margins: 2rem;
   }
 }

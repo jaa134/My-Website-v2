@@ -2,7 +2,7 @@ import 'src/components/pages/homePage/HomePage.scss';
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import WaveCanvas from 'src/components/layout/waveCanvas/WaveCanvas';
 import AboutSection from 'src/components/pages/homePage/aboutSection/AboutSection';

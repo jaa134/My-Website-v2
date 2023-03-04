@@ -1,4 +1,4 @@
-@import 'src/scss/colors.scss';
+@import 'src/scss/vars/colors.scss';
 
 $name: 'ContactGlobeScene';
 
@@ -12,7 +12,7 @@ $name: 'ContactGlobeScene';
     .#{$name} {
       &__marker-text {
         color: #eeeeee;
-        font-size: 0.75rem;
+        font-size: 0.875rem;
         margin-bottom: 0.5rem;
       }
     }

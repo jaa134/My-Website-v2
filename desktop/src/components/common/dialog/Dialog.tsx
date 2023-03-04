@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, { FunctionComponent, MouseEventHandler, ReactElement } from 'react';
 import { createPortal } from 'react-dom';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
 import Close from 'src/components/icons/general/Close';
@@ -21,7 +21,7 @@ type Props = {
     onClick?: MouseEventHandler<HTMLElement> | null;
   } | null;
   onClose: MouseEventHandler<HTMLElement>;
-}
+};
 
 const Dialog: FunctionComponent<Props> = ({ open, title, children, primaryAction = null, onClose }) => {
   if (!open) {

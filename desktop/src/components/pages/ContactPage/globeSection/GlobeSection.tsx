@@ -2,15 +2,15 @@ import 'src/components/pages/contactPage/globeSection/GlobeSection.scss';
 
 import React, { useEffect, useRef } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 import notify from 'src/utils/notificatons';
 
 import GlobeScene from 'src/components/pages/contactPage/globeSection/GlobeScene';
 
 const bem = defineBlock('ContactGlobeSection');
 
-const GLOBE_HEIGHT = 600;
-const GLOBE_WIDTH = 600;
+const GLOBE_HEIGHT = 700;
+const GLOBE_WIDTH = 700;
 
 const GlobeSection = () => {
   const globeMountRef = useRef<HTMLDivElement>(null);
@@ -30,10 +30,7 @@ const GlobeSection = () => {
   }, []);
 
   return (
-    <div
-      className={bem()}
-      style={{ height: GLOBE_HEIGHT }}
-    >
+    <div className={bem()}>
       <div className={bem('title')}>
         Let&#39;s Meet For Coffee<span className={bem('symbol')}>&#123;</span>
       </div>

@@ -1,3 +1,5 @@
+import 'src/scss/common.scss';
+
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import { createRoot } from 'react-dom/client';

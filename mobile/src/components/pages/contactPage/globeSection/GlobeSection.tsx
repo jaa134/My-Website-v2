@@ -31,12 +31,14 @@ const GlobeSection = () => {
 
   return (
     <div className={bem()}>
-      <div className={bem('title')}>
-        Let&#39;s Meet For Coffee<span className={bem('symbol')}>&#123;</span>
-      </div>
-      <div className={bem('subtitle')}>
-        Schedule a meeting with me! If I&#39;m not in the mountains hiking, camping, rock climbing, or skiing, then I
-        would love to chat.
+      <div className={bem('header')}>
+        <div className={bem('title')}>
+          Let&#39;s Meet For Coffee<span className={bem('symbol')}>&#123;</span>
+        </div>
+        <div className={bem('subtitle')}>
+          Schedule a meeting with me! If I&#39;m not in the mountains hiking, camping, rock climbing, or skiing, then I
+          would love to chat.
+        </div>
       </div>
       <div
         ref={globeMountRef}

@@ -5,7 +5,7 @@ import * as satellite from 'satellite.js';
 import { DoubleSide, Mesh, MeshLambertMaterial, SphereGeometry } from 'three';
 import * as topojson from 'topojson-client';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const globeURL = new URL('src/assets/datasets/globe.json?url', import.meta.url).href;
 const satellitesURL = new URL('src/assets/datasets/satellites.txt?url', import.meta.url).href;
@@ -67,7 +67,7 @@ export default class GlobeScene {
       .globeMaterial(new MeshLambertMaterial({ color: 0x140231 }))
       .showGlobe(true)
       .showAtmosphere(true)
-      .pointOfView({ lat: 39.6, lng: -98.5, altitude: 2.25 });
+      .pointOfView({ lat: 39.6, lng: -98.5, altitude: 2 });
 
     this.globe.controls().enableZoom = false;
 

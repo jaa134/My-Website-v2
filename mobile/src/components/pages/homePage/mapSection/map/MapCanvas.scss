@@ -1,12 +1,11 @@
-@import 'src/scss/colors.scss';
-@import 'src/scss/layout.scss';
+@import 'src/scss/vars/colors.scss';
+@import 'src/scss/vars/layout.scss';
 
 $name: 'MapCanvas';
 
 .#{$name} {
   .ol-map {
     box-sizing: border-box;
-    padding: 0 var(--app-vertical-margins);
     width: 100%;
   }
 

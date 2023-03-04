@@ -2,7 +2,7 @@ import 'src/components/layout/lineSplit/LineSplit.scss';
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('LineSplit');
 

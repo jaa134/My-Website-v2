@@ -2,7 +2,7 @@ import 'src/components/layout/appFooter/AppFooter.scss';
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import MyLogoVariant2 from 'src/components/icons/logos/personal/MyLogoVariant2';
 import FacebookVariant1 from 'src/components/icons/logos/socials/FacebookVariant1';

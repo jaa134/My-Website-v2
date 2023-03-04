@@ -4,7 +4,7 @@ import Globe, { GlobeInstance } from 'globe.gl';
 import { DoubleSide, MeshLambertMaterial } from 'three';
 import * as topojson from 'topojson-client';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const globeURL = new URL('src/assets/datasets/globe.json?url', import.meta.url).href;
 
@@ -45,7 +45,7 @@ export default class GlobeScene {
       .globeMaterial(new MeshLambertMaterial({ color: 0x140231 }))
       .showGlobe(true)
       .showAtmosphere(true)
-      .pointOfView({ lat: HOME_LAT, lng: HOME_LNG, altitude: 2.25 });
+      .pointOfView({ lat: HOME_LAT, lng: HOME_LNG, altitude: 1.75 });
 
     this.globe.controls().enableZoom = false;
 

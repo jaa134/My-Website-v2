@@ -3,7 +3,7 @@ import 'src/components/pages/homePage/aboutSection/AboutSection.scss';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import Button from 'src/components/common/button/Button';
 import Star from 'src/components/icons/general/Star';

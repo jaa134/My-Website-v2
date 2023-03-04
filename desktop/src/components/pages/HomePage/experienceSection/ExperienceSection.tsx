@@ -4,8 +4,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import React, { useCallback, useEffect, useState } from 'react';
 import { flushSync } from 'react-dom';
 
-import defineBlock from 'src/utils/defineBlock';
-import numberWithinRange from 'src/utils/mathUtils';
+import defineBlock from 'src/utils/css';
+import numberWithinRange from 'src/utils/math';
 
 import Chevron from 'src/components/icons/general/Chevron';
 

@@ -1,4 +1,3 @@
-import 'src/scss/common.scss';
 import 'src/components/App.scss';
 
 import React, { lazy } from 'react';

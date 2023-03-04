@@ -3,7 +3,7 @@ import 'src/components/common/button/Button.scss';
 import PropTypes from 'prop-types';
 import React, { FunctionComponent, MouseEventHandler, PropsWithChildren, ReactElement } from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 const bem = defineBlock('Button');
 

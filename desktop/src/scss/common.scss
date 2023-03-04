@@ -1,4 +1,7 @@
-@import 'src/scss/colors.scss';
+@import 'src/scss/vars/colors.scss';
+
+// Use normalize.css as a reset sheet
+@import-normalize;
 
 html {
   margin: 0;

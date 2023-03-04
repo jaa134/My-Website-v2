@@ -1,4 +1,4 @@
-@import 'src/scss/colors.scss';
+@import 'src/scss/vars/colors.scss';
 
 $name: 'SocialsSection';
 
@@ -12,8 +12,8 @@ $name: 'SocialsSection';
   }
 
   &__title {
-    margin-bottom: 4rem;
-    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.75rem;
     letter-spacing: 0.03125rem;
     font-weight: 300;
     color: $turquoise;
@@ -24,6 +24,16 @@ $name: 'SocialsSection';
     color: $purple;
     font-weight: 400;
     margin-left: 0.25rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 2.5rem;
+    max-width: 25rem;
+    font-size: 1.125rem;
+    line-height: 1.375;
+    letter-spacing: 0.03125rem;
+    font-weight: 300;
+    color: $white_a_90;
   }
 
   &__socials {

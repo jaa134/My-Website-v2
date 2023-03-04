@@ -2,7 +2,7 @@ import 'src/components/pages/contactPage/socialsSection/SocialsSection.scss';
 
 import React from 'react';
 
-import defineBlock from 'src/utils/defineBlock';
+import defineBlock from 'src/utils/css';
 
 import FacebookVariant1 from 'src/components/icons/logos/socials/FacebookVariant1';
 import GitHubVariant1 from 'src/components/icons/logos/socials/GitHubVariant1';
@@ -19,6 +19,9 @@ const SocialsSection = () => (
     <div className={bem('container')}>
       <div className={bem('title')}>
         Social Media<span className={bem('symbol')}>&#123;</span>
+      </div>
+      <div className={bem('subtitle')}>
+        Follow me to see what I've been up to lately and to receive updates on a regular basis.
       </div>
       <div className={bem('socials')}>
         <div className={bem('item-container')}>
