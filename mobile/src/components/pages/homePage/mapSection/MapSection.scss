@@ -4,9 +4,7 @@
 $name: 'MapSection';
 
 .#{$name} {
-  &__header {
-    padding: 0 var(--app-vertical-margins);
-  }
+  padding: 0 var(--app-vertical-margins) var(--app-vertical-margins) var(--app-vertical-margins);
 
   &__title {
     font-weight: 300;
