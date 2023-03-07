@@ -10,16 +10,32 @@ $name: 'SocialsSection';
   justify-content: center;
   padding: 0 var(--app-vertical-margins);
 
+  &__header {
+    padding: 0 var(--app-vertical-margins);
+  }
+
   &__title {
-    letter-spacing: 0.03125rem;
+    margin: auto;
     font-weight: 300;
+    letter-spacing: 0.03125rem;
     color: $turquoise;
+    text-align: center;
   }
 
   &__symbol {
     color: $purple;
     font-weight: 400;
     margin-left: 0.25rem;
+  }
+
+  &__subtitle {
+    margin: auto;
+    max-width: 25rem;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.03125rem;
+    color: $white_a_90;
+    text-align: center;
   }
 
   &__socials {
@@ -86,8 +102,13 @@ $name: 'SocialsSection';
 @media (max-width: $small-screen-end) {
   .#{$name} {
     &__title {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       font-size: 1.75rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
     }
 
     &__item-container {
@@ -112,8 +133,13 @@ $name: 'SocialsSection';
 @media (min-width: $medium-screen-start) {
   .#{$name} {
     &__title {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       font-size: 2rem;
+    }
+
+    &__subtitle {
+      margin-bottom: 2rem;
+      font-size: 1.125rem;
     }
 
     &__item-container {

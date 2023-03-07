@@ -16,8 +16,13 @@ const bem = defineBlock('SocialsSection');
 
 const SocialsSection = () => (
   <div className={bem()}>
-    <div className={bem('title')}>
-      Social Media<span className={bem('symbol')}>&#123;</span>
+    <div className={bem('header')}>
+      <div className={bem('title')}>
+        Social Media<span className={bem('symbol')}>&#123;</span>
+      </div>
+      <div className={bem('subtitle')}>
+        Follow me to see what I've been up to lately and to receive updates on a regular basis.
+      </div>
     </div>
     <div className={bem('socials')}>
       <div className={bem('item-container')}>
