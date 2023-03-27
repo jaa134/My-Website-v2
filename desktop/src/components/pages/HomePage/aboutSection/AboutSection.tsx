@@ -26,7 +26,7 @@ const AboutSection = () => (
       <div className={bem('contact')}>
         <Link to={RouteName.Contact}>
           <Button
-            size="medium"
+            size="large"
             type="filled"
             color="purple"
             label="Let's Talk"
@@ -50,7 +50,7 @@ const AboutSection = () => (
       </div>
       <div className={bem('image')}>
         <img
-          src={`${miscImagesPath}/profile--small.jpg`}
+          src={`${miscImagesPath}/profile--compressed.jpg`}
           alt=""
         />
       </div>
