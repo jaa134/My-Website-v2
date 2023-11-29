@@ -7,6 +7,8 @@ import * as topojson from 'topojson-client';
 
 import defineBlock from 'src/utils/css';
 
+import { Marker } from 'src/constants/globeMarkers';
+
 const globeURL = new URL('src/assets/datasets/globe.json?url', import.meta.url).href;
 const satellitesURL = new URL('src/assets/datasets/satellites.txt?url', import.meta.url).href;
 
@@ -19,16 +21,6 @@ const SAT_SIZE = 100; // km
 const TIME_STEP = 1000; // per frame
 
 const bem = defineBlock('HomeGlobeScene');
-
-export type Marker = {
-  title: string;
-  location: string;
-  date: string;
-  description: string;
-  imageSrc: string;
-  lat: number;
-  lng: number;
-};
 
 export default class GlobeScene {
   private globe: GlobeInstance;

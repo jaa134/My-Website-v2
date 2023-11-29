@@ -14,7 +14,7 @@ const images = Array.from({ length: 8 }).map((_, i) => {
     <img
       key={id}
       className={bem('image', id)}
-      src={`${collageImagesPath}/image--${id}.jpg`}
+      src={`${collageImagesPath}/image--${id}.webp`}
       alt=""
     />
   );

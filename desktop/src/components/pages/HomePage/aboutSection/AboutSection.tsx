@@ -38,19 +38,19 @@ const AboutSection = () => (
     <div className={bem('pictures')}>
       <div className={bem('image')}>
         <img
-          src={`${albumImagesPath}/GK6GvUHSho.jpg`}
+          src={`${albumImagesPath}/GK6GvUHSho.webp`}
           alt=""
         />
       </div>
       <div className={bem('image')}>
         <img
-          src={`${albumImagesPath}/ypqCmdMDip.jpg`}
+          src={`${albumImagesPath}/ypqCmdMDip.webp`}
           alt=""
         />
       </div>
       <div className={bem('image')}>
         <img
-          src={`${miscImagesPath}/profile--compressed.jpg`}
+          src={`${miscImagesPath}/profile--small.webp`}
           alt=""
         />
       </div>

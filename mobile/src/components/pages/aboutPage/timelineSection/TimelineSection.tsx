@@ -55,7 +55,7 @@ const TimelineSection = () => (
       </div>
       <div className={bem('picture')}>
         <img
-          src={`${albumImagesPath}/djnfv36LPa.jpg`}
+          src={`${albumImagesPath}/djnfv36LPa.webp`}
           alt=""
         />
       </div>
@@ -78,12 +78,12 @@ const TimelineSection = () => (
         <div className={bem('color-box', '2')} />
         <img
           className={bem('image', '1')}
-          src={`${albumImagesPath}/d9dK249xAz.jpg`}
+          src={`${albumImagesPath}/d9dK249xAz.webp`}
           alt=""
         />
         <img
           className={bem('image', '2')}
-          src={`${albumImagesPath}/js9FGG134c.jpg`}
+          src={`${albumImagesPath}/js9FGG134c.webp`}
           alt=""
         />
       </div>
